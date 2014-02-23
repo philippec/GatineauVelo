@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GVPisteCyclable" representedClassName="PisteCyclable" syncable="YES">
+        <attribute name="codeID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="direc_uniq" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="entiteID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="largeur" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longueur" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="munID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="proprio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="revetement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="route_verte" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="geom" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GVPoint" inverseName="piste" inverseEntity="GVPoint" syncable="YES"/>
+    </entity>
+    <entity name="GVPoint" representedClassName="Point" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="piste" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GVPisteCyclable" inverseName="geom" inverseEntity="GVPisteCyclable" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GVPisteCyclable" positionX="160" positionY="192" width="128" height="223"/>
+        <element name="GVPoint" positionX="387" positionY="375" width="128" height="88"/>
+    </elements>
 </model>

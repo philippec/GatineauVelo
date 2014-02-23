@@ -27,7 +27,10 @@
 		373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */; };
 		373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */; };
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
+		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
+		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFADAD18BA701D00728113 /* MapKit.framework */; };
+		37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +69,16 @@
 		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
+		37BAB16C18BA767A00B949D1 /* GVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPoint.h; sourceTree = "<group>"; };
+		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
+		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
+		37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPisteCyclable.m; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37EFADB018BA712F00728113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADB118BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PISTE_CYCLABLE.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 		373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */ = {
 			isa = PBXGroup;
 			children = (
+				37EFADB418BA721300728113 /* Model */,
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
 				373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */,
@@ -146,7 +155,6 @@
 				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
 				373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
-				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
 			path = "GatineauVélo";
@@ -178,6 +186,19 @@
 				373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37EFADB418BA721300728113 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */,
+				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
+				37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */,
+				37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */,
+				37BAB16C18BA767A00B949D1 /* GVPoint.h */,
+				37BAB16D18BA767A00B949D1 /* GVPoint.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +282,7 @@
 				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
 				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
 				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
+				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */,
+				37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */,
 				373DC8B418BA6CC2003FBFC3 /* main.m in Sources */,
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
