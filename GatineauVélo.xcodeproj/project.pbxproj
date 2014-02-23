@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
+		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
+		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
+		373DC8AC18BA6CC2003FBFC3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */; };
+		373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */; };
+		373DC8B418BA6CC2003FBFC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8B318BA6CC2003FBFC3 /* main.m */; };
+		373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */; };
+		373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373DC8B918BA6CC2003FBFC3 /* Main.storyboard */; };
+		373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */; };
+		373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */; };
+		373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */; };
+		373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373DC8C518BA6CC2003FBFC3 /* Images.xcassets */; };
+		373DC8CD18BA6CC2003FBFC3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8CC18BA6CC2003FBFC3 /* XCTest.framework */; };
+		373DC8CE18BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
+		373DC8CF18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
+		373DC8D018BA6CC2003FBFC3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */; };
+		373DC8D818BA6CC2003FBFC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */; };
+		373DC8DA18BA6CC2003FBFC3 /* GatineauVe_loTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		373DC8D118BA6CC2003FBFC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373DC89A18BA6CC2003FBFC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373DC8A118BA6CC2003FBFC3;
+			remoteInfo = "GatineauVélo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		373DC8A918BA6CC2003FBFC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		373DC8AF18BA6CC2003FBFC3 /* GatineauVélo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVélo-Info.plist"; sourceTree = "<group>"; };
+		373DC8B118BA6CC2003FBFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		373DC8B318BA6CC2003FBFC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		373DC8B518BA6CC2003FBFC3 /* GatineauVélo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatineauVélo-Prefix.pch"; sourceTree = "<group>"; };
+		373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVAppDelegate.h; sourceTree = "<group>"; };
+		373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegate.m; sourceTree = "<group>"; };
+		373DC8BA18BA6CC2003FBFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		373DC8BD18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GatineauVe_lo.xcdatamodel; sourceTree = "<group>"; };
+		373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVMainViewController.h; sourceTree = "<group>"; };
+		373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVMainViewController.m; sourceTree = "<group>"; };
+		373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVFlipsideViewController.h; sourceTree = "<group>"; };
+		373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewController.m; sourceTree = "<group>"; };
+		373DC8C518BA6CC2003FBFC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		373DC8CB18BA6CC2003FBFC3 /* GatineauVéloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GatineauVéloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		373DC8CC18BA6CC2003FBFC3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		373DC8D518BA6CC2003FBFC3 /* GatineauVéloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVéloTests-Info.plist"; sourceTree = "<group>"; };
+		373DC8D718BA6CC2003FBFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GatineauVe_loTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		373DC89F18BA6CC2003FBFC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */,
+				373DC8AC18BA6CC2003FBFC3 /* CoreData.framework in Frameworks */,
+				373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */,
+				373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373DC8C818BA6CC2003FBFC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8CD18BA6CC2003FBFC3 /* XCTest.framework in Frameworks */,
+				373DC8D018BA6CC2003FBFC3 /* CoreData.framework in Frameworks */,
+				373DC8CF18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */,
+				373DC8CE18BA6CC2003FBFC3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		373DC89918BA6CC2003FBFC3 = {
+			isa = PBXGroup;
+			children = (
+				373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */,
+				373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */,
+				373DC8A418BA6CC2003FBFC3 /* Frameworks */,
+				373DC8A318BA6CC2003FBFC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		373DC8A318BA6CC2003FBFC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */,
+				373DC8CB18BA6CC2003FBFC3 /* GatineauVéloTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		373DC8A418BA6CC2003FBFC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8A518BA6CC2003FBFC3 /* Foundation.framework */,
+				373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */,
+				373DC8A918BA6CC2003FBFC3 /* UIKit.framework */,
+				373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */,
+				373DC8CC18BA6CC2003FBFC3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
+				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
+				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
+				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
+				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
+				373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */,
+				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
+				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
+				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
+				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
+			);
+			path = "GatineauVélo";
+			sourceTree = "<group>";
+		};
+		373DC8AE18BA6CC2003FBFC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8AF18BA6CC2003FBFC3 /* GatineauVélo-Info.plist */,
+				373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */,
+				373DC8B318BA6CC2003FBFC3 /* main.m */,
+				373DC8B518BA6CC2003FBFC3 /* GatineauVélo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */,
+				373DC8D418BA6CC2003FBFC3 /* Supporting Files */,
+			);
+			path = "GatineauVéloTests";
+			sourceTree = "<group>";
+		};
+		373DC8D418BA6CC2003FBFC3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				373DC8D518BA6CC2003FBFC3 /* GatineauVéloTests-Info.plist */,
+				373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		373DC8A118BA6CC2003FBFC3 /* GatineauVélo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373DC8DD18BA6CC2003FBFC3 /* Build configuration list for PBXNativeTarget "GatineauVélo" */;
+			buildPhases = (
+				373DC89E18BA6CC2003FBFC3 /* Sources */,
+				373DC89F18BA6CC2003FBFC3 /* Frameworks */,
+				373DC8A018BA6CC2003FBFC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GatineauVélo";
+			productName = "GatineauVélo";
+			productReference = 373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		373DC8CA18BA6CC2003FBFC3 /* GatineauVéloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373DC8E018BA6CC2003FBFC3 /* Build configuration list for PBXNativeTarget "GatineauVéloTests" */;
+			buildPhases = (
+				373DC8C718BA6CC2003FBFC3 /* Sources */,
+				373DC8C818BA6CC2003FBFC3 /* Frameworks */,
+				373DC8C918BA6CC2003FBFC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373DC8D218BA6CC2003FBFC3 /* PBXTargetDependency */,
+			);
+			name = "GatineauVéloTests";
+			productName = "GatineauVéloTests";
+			productReference = 373DC8CB18BA6CC2003FBFC3 /* GatineauVéloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		373DC89A18BA6CC2003FBFC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GV;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Philippe Casgrain";
+				TargetAttributes = {
+					373DC8CA18BA6CC2003FBFC3 = {
+						TestTargetID = 373DC8A118BA6CC2003FBFC3;
+					};
+				};
+			};
+			buildConfigurationList = 373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVélo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 373DC89918BA6CC2003FBFC3;
+			productRefGroup = 373DC8A318BA6CC2003FBFC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				373DC8A118BA6CC2003FBFC3 /* GatineauVélo */,
+				373DC8CA18BA6CC2003FBFC3 /* GatineauVéloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		373DC8A018BA6CC2003FBFC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
+				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373DC8C918BA6CC2003FBFC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8D818BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		373DC89E18BA6CC2003FBFC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8B418BA6CC2003FBFC3 /* main.m in Sources */,
+				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
+				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
+				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
+				373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373DC8C718BA6CC2003FBFC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373DC8DA18BA6CC2003FBFC3 /* GatineauVe_loTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		373DC8D218BA6CC2003FBFC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373DC8A118BA6CC2003FBFC3 /* GatineauVélo */;
+			targetProxy = 373DC8D118BA6CC2003FBFC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373DC8B118BA6CC2003FBFC3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		373DC8B918BA6CC2003FBFC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373DC8BA18BA6CC2003FBFC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373DC8D718BA6CC2003FBFC3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		373DC8DB18BA6CC2003FBFC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		373DC8DC18BA6CC2003FBFC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		373DC8DE18BA6CC2003FBFC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVélo/GatineauVélo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		373DC8DF18BA6CC2003FBFC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVélo/GatineauVélo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		373DC8E118BA6CC2003FBFC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GatineauVélo.app/GatineauVélo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		373DC8E218BA6CC2003FBFC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GatineauVélo.app/GatineauVélo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVélo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373DC8DB18BA6CC2003FBFC3 /* Debug */,
+				373DC8DC18BA6CC2003FBFC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373DC8DD18BA6CC2003FBFC3 /* Build configuration list for PBXNativeTarget "GatineauVélo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373DC8DE18BA6CC2003FBFC3 /* Debug */,
+				373DC8DF18BA6CC2003FBFC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		373DC8E018BA6CC2003FBFC3 /* Build configuration list for PBXNativeTarget "GatineauVéloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373DC8E118BA6CC2003FBFC3 /* Debug */,
+				373DC8E218BA6CC2003FBFC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				373DC8BD18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodel */,
+			);
+			currentVersion = 373DC8BD18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodel */;
+			path = GatineauVe_lo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 373DC89A18BA6CC2003FBFC3 /* Project object */;
+}
