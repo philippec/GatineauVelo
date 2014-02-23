@@ -67,6 +67,10 @@
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37EFADB018BA712F00728113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		37EFADB118BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 373DC89918BA6CC2003FBFC3;
 			productRefGroup = 373DC8A318BA6CC2003FBFC3 /* Products */;
@@ -307,6 +312,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				373DC8B118BA6CC2003FBFC3 /* en */,
+				37EFADB218BA716000728113 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				373DC8BA18BA6CC2003FBFC3 /* Base */,
+				37EFADB018BA712F00728113 /* en */,
+				37EFADB118BA716000728113 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +331,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				373DC8D718BA6CC2003FBFC3 /* en */,
+				37EFADB318BA716000728113 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
