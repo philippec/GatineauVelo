@@ -24,7 +24,9 @@
 		373DC8CF18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
 		373DC8D018BA6CC2003FBFC3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */; };
 		373DC8D818BA6CC2003FBFC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */; };
-		373DC8DA18BA6CC2003FBFC3 /* GatineauVe_loTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */; };
+		373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */; };
+		373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */; };
+		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +62,9 @@
 		373DC8CC18BA6CC2003FBFC3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		373DC8D518BA6CC2003FBFC3 /* GatineauVéloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVéloTests-Info.plist"; sourceTree = "<group>"; };
 		373DC8D718BA6CC2003FBFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GatineauVe_loTests.m; sourceTree = "<group>"; };
+		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
+		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
+		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +129,14 @@
 			children = (
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
+				373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */,
 				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
 				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
 				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
+				373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */,
 				373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */,
 				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
+				373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
 				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
@@ -151,7 +158,6 @@
 		373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */ = {
 			isa = PBXGroup;
 			children = (
-				373DC8D918BA6CC2003FBFC3 /* GatineauVe_loTests.m */,
 				373DC8D418BA6CC2003FBFC3 /* Supporting Files */,
 			);
 			path = "GatineauVéloTests";
@@ -276,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373DC8DA18BA6CC2003FBFC3 /* GatineauVe_loTests.m in Sources */,
+				373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */,
+				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
+				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
