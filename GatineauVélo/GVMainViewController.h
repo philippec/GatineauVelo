@@ -9,9 +9,12 @@
 #import "GVFlipsideViewController.h"
 
 #import <CoreData/CoreData.h>
+#import <MapKit/MapKit.h>
 
 @interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (strong) IBOutlet MKMapView *mapView;
 
 @end

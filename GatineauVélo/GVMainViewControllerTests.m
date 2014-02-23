@@ -38,6 +38,8 @@
     XCTAssertNotNil(self.controller);
 
     XCTAssertNoThrow([self.controller view]);
+
+    XCTAssertNotNil(self.controller.mapView);
 }
 
 @end
