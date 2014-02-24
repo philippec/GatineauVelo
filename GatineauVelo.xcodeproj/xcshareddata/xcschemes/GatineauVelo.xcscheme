@@ -17,7 +17,7 @@
                BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
                BuildableName = "GatineauVe&#769;lo.app"
                BlueprintName = "GatineauVe&#769;lo"
-               ReferencedContainer = "container:GatineauVe&#769;lo.xcodeproj">
+               ReferencedContainer = "container:GatineauVelo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "373DC8CA18BA6CC2003FBFC3"
                BuildableName = "GatineauVe&#769;loTests.xctest"
                BlueprintName = "GatineauVe&#769;loTests"
-               ReferencedContainer = "container:GatineauVe&#769;lo.xcodeproj">
+               ReferencedContainer = "container:GatineauVelo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
             BuildableName = "GatineauVe&#769;lo.app"
             BlueprintName = "GatineauVe&#769;lo"
-            ReferencedContainer = "container:GatineauVe&#769;lo.xcodeproj">
+            ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
             BuildableName = "GatineauVe&#769;lo.app"
             BlueprintName = "GatineauVe&#769;lo"
-            ReferencedContainer = "container:GatineauVe&#769;lo.xcodeproj">
+            ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
             BuildableName = "GatineauVe&#769;lo.app"
             BlueprintName = "GatineauVe&#769;lo"
-            ReferencedContainer = "container:GatineauVe&#769;lo.xcodeproj">
+            ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
