@@ -29,6 +29,7 @@
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
+		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
 		37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFADAD18BA701D00728113 /* MapKit.framework */; };
 		37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,8 @@
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
 		37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPisteCyclable.m; sourceTree = "<group>"; };
+		37BAB17318BAED9300B949D1 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = "Third Party/DDFileReader.h"; sourceTree = "<group>"; };
+		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37EFADB018BA712F00728113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADB118BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */ = {
 			isa = PBXGroup;
 			children = (
+				37BAB17218BAED6700B949D1 /* Third Party */,
 				37EFADB418BA721300728113 /* Model */,
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
@@ -186,6 +190,15 @@
 				373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37BAB17218BAED6700B949D1 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				37BAB17318BAED9300B949D1 /* DDFileReader.h */,
+				37BAB17418BAED9300B949D1 /* DDFileReader.m */,
+			);
+			name = "Third Party";
 			sourceTree = "<group>";
 		};
 		37EFADB418BA721300728113 /* Model */ = {
@@ -254,7 +267,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVélo" */;
+			buildConfigurationList = 373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVelo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -305,6 +318,7 @@
 				37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */,
 				373DC8B418BA6CC2003FBFC3 /* main.m in Sources */,
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
+				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
 				373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */,
@@ -506,7 +520,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVélo" */ = {
+		373DC89D18BA6CC2003FBFC3 /* Build configuration list for PBXProject "GatineauVelo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				373DC8DB18BA6CC2003FBFC3 /* Debug */,
