@@ -13,5 +13,7 @@
 
 @dynamic latitude;
 @dynamic longitude;
+@dynamic order;
+@dynamic piste;
 
 @end

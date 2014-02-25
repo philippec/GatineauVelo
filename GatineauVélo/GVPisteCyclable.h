@@ -14,14 +14,14 @@
 @interface GVPisteCyclable : NSManagedObject
 
 @property (nonatomic, retain) NSString * codeID;
-@property (nonatomic) BOOL direc_uniq;
+@property (nonatomic, retain) NSNumber *direc_uniq;
 @property (nonatomic, retain) NSString * entiteID;
-@property (nonatomic) float largeur;
-@property (nonatomic) float longueur;
+@property (nonatomic, retain) NSNumber *largeur;
+@property (nonatomic, retain) NSNumber *longueur;
 @property (nonatomic, retain) NSString * munID;
 @property (nonatomic, retain) NSString * proprio;
 @property (nonatomic, retain) NSString * revetement;
-@property (nonatomic) BOOL route_verte;
+@property (nonatomic, retain) NSNumber *route_verte;
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSSet *geom;
