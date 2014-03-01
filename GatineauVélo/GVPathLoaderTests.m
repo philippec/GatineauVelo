@@ -7,11 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "GVPathLoader.h"
 
 @interface GVPathLoaderTests : XCTestCase
 
 @property (strong) GVPathLoader *pathLoader;
+@property (strong) id mockContext;
 
 @end
 
@@ -20,18 +22,22 @@
 - (void)setUp
 {
     [super setUp];
+    self.mockContext = [OCMockObject mockForClass:[NSManagedObjectContext class]];
 }
 
 - (void)tearDown
 {
+    self.mockContext = nil;
     self.pathLoader = nil;
     [super tearDown];
 }
 
 - (void)testCreation
 {
-    XCTAssertNoThrow(self.pathLoader = [[GVPathLoader alloc] init]);
+    XCTAssertNoThrow(self.pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.mockContext]);
     XCTAssertNotNil(self.pathLoader);
+
+    XCTAssertEqualObjects(self.pathLoader.managedObjectContext, self.mockContext);
 }
 
 @end

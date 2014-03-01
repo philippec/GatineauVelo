@@ -10,4 +10,8 @@
 
 @interface GVPathLoader : NSObject
 
+@property (readonly) NSManagedObjectContext *managedObjectContext;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end

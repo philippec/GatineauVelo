@@ -7,7 +7,26 @@
 //
 
 #import "GVPathLoader.h"
+#import "DDFileReader.h"
+#import "GVPisteCyclable.h"
+#import "GVPoint.h"
+
+@interface GVPathLoader()
+
+@property (strong) NSManagedObjectContext *managedObjectContext;
+
+@end
 
 @implementation GVPathLoader
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context
+{
+    if (self = [super init])
+    {
+        _managedObjectContext = context;
+    }
+
+    return self;
+}
 
 @end
