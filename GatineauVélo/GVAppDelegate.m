@@ -12,9 +12,6 @@
 #import "GVContext.h"
 
 
-@interface GVAppDelegate()
-@end
-
 @implementation GVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
