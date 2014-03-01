@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67C18C2886200A36D54 /* GVAppDefaults.m */; };
+		370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370AC67B18C2886200A36D54 /* GVAppDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAppDefaults.h; sourceTree = "<group>"; };
+		370AC67C18C2886200A36D54 /* GVAppDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaults.m; sourceTree = "<group>"; };
+		370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaultsTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +156,9 @@
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
 				373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */,
+				370AC67B18C2886200A36D54 /* GVAppDefaults.h */,
+				370AC67C18C2886200A36D54 /* GVAppDefaults.m */,
+				370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */,
 				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
 				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
 				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
@@ -317,6 +325,7 @@
 				37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */,
 				37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */,
 				373DC8B418BA6CC2003FBFC3 /* main.m in Sources */,
+				370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */,
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
 				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
@@ -329,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
 				373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */,
 				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
 				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,
