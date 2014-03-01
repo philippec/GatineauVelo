@@ -10,6 +10,8 @@
 		370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67C18C2886200A36D54 /* GVAppDefaults.m */; };
 		370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */; };
 		370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */; };
+		370AC68418C28E6800A36D54 /* GVPathLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68318C28E6800A36D54 /* GVPathLoader.m */; };
+		370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -52,6 +54,9 @@
 		370AC67C18C2886200A36D54 /* GVAppDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaults.m; sourceTree = "<group>"; };
 		370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaultsTests.m; sourceTree = "<group>"; };
 		370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApplicationDefaults.plist; sourceTree = "<group>"; };
+		370AC68218C28E6800A36D54 /* GVPathLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathLoader.h; sourceTree = "<group>"; };
+		370AC68318C28E6800A36D54 /* GVPathLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoader.m; sourceTree = "<group>"; };
+		370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoaderTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +174,9 @@
 				373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */,
 				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
 				373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */,
+				370AC68218C28E6800A36D54 /* GVPathLoader.h */,
+				370AC68318C28E6800A36D54 /* GVPathLoader.m */,
+				370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
@@ -330,6 +338,7 @@
 				37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */,
 				373DC8B418BA6CC2003FBFC3 /* main.m in Sources */,
 				370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */,
+				370AC68418C28E6800A36D54 /* GVPathLoader.m in Sources */,
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
 				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
@@ -342,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
 				373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */,
 				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
