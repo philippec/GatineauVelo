@@ -8,15 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class GVContext;
+@class GVPathLoader;
+
 @interface GVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
+@property (strong, nonatomic) GVContext *context;
+@property (strong, nonatomic) GVPathLoader *pathLoader;
 
 @end

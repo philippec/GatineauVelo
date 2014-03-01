@@ -13,6 +13,8 @@
 		370AC68418C28E6800A36D54 /* GVPathLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68318C28E6800A36D54 /* GVPathLoader.m */; };
 		370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */; };
 		370AC68818C291B900A36D54 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370AC68718C291B900A36D54 /* libOCMock.a */; };
+		370AC68B18C299FA00A36D54 /* GVContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68A18C299FA00A36D54 /* GVContext.m */; };
+		370AC68D18C29A0300A36D54 /* GVContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68C18C29A0300A36D54 /* GVContextTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -59,6 +61,9 @@
 		370AC68318C28E6800A36D54 /* GVPathLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoader.m; sourceTree = "<group>"; };
 		370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoaderTests.m; sourceTree = "<group>"; };
 		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "GatineauVéloTests/OCMock/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
+		370AC68918C299FA00A36D54 /* GVContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVContext.h; sourceTree = "<group>"; };
+		370AC68A18C299FA00A36D54 /* GVContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContext.m; sourceTree = "<group>"; };
+		370AC68C18C29A0300A36D54 /* GVContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContextTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +175,9 @@
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
 				373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */,
+				370AC68918C299FA00A36D54 /* GVContext.h */,
+				370AC68A18C299FA00A36D54 /* GVContext.m */,
+				370AC68C18C29A0300A36D54 /* GVContextTests.m */,
 				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
 				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
 				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
@@ -346,6 +354,7 @@
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
 				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
+				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
 				373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */,
 			);
@@ -357,6 +366,7 @@
 			files = (
 				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
+				370AC68D18C29A0300A36D54 /* GVContextTests.m in Sources */,
 				373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */,
 				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
 				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "GVAppDelegate.h"
+#import "GVPathLoader.h"
 
 @interface GVAppDelegateTests : XCTestCase
 
@@ -33,6 +34,14 @@
     XCTAssertNoThrow(appDelegate = [[UIApplication sharedApplication] delegate]);
     XCTAssertNotNil(appDelegate);
     XCTAssertTrue([appDelegate isKindOfClass:[GVAppDelegate class]]);
+
+    GVContext *context;
+    XCTAssertNoThrow(context = appDelegate.context);
+    XCTAssertNotNil(context);
+
+    GVPathLoader *pathLoader;
+    XCTAssertNoThrow(pathLoader = appDelegate.pathLoader);
+    XCTAssertNotNil(pathLoader);
 }
 
 @end
