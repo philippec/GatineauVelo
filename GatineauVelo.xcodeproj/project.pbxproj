@@ -12,6 +12,7 @@
 		370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */; };
 		370AC68418C28E6800A36D54 /* GVPathLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68318C28E6800A36D54 /* GVPathLoader.m */; };
 		370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */; };
+		370AC68818C291B900A36D54 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 370AC68718C291B900A36D54 /* libOCMock.a */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -57,6 +58,7 @@
 		370AC68218C28E6800A36D54 /* GVPathLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathLoader.h; sourceTree = "<group>"; };
 		370AC68318C28E6800A36D54 /* GVPathLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoader.m; sourceTree = "<group>"; };
 		370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoaderTests.m; sourceTree = "<group>"; };
+		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "GatineauVéloTests/OCMock/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				373DC8D018BA6CC2003FBFC3 /* CoreData.framework in Frameworks */,
 				373DC8CF18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */,
 				373DC8CE18BA6CC2003FBFC3 /* Foundation.framework in Frameworks */,
+				370AC68818C291B900A36D54 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +189,7 @@
 		373DC8AE18BA6CC2003FBFC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				370AC68718C291B900A36D54 /* libOCMock.a */,
 				373DC8AF18BA6CC2003FBFC3 /* GatineauVélo-Info.plist */,
 				373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */,
 				373DC8B318BA6CC2003FBFC3 /* main.m */,
@@ -515,7 +519,24 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS\"",
+				);
 				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/philippe/Desktop/GatineauVélo/GatineauVéloTests/OCMock/iOS",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -534,7 +555,24 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS\"",
+				);
 				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/philippe/Desktop/GatineauVélo/GatineauVéloTests/OCMock/iOS",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-force_load",
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
