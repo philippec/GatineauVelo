@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cityExtent</key>
+	<dict>
+		<key>centerLat</key>
+		<real>45.4759</real>
+		<key>centerLong</key>
+		<real>-75.58880000000001</real>
+		<key>deltaLat</key>
+		<real>0.263258</real>
+		<key>deltaLong</key>
+		<real>0.710821</real>
+	</dict>
+</dict>
+</plist>

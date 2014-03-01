@@ -8,6 +8,37 @@
 
 #import "GVAppDefaults.h"
 
+@interface GVAppDefaults()
+
+@property (strong) NSDictionary *appDefaults;
+@property (assign) MKCoordinateRegion maxCityRegionInternal;
+
+@end
+
 @implementation GVAppDefaults
+
+- (instancetype)init
+{
+    if (self = [super init])
+    {
+        NSURL *url = [[NSBundle bundleForClass:[self class]] URLForResource:@"ApplicationDefaults" withExtension:@"plist"];
+        _appDefaults = [NSDictionary dictionaryWithContentsOfURL:url];
+    }
+
+    return self;
+}
+
+- (MKCoordinateRegion)maximumCityRegion
+{
+    if (self.maxCityRegionInternal.span.latitudeDelta == 0)
+    {
+        NSDictionary *cityExtent = self.appDefaults[@"cityExtent"];
+        CLLocationCoordinate2D center = CLLocationCoordinate2DMake([cityExtent[@"centerLat"] doubleValue], [cityExtent[@"centerLong"] doubleValue]);
+        MKCoordinateSpan span = MKCoordinateSpanMake([cityExtent[@"deltaLat"] doubleValue], [cityExtent[@"deltaLong"] doubleValue]);
+        self.maxCityRegionInternal = MKCoordinateRegionMake(center, span);
+    }
+
+    return self.maxCityRegionInternal;
+}
 
 @end

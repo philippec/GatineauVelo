@@ -32,6 +32,13 @@
 {
     XCTAssertNoThrow(self.appDefaults = [[GVAppDefaults alloc] init]);
     XCTAssertNotNil(self.appDefaults);
+
+    MKCoordinateRegion region;
+    XCTAssertNoThrow(region = self.appDefaults.maximumCityRegion);
+    XCTAssertTrue(region.center.latitude != 0.0);
+    XCTAssertTrue(region.center.longitude != 0.0);
+    XCTAssertTrue(region.span.latitudeDelta > 0.0);
+    XCTAssertTrue(region.span.longitudeDelta > 0.0);
 }
 
 @end

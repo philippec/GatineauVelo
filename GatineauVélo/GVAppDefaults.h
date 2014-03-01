@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface GVAppDefaults : NSObject
+
+@property (readonly) MKCoordinateRegion maximumCityRegion;
 
 @end

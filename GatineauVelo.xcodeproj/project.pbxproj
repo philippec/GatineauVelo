@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67C18C2886200A36D54 /* GVAppDefaults.m */; };
 		370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */; };
+		370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -50,6 +51,7 @@
 		370AC67B18C2886200A36D54 /* GVAppDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAppDefaults.h; sourceTree = "<group>"; };
 		370AC67C18C2886200A36D54 /* GVAppDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaults.m; sourceTree = "<group>"; };
 		370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDefaultsTests.m; sourceTree = "<group>"; };
+		370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApplicationDefaults.plist; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +161,7 @@
 				370AC67B18C2886200A36D54 /* GVAppDefaults.h */,
 				370AC67C18C2886200A36D54 /* GVAppDefaults.m */,
 				370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */,
+				370AC68018C2892B00A36D54 /* ApplicationDefaults.plist */,
 				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
 				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
 				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
@@ -302,6 +305,7 @@
 			files = (
 				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
 				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+				370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */,
 				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
 				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
 			);
