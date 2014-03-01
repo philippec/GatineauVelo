@@ -10,14 +10,21 @@
 
 @interface GVMainViewController ()
 
+@property (assign) MKCoordinateRegion selectedRegion;
+
 @end
 
 @implementation GVMainViewController
 
+- (void)awakeFromNib
+{
+    self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.mapView.region = self.selectedRegion;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +45,14 @@
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
         [[segue destinationViewController] setDelegate:self];
     }
+}
+
+#pragma mark - MapView delegate
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    self.selectedRegion = self.mapView.region;
+    NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
 
 @end

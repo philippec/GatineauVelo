@@ -40,6 +40,7 @@
     XCTAssertNoThrow([self.controller view]);
 
     XCTAssertNotNil(self.controller.mapView);
+    XCTAssertEqualObjects(self.controller.mapView.delegate, self.controller);
 }
 
 @end

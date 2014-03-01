@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
 
-@interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate>
+@interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
