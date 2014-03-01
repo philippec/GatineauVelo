@@ -14,4 +14,6 @@
 
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 
+- (void)loadBikePathsAtURL:(NSURL *)url;
+
 @end
