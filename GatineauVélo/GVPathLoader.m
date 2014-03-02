@@ -40,10 +40,10 @@
 
     if (self.boundingRegion.span.latitudeDelta > 0 && self.boundingRegion.span.longitudeDelta > 0)
     {
-        minLat = self.boundingRegion.center.latitude - self.boundingRegion.span.latitudeDelta;
-        maxLat = self.boundingRegion.center.latitude + self.boundingRegion.span.latitudeDelta;
-        minLong = self.boundingRegion.center.longitude - self.boundingRegion.span.longitudeDelta;
-        maxLong = self.boundingRegion.center.longitude + self.boundingRegion.span.longitudeDelta;
+        minLat = self.boundingRegion.center.latitude - self.boundingRegion.span.latitudeDelta / 2.0;
+        maxLat = self.boundingRegion.center.latitude + self.boundingRegion.span.latitudeDelta / 2.0;
+        minLong = self.boundingRegion.center.longitude - self.boundingRegion.span.longitudeDelta / 2.0;
+        maxLong = self.boundingRegion.center.longitude + self.boundingRegion.span.longitudeDelta / 2.0;
     }
 
     NSString *coordsWithoutLinestring = [coords substringFromIndex:@"LINESTRING (".length];

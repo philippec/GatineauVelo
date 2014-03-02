@@ -10,12 +10,16 @@
 #import "GVMainViewController.h"
 #import "GVPathLoader.h"
 #import "GVContext.h"
+#import "GVAppDefaults.h"
 
 
 @implementation GVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
+    self.pathLoader.boundingRegion = appDefaults.maximumCityRegion;
+
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
     [self.pathLoader loadBikePathsAtURL:url];
 
