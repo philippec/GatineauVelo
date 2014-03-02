@@ -1,4 +1,7 @@
 
+/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
+"5QO-yh-4Fr.text" = "Main Bike Paths";
+
 /* Class = "IBUILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
 "BfK-in-HwL.text" = "Colours";
 
@@ -10,6 +13,12 @@
 
 /* Class = "IBUITableViewController"; title = "Settings"; ObjectID = "Ozv-HC-FVd"; */
 "Ozv-HC-FVd.title" = "Settings";
+
+/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "RQ5-C6-lNr"; */
+"RQ5-C6-lNr.text" = "Route Verte";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Wdy-xG-hi4"; */
+"Wdy-xG-hi4.title" = "Back";
 
 /* Class = "IBUILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "About this Application";

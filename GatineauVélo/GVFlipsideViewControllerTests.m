@@ -38,6 +38,10 @@
     XCTAssertNotNil(self.controller);
 
     XCTAssertNoThrow([self.controller view]);
+    XCTAssertNotNil(self.controller.navigationController);
+    XCTAssertEqualObjects(self.controller.navigationController.delegate, self.controller);
+    XCTAssertNotNil(self.controller.backButton);
+    XCTAssertFalse(self.controller.backButton.enabled);
 }
 
 @end

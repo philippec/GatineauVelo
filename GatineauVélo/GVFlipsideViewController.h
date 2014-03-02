@@ -14,10 +14,14 @@
 - (void)flipsideViewControllerDidFinish:(GVFlipsideViewController *)controller;
 @end
 
-@interface GVFlipsideViewController : UIViewController
+@interface GVFlipsideViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (weak, nonatomic) id <GVFlipsideViewControllerDelegate> delegate;
+@property (readonly) UINavigationController *navigationController;
+
+@property (strong) IBOutlet UIBarButtonItem *backButton;
 
 - (IBAction)done:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end
