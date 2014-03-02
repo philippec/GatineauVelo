@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface GVPathLoader : NSObject
 
 @property (readonly) NSManagedObjectContext *managedObjectContext;
+@property (assign) MKCoordinateRegion boundingRegion;
 
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 

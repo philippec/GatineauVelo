@@ -33,6 +33,19 @@
 {
     NSMutableSet *s = [NSMutableSet setWithCapacity:0];
 
+    CGFloat minLat =  -90.0;
+    CGFloat maxLat =   90.0;
+    CGFloat minLong = -90.0;
+    CGFloat maxLong =  90.0;
+
+    if (self.boundingRegion.span.latitudeDelta > 0 && self.boundingRegion.span.longitudeDelta > 0)
+    {
+        minLat = self.boundingRegion.center.latitude - self.boundingRegion.span.latitudeDelta;
+        maxLat = self.boundingRegion.center.latitude + self.boundingRegion.span.latitudeDelta;
+        minLong = self.boundingRegion.center.longitude - self.boundingRegion.span.longitudeDelta;
+        maxLong = self.boundingRegion.center.longitude + self.boundingRegion.span.longitudeDelta;
+    }
+
     NSString *coordsWithoutLinestring = [coords substringFromIndex:@"LINESTRING (".length];
     NSString *coordsWithoutBraces = [coordsWithoutLinestring substringToIndex:coordsWithoutLinestring.length - 2];
     NSArray *allCoords = [coordsWithoutBraces componentsSeparatedByString:@","];
@@ -40,11 +53,18 @@
     for (NSString *oneCoord in allCoords)
     {
         NSScanner *scanner = [NSScanner scannerWithString:oneCoord];
-        GVPoint *pt = [NSEntityDescription insertNewObjectForEntityForName:@"GVPoint" inManagedObjectContext:self.managedObjectContext];
 
         double latitude, longitude;
         [scanner scanDouble:&longitude];
         [scanner scanDouble:&latitude];
+
+        if (latitude < minLat || latitude > maxLat || longitude < minLong || longitude > maxLong)
+        {
+            NSLog(@"pt outside of coord space {%g %g}", latitude, longitude);
+            continue;
+        }
+
+        GVPoint *pt = [NSEntityDescription insertNewObjectForEntityForName:@"GVPoint" inManagedObjectContext:self.managedObjectContext];
 
         pt.latitude = [NSNumber numberWithDouble:latitude];
         pt.longitude = [NSNumber numberWithDouble:longitude];

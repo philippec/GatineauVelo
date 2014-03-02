@@ -17,6 +17,7 @@
 		370AC68D18C29A0300A36D54 /* GVContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC68C18C29A0300A36D54 /* GVContextTests.m */; };
 		370AC69518C2A33200A36D54 /* GVTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC69418C2A33200A36D54 /* GVTestCase.m */; };
 		370AC69718C2A3AF00A36D54 /* GVMainViewControllerTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 370AC69618C2A3AF00A36D54 /* GVMainViewControllerTestsData */; };
+		370AC69918C2B55A00A36D54 /* GVPathLoaderTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -69,6 +70,7 @@
 		370AC69318C2A33200A36D54 /* GVTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVTestCase.h; sourceTree = "<group>"; };
 		370AC69418C2A33200A36D54 /* GVTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVTestCase.m; sourceTree = "<group>"; };
 		370AC69618C2A3AF00A36D54 /* GVMainViewControllerTestsData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GVMainViewControllerTestsData; sourceTree = "<group>"; };
+		370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GVPathLoaderTestsData; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 				370AC68218C28E6800A36D54 /* GVPathLoader.h */,
 				370AC68318C28E6800A36D54 /* GVPathLoader.m */,
 				370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */,
+				370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373DC8D818BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+				370AC69918C2B55A00A36D54 /* GVPathLoaderTestsData in Resources */,
 				370AC69718C2A3AF00A36D54 /* GVMainViewControllerTestsData in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
