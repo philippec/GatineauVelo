@@ -220,6 +220,9 @@
                                                 <constraint firstItem="q90-xu-Q0C" firstAttribute="leading" secondItem="xFw-05-tmZ" secondAttribute="leading" constant="20" symbolic="YES" id="Mfs-sB-ksN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MsA-WV-BCB" kind="push" id="sAd-dM-CS8"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6A9-MF-7vZ">
                                         <rect key="frame" x="0.0" y="235" width="320" height="44"/>
@@ -536,6 +539,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSF-uy-7AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1382" y="498"/>
+        </scene>
+        <!--Open Data License View Controller-->
+        <scene sceneID="LpS-mc-5Z1">
+            <objects>
+                <viewController storyboardIdentifier="GVOpenDataLicenseViewController" id="MsA-WV-BCB" customClass="GVOpenDataLicenseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Gd-4E-9yR"/>
+                        <viewControllerLayoutGuide type="bottom" id="wh9-5T-muW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="odA-Uf-M5N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="igG-Lp-xU7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="igG-Lp-xU7" secondAttribute="trailing" id="4yV-Fq-Lnx"/>
+                            <constraint firstItem="igG-Lp-xU7" firstAttribute="top" secondItem="odA-Uf-M5N" secondAttribute="top" id="5QW-Lv-ZCV"/>
+                            <constraint firstAttribute="bottom" secondItem="igG-Lp-xU7" secondAttribute="bottom" id="CIK-YL-08d"/>
+                            <constraint firstItem="igG-Lp-xU7" firstAttribute="leading" secondItem="odA-Uf-M5N" secondAttribute="leading" id="gAN-hq-Y29"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8vK-ui-7Mb"/>
+                    <connections>
+                        <outlet property="webView" destination="igG-Lp-xU7" id="Uah-xf-n48"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VvP-f4-hYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="498"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
