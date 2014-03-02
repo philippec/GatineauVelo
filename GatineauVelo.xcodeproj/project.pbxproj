@@ -551,7 +551,7 @@
 				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/philippe/Desktop/GatineauVélo/GatineauVéloTests/OCMock/iOS",
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -587,7 +587,7 @@
 				INFOPLIST_FILE = "GatineauVéloTests/GatineauVéloTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/philippe/Desktop/GatineauVélo/GatineauVéloTests/OCMock/iOS",
+					"\"$(SRCROOT)/GatineauVéloTests/OCMock/iOS\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
