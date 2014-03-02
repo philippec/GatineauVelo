@@ -14,6 +14,8 @@
 @interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong) UIColor *standardColor;
+@property (strong) UIColor *routeVerteColor;
 
 @property (strong) IBOutlet MKMapView *mapView;
 

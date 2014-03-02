@@ -22,6 +22,8 @@
 - (void)awakeFromNib
 {
     self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
+    self.routeVerteColor = [UIColor greenColor];
+    self.standardColor = [UIColor orangeColor];
 }
 
 - (void)viewDidLoad
@@ -108,7 +110,7 @@
         return;
     }
 
-    NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:[UIColor greenColor]];
+    NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.routeVerteColor];
     [self.mapView addOverlays:pistesCyclables];
 
     // Not route_verte
@@ -122,7 +124,7 @@
         return;
     }
 
-    pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:[UIColor orangeColor]];
+    pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.standardColor];
     [self.mapView addOverlays:pistesCyclables];
 }
 

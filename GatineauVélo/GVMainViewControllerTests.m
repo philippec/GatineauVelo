@@ -58,4 +58,13 @@
     XCTAssertEqualObjects(self.controller.mapView.delegate, self.controller);
 }
 
+- (void)testColors
+{
+    XCTAssertNoThrow(self.controller.standardColor = [UIColor redColor]);
+    XCTAssertEqualObjects(self.controller.standardColor, [UIColor redColor]);
+
+    XCTAssertNoThrow(self.controller.routeVerteColor = [UIColor blueColor]);
+    XCTAssertEqualObjects(self.controller.routeVerteColor, [UIColor blueColor]);
+}
+
 @end

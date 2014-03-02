@@ -25,6 +25,9 @@
 
     GVMainViewController *controller = (GVMainViewController *)self.window.rootViewController;
     controller.managedObjectContext = self.context.managedObjectContext;
+    controller.standardColor = [appDefaults colorNamed:@"standardColor"];
+    controller.routeVerteColor = [appDefaults colorNamed:@"routeVerteColor"];
+    
     return YES;
 }
 							
