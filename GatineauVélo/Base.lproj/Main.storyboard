@@ -240,6 +240,9 @@
                                                 <constraint firstItem="Nd3-n3-X0h" firstAttribute="centerY" secondItem="r3G-vz-QDo" secondAttribute="centerY" id="brn-dQ-phF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="STC-p5-RVl" kind="push" id="jMY-v2-5OZ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tze-4y-F3k">
                                         <rect key="frame" x="0.0" y="279" width="320" height="44"/>
@@ -499,6 +502,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1o-De-ybz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-61" y="246"/>
+        </scene>
+        <!--Licenses View Controller-->
+        <scene sceneID="NPy-hh-AMc">
+            <objects>
+                <viewController storyboardIdentifier="GVLicensesViewController" id="STC-p5-RVl" customClass="GVLicensesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cLQ-TA-b9S"/>
+                        <viewControllerLayoutGuide type="bottom" id="8FM-hs-omD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S7c-Aw-bfU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="XSq-Tj-Z23">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XSq-Tj-Z23" secondAttribute="trailing" id="WOB-Me-5vO"/>
+                            <constraint firstItem="XSq-Tj-Z23" firstAttribute="leading" secondItem="S7c-Aw-bfU" secondAttribute="leading" id="hJa-j7-oEf"/>
+                            <constraint firstAttribute="bottom" secondItem="XSq-Tj-Z23" secondAttribute="bottom" id="mXz-oF-cTb"/>
+                            <constraint firstItem="XSq-Tj-Z23" firstAttribute="top" secondItem="S7c-Aw-bfU" secondAttribute="top" id="vzc-R7-mW2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YXO-zN-HLD"/>
+                    <connections>
+                        <outlet property="webView" destination="XSq-Tj-Z23" id="wCp-Ux-9ps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSF-uy-7AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="498"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

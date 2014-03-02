@@ -32,6 +32,8 @@
 		370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */; };
 		370AC6D218C3DE7700A36D54 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 370AC6D418C3DE7700A36D54 /* about.html */; };
 		370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */; };
+		370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6DB18C3E71700A36D54 /* GVLicensesViewController.m */; };
+		370AC6DF18C3E71E00A36D54 /* GVLicensesViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6DC18C3E71700A36D54 /* GVLicensesViewControllerTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -52,6 +54,7 @@
 		373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */; };
 		373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */; };
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
+		378DA92718C3E75B00ED4501 /* licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92518C3E75B00ED4501 /* licenses.html */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
@@ -108,9 +111,12 @@
 		370AC6CA18C3D67E00A36D54 /* GVCoordinateCheckerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCoordinateCheckerTests.m; sourceTree = "<group>"; };
 		370AC6CD18C3DCF100A36D54 /* GVAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAboutViewController.h; sourceTree = "<group>"; };
 		370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAboutViewController.m; sourceTree = "<group>"; };
-		370AC6D618C3DE7C00A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/about.html; sourceTree = "<group>"; };
-		370AC6D718C3DEB700A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/about.html; sourceTree = "<group>"; };
+		370AC6D618C3DE7C00A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/about.html; sourceTree = "<group>"; };
+		370AC6D718C3DEB700A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/about.html; sourceTree = "<group>"; };
 		370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAboutViewControllerTests.m; sourceTree = "<group>"; };
+		370AC6DA18C3E71700A36D54 /* GVLicensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVLicensesViewController.h; sourceTree = "<group>"; };
+		370AC6DB18C3E71700A36D54 /* GVLicensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLicensesViewController.m; sourceTree = "<group>"; };
+		370AC6DC18C3E71700A36D54 /* GVLicensesViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLicensesViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +142,8 @@
 		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
+		378DA92618C3E75B00ED4501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/licenses.html; sourceTree = "<group>"; };
+		378DA92818C3E76100ED4501 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/licenses.html; sourceTree = "<group>"; };
 		37BAB16C18BA767A00B949D1 /* GVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPoint.h; sourceTree = "<group>"; };
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
@@ -192,6 +200,10 @@
 				370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */,
 				370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */,
 				370AC6D418C3DE7700A36D54 /* about.html */,
+				370AC6DA18C3E71700A36D54 /* GVLicensesViewController.h */,
+				370AC6DB18C3E71700A36D54 /* GVLicensesViewController.m */,
+				370AC6DC18C3E71700A36D54 /* GVLicensesViewControllerTests.m */,
+				378DA92518C3E75B00ED4501 /* licenses.html */,
 			);
 			name = "Web Views";
 			sourceTree = "<group>";
@@ -417,6 +429,7 @@
 				370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */,
 				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
 				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
+				378DA92718C3E75B00ED4501 /* licenses.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +462,7 @@
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
 				370AC6BF18C3A10B00A36D54 /* GVPathEnabledViewController.m in Sources */,
 				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,
+				370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */,
 				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
 				370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */,
 				370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */,
@@ -473,6 +487,7 @@
 				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
 				370AC6C618C3B20800A36D54 /* GVUserLocationTests.m in Sources */,
 				370AC6C118C3A10F00A36D54 /* GVPathEnabledViewControllerTests.m in Sources */,
+				370AC6DF18C3E71E00A36D54 /* GVLicensesViewControllerTests.m in Sources */,
 				370AC6CB18C3D67E00A36D54 /* GVCoordinateCheckerTests.m in Sources */,
 				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,
 			);
@@ -524,6 +539,15 @@
 				37EFADB318BA716000728113 /* fr */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		378DA92518C3E75B00ED4501 /* licenses.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				378DA92618C3E75B00ED4501 /* en */,
+				378DA92818C3E76100ED4501 /* fr */,
+			);
+			name = licenses.html;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
