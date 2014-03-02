@@ -9,46 +9,56 @@
             <objects>
                 <viewController storyboardIdentifier="GVMainViewController" id="rQl-PL-IFJ" customClass="GVMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yHs-zc-7Ou"/>
-                        <viewControllerLayoutGuide type="bottom" id="OnH-mB-bF7"/>
+                        <viewControllerLayoutGuide type="top" id="083-jn-Pie"/>
+                        <viewControllerLayoutGuide type="bottom" id="zfa-u3-UcC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l9E-07-oys">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8y-eM-9F2">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kh1-cD-lZm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8y-eM-9F2">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="rQl-PL-IFJ" id="L1B-et-gWP"/>
+                                        </connections>
+                                    </mapView>
+                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-sy-dxO">
+                                        <rect key="frame" x="278" y="526" width="22" height="22"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" priority="683" constant="548" id="SbA-dZ-2zI"/>
+                                    <constraint firstAttribute="bottom" secondItem="L8y-eM-9F2" secondAttribute="bottom" id="2Zh-ng-Br1"/>
+                                    <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="7Ay-bR-u1D"/>
+                                    <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Awz-6h-Ego"/>
+                                    <constraint firstAttribute="trailing" secondItem="L8y-eM-9F2" secondAttribute="trailing" id="OhR-u9-Nmq"/>
+                                    <constraint firstItem="L8y-eM-9F2" firstAttribute="leading" secondItem="kh1-cD-lZm" secondAttribute="leading" id="exg-7h-M9P"/>
+                                    <constraint firstItem="L8y-eM-9F2" firstAttribute="top" secondItem="kh1-cD-lZm" secondAttribute="top" constant="20" symbolic="YES" id="jYK-65-x21"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="rQl-PL-IFJ" id="L1B-et-gWP"/>
-                                </connections>
-                            </mapView>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-sy-dxO">
-                                <rect key="frame" x="278" y="526" width="22" height="22"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
-                            <constraint firstItem="yHs-zc-7Ou" firstAttribute="top" secondItem="L8y-eM-9F2" secondAttribute="bottom" constant="-548" id="4lJ-cU-Nya"/>
-                            <constraint firstAttribute="trailing" secondItem="L8y-eM-9F2" secondAttribute="trailing" id="L5L-tP-9Ui"/>
-                            <constraint firstItem="L8y-eM-9F2" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" id="Qgo-s1-phV"/>
-                            <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
-                            <constraint firstItem="OnH-mB-bF7" firstAttribute="top" secondItem="L8y-eM-9F2" secondAttribute="bottom" id="qwS-kD-sJB"/>
+                            <constraint firstItem="kh1-cD-lZm" firstAttribute="top" secondItem="l9E-07-oys" secondAttribute="top" id="3xF-um-WTx"/>
+                            <constraint firstAttribute="trailing" secondItem="kh1-cD-lZm" secondAttribute="trailing" id="Zjt-tY-j04"/>
+                            <constraint firstItem="kh1-cD-lZm" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leading" id="rEk-1W-69u"/>
+                            <constraint firstAttribute="bottom" secondItem="kh1-cD-lZm" secondAttribute="bottom" id="rnR-EM-Fea"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,14 +74,14 @@
             <objects>
                 <viewController storyboardIdentifier="GVFlipsideViewController" id="kIf-nA-PKG" customClass="GVFlipsideViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VJB-bq-5tn"/>
-                        <viewControllerLayoutGuide type="bottom" id="pSS-Sm-AoX"/>
+                        <viewControllerLayoutGuide type="top" id="Spz-ZN-PrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="x9D-Mf-B1Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tg4-aq-CMy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="caU-JJ-JLf">
@@ -85,11 +95,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="leading" secondItem="tg4-aq-CMy" secondAttribute="leading" id="4QI-iY-IyT"/>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="top" secondItem="tg4-aq-CMy" secondAttribute="top" id="4lF-kP-6dV"/>
-                            <constraint firstItem="hED-2o-FLw" firstAttribute="trailing" secondItem="tg4-aq-CMy" secondAttribute="trailing" id="cVE-3m-sGp"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlJ-1o-FvB" sceneMemberID="firstResponder"/>
