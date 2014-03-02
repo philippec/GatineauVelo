@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface GVUserLocation : NSObject
+
+typedef void (^GVUserLocationCallback)(CLLocationCoordinate2D userPosition);
+
+@interface GVUserLocation : NSObject <CLLocationManagerDelegate>
+
+- (BOOL)locationServicesEnabled;
+
+- (void)locateUserPositionWithBlock:(GVUserLocationCallback)callback;
 
 @end

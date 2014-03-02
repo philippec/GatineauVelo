@@ -11,12 +11,15 @@
 #import <CoreData/CoreData.h>
 #import <MapKit/MapKit.h>
 
+@class GVUserLocation;
+
 @interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate, MKMapViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong) UIColor *standardColor;
 @property (strong) UIColor *routeVerteColor;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
+@property (nonatomic, strong) GVUserLocation *userLocation;
 
 
 @property (strong) IBOutlet MKMapView *mapView;

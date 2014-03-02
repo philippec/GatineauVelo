@@ -10,6 +10,7 @@
 #import "GVPisteCyclable.h"
 #import "GVPoint.h"
 #import "GVColorPolyline.h"
+#import "GVUserLocation.h"
 
 @interface GVMainViewController ()
 
@@ -30,6 +31,17 @@
 {
     [super viewDidLoad];
     self.mapView.region = self.selectedRegion;
+
+    if (self.userLocation.locationServicesEnabled)
+    {
+        [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
+            // This span represents a "neighbourhood" area
+            MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
+            MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
+            [self.mapView setRegion:region animated:YES];
+        }];
+    }
+
     [self updateAllOverlays];
 }
 
@@ -47,6 +59,16 @@
     }
 
     return _userDefaults;
+}
+
+- (GVUserLocation *)userLocation
+{
+    if (!_userLocation)
+    {
+        _userLocation = [[GVUserLocation alloc] init];
+    }
+
+    return _userLocation;
 }
 
 #pragma mark - Flipside View

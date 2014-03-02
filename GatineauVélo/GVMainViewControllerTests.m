@@ -11,6 +11,7 @@
 #import "GVMainViewController.h"
 #import "GVPathLoader.h"
 #import "GVContext.h"
+#import "GVUserLocation.h"
 
 @interface GVMainViewControllerTests : GVTestCase
 
@@ -19,6 +20,7 @@
 @property (strong) GVPathLoader *pathLoader;
 @property (strong) GVContext *context;
 @property (strong) id mockUserDefaults;
+@property (strong) id mockUserLocation;
 
 @end
 
@@ -37,6 +39,9 @@
     [self.pathLoader loadBikePathsAtURL:fileURL];
 
     self.mockUserDefaults = [OCMockObject mockForClass:[NSUserDefaults class]];
+    self.mockUserLocation = [OCMockObject mockForClass:[GVUserLocation class]];
+
+    self.controller.userLocation = self.mockUserLocation;
 }
 
 - (void)tearDown
@@ -46,6 +51,7 @@
     self.context = nil;
     self.pathLoader = nil;
     self.mockUserDefaults = nil;
+    self.mockUserLocation = nil;
     [super tearDown];
 }
 
@@ -61,10 +67,14 @@
 
     XCTAssertNotNil(self.controller.mapView);
     XCTAssertEqualObjects(self.controller.mapView.delegate, self.controller);
-    XCTAssertNotNil(self.controller.userDefaults);
 
+    XCTAssertNotNil(self.controller.userDefaults);
     XCTAssertNoThrow(self.controller.userDefaults = self.mockUserDefaults);
     XCTAssertEqualObjects(self.controller.userDefaults, self.mockUserDefaults);
+
+    XCTAssertNotNil(self.controller.userLocation);
+    XCTAssertNoThrow(self.controller.userLocation = self.mockUserLocation);
+    XCTAssertEqualObjects(self.controller.userLocation, self.mockUserLocation);
 }
 
 - (void)testColors
