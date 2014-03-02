@@ -10,6 +10,7 @@
 #import "DDFileReader.h"
 #import "GVPisteCyclable.h"
 #import "GVPoint.h"
+#import "GVCoordinateChecker.h"
 
 @interface GVPathLoader()
 
@@ -33,18 +34,7 @@
 {
     NSMutableSet *s = [NSMutableSet setWithCapacity:0];
 
-    CGFloat minLat =  -90.0;
-    CGFloat maxLat =   90.0;
-    CGFloat minLong = -90.0;
-    CGFloat maxLong =  90.0;
-
-    if (self.boundingRegion.span.latitudeDelta > 0 && self.boundingRegion.span.longitudeDelta > 0)
-    {
-        minLat = self.boundingRegion.center.latitude - self.boundingRegion.span.latitudeDelta / 2.0;
-        maxLat = self.boundingRegion.center.latitude + self.boundingRegion.span.latitudeDelta / 2.0;
-        minLong = self.boundingRegion.center.longitude - self.boundingRegion.span.longitudeDelta / 2.0;
-        maxLong = self.boundingRegion.center.longitude + self.boundingRegion.span.longitudeDelta / 2.0;
-    }
+    GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.boundingRegion];
 
     NSString *coordsWithoutLinestring = [coords substringFromIndex:@"LINESTRING (".length];
     NSString *coordsWithoutBraces = [coordsWithoutLinestring substringToIndex:coordsWithoutLinestring.length - 2];
@@ -58,9 +48,8 @@
         [scanner scanDouble:&longitude];
         [scanner scanDouble:&latitude];
 
-        if (latitude < minLat || latitude > maxLat || longitude < minLong || longitude > maxLong)
+        if (![checker coordinateInRegion:CLLocationCoordinate2DMake(latitude, longitude)])
         {
-//            NSLog(@"pt outside of coord space {%g %g}", latitude, longitude);
             continue;
         }
 

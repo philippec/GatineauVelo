@@ -11,6 +11,8 @@
 #import "GVPoint.h"
 #import "GVColorPolyline.h"
 #import "GVUserLocation.h"
+#import "GVAppDefaults.h"
+#import "GVCoordinateChecker.h"
 
 @interface GVMainViewController ()
 
@@ -35,10 +37,15 @@
     if (self.userLocation.locationServicesEnabled)
     {
         [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
-            // This span represents a "neighbourhood" area
-            MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
-            MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
-            [self.mapView setRegion:region animated:YES];
+            GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
+            GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:appDefaults.maximumCityRegion];
+            if ([checker coordinateInRegion:userPosition])
+            {
+                // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
+                MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
+                MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
+                [self.mapView setRegion:region animated:YES];
+            }
         }];
     }
 
