@@ -9,6 +9,7 @@
 #import "GVMainViewController.h"
 #import "GVPisteCyclable.h"
 #import "GVPoint.h"
+#import "GVColorPolyline.h"
 
 @interface GVMainViewController ()
 
@@ -58,22 +59,8 @@
     NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
 
-- (void)updateAllOverlays
+- (NSArray *)pistesCyclablesForFetchRequestController:(NSFetchedResultsController *)frc withColor:(UIColor *)color
 {
-    // Filter out the map points that can be shown on the map
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];
-    fetchRequest.sortDescriptors = @[sortDescriptor];
-    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-
-    NSError *error;
-    [frc performFetch:&error];
-    if (error)
-    {
-        NSLog(@"fetch error: %@", error);
-        return;
-    }
-
     NSMutableArray *pistesCyclablesVisibles = [NSMutableArray array];
     for (GVPisteCyclable *pisteCyclable in frc.fetchedObjects)
     {
@@ -90,20 +77,63 @@
             coords[count] = CLLocationCoordinate2DMake(pt.latitude.doubleValue, pt.longitude.doubleValue);
             count++;
         }
-        MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:count];
+        GVColorPolyline *polyLine = [GVColorPolyline polylineWithCoordinates:coords count:count];
+        polyLine.color = color;
         [pistesCyclablesVisibles addObject:polyLine];
         free(coords);
     }
 
+    return [NSArray arrayWithArray:pistesCyclablesVisibles];
+}
+
+- (void)updateAllOverlays
+{
     [self.mapView removeOverlays:self.mapView.overlays];
 
-    [self.mapView addOverlays:pistesCyclablesVisibles];
+    // Filter out the map points that can be shown on the map
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+
+    // route_verte
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"route_verte == 1"];
+    fetchRequest.predicate = p;
+
+    NSError *error;
+    [frc performFetch:&error];
+    if (error)
+    {
+        NSLog(@"fetch error: %@", error);
+        return;
+    }
+
+    NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:[UIColor greenColor]];
+    [self.mapView addOverlays:pistesCyclables];
+
+    // Not route_verte
+    p = [NSPredicate predicateWithFormat:@"route_verte == 0"];
+    fetchRequest.predicate = p;
+
+    [frc performFetch:&error];
+    if (error)
+    {
+        NSLog(@"fetch error: %@", error);
+        return;
+    }
+
+    pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:[UIColor orangeColor]];
+    [self.mapView addOverlays:pistesCyclables];
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
     MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
-    renderer.strokeColor = [UIColor orangeColor];
+    if ([overlay isKindOfClass:[GVColorPolyline class]])
+    {
+        GVColorPolyline *polyLine = (GVColorPolyline *)overlay;
+        renderer.strokeColor = polyLine.color;
+    }
     renderer.lineWidth = 4.0;
     return renderer;
 }
