@@ -21,6 +21,8 @@
 		370AC69C18C2E3E800A36D54 /* GVColorPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC69B18C2E3E800A36D54 /* GVColorPolyline.m */; };
 		370AC69E18C2E43C00A36D54 /* GVColorPolylineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC69D18C2E43C00A36D54 /* GVColorPolylineTests.m */; };
 		370AC6A118C2ED5400A36D54 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */; };
+		370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6B818C3987700A36D54 /* GVPathColorsViewController.m */; };
+		370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -83,6 +85,9 @@
 		370AC6A418C377E300A36D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		370AC6B518C3941400A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		370AC6B618C3941700A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		370AC6B718C3987700A36D54 /* GVPathColorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathColorsViewController.h; sourceTree = "<group>"; };
+		370AC6B818C3987700A36D54 /* GVPathColorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathColorsViewController.m; sourceTree = "<group>"; };
+		370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathColorsViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +221,9 @@
 				373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */,
 				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
 				373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */,
+				370AC6B718C3987700A36D54 /* GVPathColorsViewController.h */,
+				370AC6B818C3987700A36D54 /* GVPathColorsViewController.m */,
+				370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */,
 				370AC68218C28E6800A36D54 /* GVPathLoader.h */,
 				370AC68318C28E6800A36D54 /* GVPathLoader.m */,
 				370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */,
@@ -394,6 +402,7 @@
 				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
 				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,
+				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
 				370AC6A118C2ED5400A36D54 /* UIColor+HexColors.m in Sources */,
 				373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */,
@@ -404,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */,
 				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
 				370AC68D18C29A0300A36D54 /* GVContextTests.m in Sources */,
