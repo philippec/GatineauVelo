@@ -81,6 +81,8 @@
 		370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Third Party/UIColor+HexColors.m"; sourceTree = "<group>"; };
 		370AC6A318C377E300A36D54 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		370AC6A418C377E300A36D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		370AC6B118C3857700A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		370AC6B218C3857B00A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,8 +115,6 @@
 		37BAB17318BAED9300B949D1 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = "Third Party/DDFileReader.h"; sourceTree = "<group>"; };
 		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		37EFADB018BA712F00728113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		37EFADB118BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PISTE_CYCLABLE.csv; sourceTree = "<group>"; };
@@ -439,8 +439,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				373DC8BA18BA6CC2003FBFC3 /* Base */,
-				37EFADB018BA712F00728113 /* en */,
-				37EFADB118BA716000728113 /* fr */,
+				370AC6B118C3857700A36D54 /* en */,
+				370AC6B218C3857B00A36D54 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
