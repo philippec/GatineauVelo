@@ -29,6 +29,9 @@
 		370AC6C618C3B20800A36D54 /* GVUserLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */; };
 		370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6C818C3D66A00A36D54 /* GVCoordinateChecker.m */; };
 		370AC6CB18C3D67E00A36D54 /* GVCoordinateCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6CA18C3D67E00A36D54 /* GVCoordinateCheckerTests.m */; };
+		370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */; };
+		370AC6D218C3DE7700A36D54 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 370AC6D418C3DE7700A36D54 /* about.html */; };
+		370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -103,6 +106,11 @@
 		370AC6C718C3D66A00A36D54 /* GVCoordinateChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVCoordinateChecker.h; sourceTree = "<group>"; };
 		370AC6C818C3D66A00A36D54 /* GVCoordinateChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCoordinateChecker.m; sourceTree = "<group>"; };
 		370AC6CA18C3D67E00A36D54 /* GVCoordinateCheckerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVCoordinateCheckerTests.m; sourceTree = "<group>"; };
+		370AC6CD18C3DCF100A36D54 /* GVAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAboutViewController.h; sourceTree = "<group>"; };
+		370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAboutViewController.m; sourceTree = "<group>"; };
+		370AC6D618C3DE7C00A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/about.html; sourceTree = "<group>"; };
+		370AC6D718C3DEB700A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/about.html; sourceTree = "<group>"; };
+		370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAboutViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,6 +185,17 @@
 			name = "Distribution Support";
 			sourceTree = "<group>";
 		};
+		370AC6CC18C3DCC700A36D54 /* Web Views */ = {
+			isa = PBXGroup;
+			children = (
+				370AC6CD18C3DCF100A36D54 /* GVAboutViewController.h */,
+				370AC6CE18C3DCF100A36D54 /* GVAboutViewController.m */,
+				370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */,
+				370AC6D418C3DE7700A36D54 /* about.html */,
+			);
+			name = "Web Views";
+			sourceTree = "<group>";
+		};
 		373DC89918BA6CC2003FBFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +234,7 @@
 			children = (
 				37BAB17218BAED6700B949D1 /* Third Party */,
 				37EFADB418BA721300728113 /* Model */,
+				370AC6CC18C3DCC700A36D54 /* Web Views */,
 				370AC67B18C2886200A36D54 /* GVAppDefaults.h */,
 				370AC67C18C2886200A36D54 /* GVAppDefaults.m */,
 				370AC67E18C2887600A36D54 /* GVAppDefaultsTests.m */,
@@ -391,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC6D218C3DE7700A36D54 /* about.html in Resources */,
 				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
 				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
 				370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */,
@@ -429,6 +450,7 @@
 				370AC6BF18C3A10B00A36D54 /* GVPathEnabledViewController.m in Sources */,
 				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,
 				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
+				370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */,
 				370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
 				370AC6A118C2ED5400A36D54 /* UIColor+HexColors.m in Sources */,
@@ -440,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */,
 				370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */,
 				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
@@ -466,6 +489,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		370AC6D418C3DE7700A36D54 /* about.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				370AC6D618C3DE7C00A36D54 /* fr */,
+				370AC6D718C3DEB700A36D54 /* en */,
+			);
+			name = about.html;
+			sourceTree = "<group>";
+		};
 		373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

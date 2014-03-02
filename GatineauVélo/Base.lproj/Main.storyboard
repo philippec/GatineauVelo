@@ -260,6 +260,9 @@
                                                 <constraint firstItem="WlB-al-rZQ" firstAttribute="centerY" secondItem="3em-XX-jh7" secondAttribute="centerY" id="nQU-Xw-VgU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pCp-PG-7IT" kind="push" id="uHm-CI-UA3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -270,6 +273,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONu-fA-rxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="246"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="1k3-ZR-zGb">
+            <objects>
+                <viewController storyboardIdentifier="GVAboutViewController" id="pCp-PG-7IT" customClass="GVAboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hcf-ml-xZ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="W6B-Rg-FzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ncc-jO-ceS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-gX-7GF">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9Mf-gX-7GF" secondAttribute="trailing" id="7wS-T4-W31"/>
+                            <constraint firstItem="9Mf-gX-7GF" firstAttribute="leading" secondItem="ncc-jO-ceS" secondAttribute="leading" id="A6H-vP-Ibx"/>
+                            <constraint firstAttribute="bottom" secondItem="9Mf-gX-7GF" secondAttribute="bottom" id="Kkb-Gm-qYv"/>
+                            <constraint firstItem="9Mf-gX-7GF" firstAttribute="top" secondItem="ncc-jO-ceS" secondAttribute="top" id="QDH-XC-964"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mXh-Ui-eQy"/>
+                    <connections>
+                        <outlet property="webView" destination="9Mf-gX-7GF" id="aol-VX-j3Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rie-t4-SlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="498"/>
         </scene>
         <!--Path Enabled View Controller-->
         <scene sceneID="e1i-qi-uhR">
@@ -356,7 +393,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSA-Tx-fO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-493"/>
+            <point key="canvasLocation" x="996" y="-227"/>
         </scene>
         <!--Path Colors View Controller-->
         <scene sceneID="n2u-Db-98C">
@@ -443,7 +480,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJR-lx-JWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="115"/>
+            <point key="canvasLocation" x="1398" y="-227"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v8S-79-s4d">
