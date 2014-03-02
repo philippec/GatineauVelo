@@ -60,7 +60,7 @@
 
         if (latitude < minLat || latitude > maxLat || longitude < minLong || longitude > maxLong)
         {
-            NSLog(@"pt outside of coord space {%g %g}", latitude, longitude);
+//            NSLog(@"pt outside of coord space {%g %g}", latitude, longitude);
             continue;
         }
 
