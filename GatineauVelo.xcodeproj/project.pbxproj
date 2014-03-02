@@ -25,6 +25,8 @@
 		370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */; };
 		370AC6BF18C3A10B00A36D54 /* GVPathEnabledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6BD18C3A10B00A36D54 /* GVPathEnabledViewController.m */; };
 		370AC6C118C3A10F00A36D54 /* GVPathEnabledViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6BE18C3A10B00A36D54 /* GVPathEnabledViewControllerTests.m */; };
+		370AC6C418C3B18E00A36D54 /* GVUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6C318C3B18E00A36D54 /* GVUserLocation.m */; };
+		370AC6C618C3B20800A36D54 /* GVUserLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -93,6 +95,9 @@
 		370AC6BC18C3A10B00A36D54 /* GVPathEnabledViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathEnabledViewController.h; sourceTree = "<group>"; };
 		370AC6BD18C3A10B00A36D54 /* GVPathEnabledViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathEnabledViewController.m; sourceTree = "<group>"; };
 		370AC6BE18C3A10B00A36D54 /* GVPathEnabledViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathEnabledViewControllerTests.m; sourceTree = "<group>"; };
+		370AC6C218C3B18E00A36D54 /* GVUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVUserLocation.h; sourceTree = "<group>"; };
+		370AC6C318C3B18E00A36D54 /* GVUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserLocation.m; sourceTree = "<group>"; };
+		370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVUserLocationTests.m; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -236,6 +241,9 @@
 				370AC68318C28E6800A36D54 /* GVPathLoader.m */,
 				370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */,
 				370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */,
+				370AC6C218C3B18E00A36D54 /* GVUserLocation.h */,
+				370AC6C318C3B18E00A36D54 /* GVUserLocation.m */,
+				370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
@@ -400,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370AC6C418C3B18E00A36D54 /* GVUserLocation.m in Sources */,
 				370AC69C18C2E3E800A36D54 /* GVColorPolyline.m in Sources */,
 				37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */,
 				37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */,
@@ -430,6 +439,7 @@
 				370AC69E18C2E43C00A36D54 /* GVColorPolylineTests.m in Sources */,
 				370AC69518C2A33200A36D54 /* GVTestCase.m in Sources */,
 				373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */,
+				370AC6C618C3B20800A36D54 /* GVUserLocationTests.m in Sources */,
 				370AC6C118C3A10F00A36D54 /* GVPathEnabledViewControllerTests.m in Sources */,
 				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,
 			);
