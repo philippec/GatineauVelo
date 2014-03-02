@@ -79,6 +79,8 @@
 		370AC69D18C2E43C00A36D54 /* GVColorPolylineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVColorPolylineTests.m; sourceTree = "<group>"; };
 		370AC69F18C2ED5400A36D54 /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Third Party/UIColor+HexColors.h"; sourceTree = "<group>"; };
 		370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Third Party/UIColor+HexColors.m"; sourceTree = "<group>"; };
+		370AC6A318C377E300A36D54 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		370AC6A418C377E300A36D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +148,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370AC6A218C377C300A36D54 /* Distribution Support */ = {
+			isa = PBXGroup;
+			children = (
+				370AC6A418C377E300A36D54 /* README.md */,
+				370AC6A318C377E300A36D54 /* LICENSE */,
+			);
+			name = "Distribution Support";
+			sourceTree = "<group>";
+		};
 		373DC89918BA6CC2003FBFC3 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +164,7 @@
 				373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */,
 				373DC8A418BA6CC2003FBFC3 /* Frameworks */,
 				373DC8A318BA6CC2003FBFC3 /* Products */,
+				370AC6A218C377C300A36D54 /* Distribution Support */,
 			);
 			sourceTree = "<group>";
 		};
