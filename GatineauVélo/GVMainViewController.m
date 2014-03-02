@@ -7,6 +7,8 @@
 //
 
 #import "GVMainViewController.h"
+#import "GVPisteCyclable.h"
+#import "GVPoint.h"
 
 @interface GVMainViewController ()
 
@@ -25,6 +27,7 @@
 {
     [super viewDidLoad];
     self.mapView.region = self.selectedRegion;
+    [self updateAllOverlays];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,5 +57,56 @@
     self.selectedRegion = self.mapView.region;
     NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
+
+- (void)updateAllOverlays
+{
+    // Filter out the map points that can be shown on the map
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+
+    NSError *error;
+    [frc performFetch:&error];
+    if (error)
+    {
+        NSLog(@"fetch error: %@", error);
+        return;
+    }
+
+    NSMutableArray *pistesCyclablesVisibles = [NSMutableArray array];
+    for (GVPisteCyclable *pisteCyclable in frc.fetchedObjects)
+    {
+//        NSLog(@"%@", pisteCyclable);
+        // All the coordinates of the pisteCyclable, in order
+        NSSet *points = pisteCyclable.geom;
+        NSArray *orderedPoints = [points sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]]];
+        CLLocationCoordinate2D *coords = malloc(sizeof(CLLocationCoordinate2D) * orderedPoints.count);
+        NSUInteger count = 0;
+        for (NSUInteger i = 0; i < orderedPoints.count; i++)
+        {
+            GVPoint *pt = (GVPoint *)orderedPoints[i];
+
+            coords[count] = CLLocationCoordinate2DMake(pt.latitude.doubleValue, pt.longitude.doubleValue);
+            count++;
+        }
+        MKPolyline *polyLine = [MKPolyline polylineWithCoordinates:coords count:count];
+        [pistesCyclablesVisibles addObject:polyLine];
+        free(coords);
+    }
+
+    [self.mapView removeOverlays:self.mapView.overlays];
+
+    [self.mapView addOverlays:pistesCyclablesVisibles];
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+    renderer.strokeColor = [UIColor orangeColor];
+    renderer.lineWidth = 4.0;
+    return renderer;
+}
+
 
 @end
