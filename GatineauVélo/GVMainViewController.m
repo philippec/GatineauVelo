@@ -39,11 +39,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSUserDefaults *)userDefaults
+{
+    if (!_userDefaults)
+    {
+        _userDefaults = [NSUserDefaults standardUserDefaults];
+    }
+
+    return _userDefaults;
+}
+
 #pragma mark - Flipside View
 
 - (void)flipsideViewControllerDidFinish:(GVFlipsideViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self updateAllOverlays];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -98,34 +109,43 @@
     fetchRequest.sortDescriptors = @[sortDescriptor];
     NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
 
-    // route_verte
-    NSPredicate *p = [NSPredicate predicateWithFormat:@"route_verte == 1"];
-    fetchRequest.predicate = p;
-
-    NSError *error;
-    [frc performFetch:&error];
-    if (error)
+    BOOL hideRouteVerte = [[NSUserDefaults standardUserDefaults] boolForKey:@"routeVertePathsHidden"];
+    if (!hideRouteVerte)
     {
-        NSLog(@"fetch error: %@", error);
-        return;
+        // route_verte
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"route_verte == 1"];
+        fetchRequest.predicate = p;
+
+        NSError *error;
+        [frc performFetch:&error];
+        if (error)
+        {
+            NSLog(@"fetch error: %@", error);
+            return;
+        }
+
+        NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.routeVerteColor];
+        [self.mapView addOverlays:pistesCyclables];
     }
 
-    NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.routeVerteColor];
-    [self.mapView addOverlays:pistesCyclables];
-
-    // Not route_verte
-    p = [NSPredicate predicateWithFormat:@"route_verte == 0"];
-    fetchRequest.predicate = p;
-
-    [frc performFetch:&error];
-    if (error)
+    BOOL hideMainPaths = [[NSUserDefaults standardUserDefaults] boolForKey:@"mainPathsHidden"];
+    if (!hideMainPaths)
     {
-        NSLog(@"fetch error: %@", error);
-        return;
-    }
+        // Not route_verte
+        NSPredicate *p = [NSPredicate predicateWithFormat:@"route_verte == 0"];
+        fetchRequest.predicate = p;
 
-    pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.standardColor];
-    [self.mapView addOverlays:pistesCyclables];
+        NSError *error;
+        [frc performFetch:&error];
+        if (error)
+        {
+            NSLog(@"fetch error: %@", error);
+            return;
+        }
+
+        NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.standardColor];
+        [self.mapView addOverlays:pistesCyclables];
+    }
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay

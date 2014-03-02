@@ -7,6 +7,7 @@
 //
 
 #import "GVTestCase.h"
+#import <OCMock/OCMock.h>
 #import "GVMainViewController.h"
 #import "GVPathLoader.h"
 #import "GVContext.h"
@@ -17,6 +18,7 @@
 @property (strong) UIStoryboard *storyboard;
 @property (strong) GVPathLoader *pathLoader;
 @property (strong) GVContext *context;
+@property (strong) id mockUserDefaults;
 
 @end
 
@@ -33,6 +35,8 @@
 
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
     [self.pathLoader loadBikePathsAtURL:fileURL];
+
+    self.mockUserDefaults = [OCMockObject mockForClass:[NSUserDefaults class]];
 }
 
 - (void)tearDown
@@ -41,6 +45,7 @@
     self.storyboard = nil;
     self.context = nil;
     self.pathLoader = nil;
+    self.mockUserDefaults = nil;
     [super tearDown];
 }
 
@@ -56,6 +61,10 @@
 
     XCTAssertNotNil(self.controller.mapView);
     XCTAssertEqualObjects(self.controller.mapView.delegate, self.controller);
+    XCTAssertNotNil(self.controller.userDefaults);
+
+    XCTAssertNoThrow(self.controller.userDefaults = self.mockUserDefaults);
+    XCTAssertEqualObjects(self.controller.userDefaults, self.mockUserDefaults);
 }
 
 - (void)testColors
