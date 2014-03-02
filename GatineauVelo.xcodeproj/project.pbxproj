@@ -20,6 +20,7 @@
 		370AC69918C2B55A00A36D54 /* GVPathLoaderTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */; };
 		370AC69C18C2E3E800A36D54 /* GVColorPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC69B18C2E3E800A36D54 /* GVColorPolyline.m */; };
 		370AC69E18C2E43C00A36D54 /* GVColorPolylineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC69D18C2E43C00A36D54 /* GVColorPolylineTests.m */; };
+		370AC6A118C2ED5400A36D54 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -76,6 +77,8 @@
 		370AC69A18C2E3E800A36D54 /* GVColorPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVColorPolyline.h; sourceTree = "<group>"; };
 		370AC69B18C2E3E800A36D54 /* GVColorPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVColorPolyline.m; sourceTree = "<group>"; };
 		370AC69D18C2E43C00A36D54 /* GVColorPolylineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVColorPolylineTests.m; sourceTree = "<group>"; };
+		370AC69F18C2ED5400A36D54 /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Third Party/UIColor+HexColors.h"; sourceTree = "<group>"; };
+		370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Third Party/UIColor+HexColors.m"; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -247,6 +250,8 @@
 			children = (
 				37BAB17318BAED9300B949D1 /* DDFileReader.h */,
 				37BAB17418BAED9300B949D1 /* DDFileReader.m */,
+				370AC69F18C2ED5400A36D54 /* UIColor+HexColors.h */,
+				370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
 				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
+				370AC6A118C2ED5400A36D54 /* UIColor+HexColors.m in Sources */,
 				373DC8BE18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

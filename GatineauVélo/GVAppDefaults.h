@@ -13,4 +13,6 @@
 
 @property (readonly) MKCoordinateRegion maximumCityRegion;
 
+- (UIColor *)colorNamed:(NSString *)name;
+
 @end

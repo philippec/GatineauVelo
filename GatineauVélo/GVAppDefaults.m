@@ -7,6 +7,7 @@
 //
 
 #import "GVAppDefaults.h"
+#import "UIColor+HexColors.h"
 
 @interface GVAppDefaults()
 
@@ -39,6 +40,19 @@
     }
 
     return self.maxCityRegionInternal;
+}
+
+- (UIColor *)colorNamed:(NSString *)name
+{
+    UIColor *color = [UIColor clearColor];
+
+    NSString *colorString = self.appDefaults[name];
+    if (colorString)
+    {
+        color = [UIColor colorWithHexString:colorString];
+    }
+
+    return color;
 }
 
 @end

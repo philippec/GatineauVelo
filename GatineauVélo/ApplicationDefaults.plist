@@ -13,5 +13,9 @@
 		<key>deltaLong</key>
 		<real>0.710821</real>
 	</dict>
+	<key>standardColor</key>
+	<string>ffa500</string>
+	<key>routeVerteColor</key>
+	<string>266a2e</string>
 </dict>
 </plist>

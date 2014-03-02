@@ -39,6 +39,10 @@
     XCTAssertTrue(region.center.longitude != 0.0);
     XCTAssertTrue(region.span.latitudeDelta > 0.0);
     XCTAssertTrue(region.span.longitudeDelta > 0.0);
+
+    UIColor *color;
+    XCTAssertNoThrow(color = [self.appDefaults colorNamed:@"standardColor"]);
+    XCTAssertNotNil(color);
 }
 
 @end
