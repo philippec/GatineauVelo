@@ -55,9 +55,9 @@
 {
     XCTAssertNoThrow(self.controller.userDefaults = self.mockUserDefaults);
 
-    BOOL yes = YES;
-    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(yes)] boolForKey:@"mainPaths"];
-    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(yes)] boolForKey:@"routeVertePaths"];
+    BOOL no = NO;
+    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(no)] boolForKey:@"mainPathsHidden"];
+    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(no)] boolForKey:@"routeVertePathsHidden"];
 
     XCTAssertNoThrow([self.controller view]);
     XCTAssertTrue(self.controller.mainPathSwitch.isOn);
@@ -65,7 +65,7 @@
 
     XCTAssertNoThrow([self.mockUserDefaults verify]);
 
-    [[self.mockUserDefaults expect] setBool:NO forKey:@"mainPaths"];
+    [[self.mockUserDefaults expect] setBool:YES forKey:@"mainPathsHidden"];
     [[self.mockUserDefaults expect] synchronize];
 
     XCTAssertNoThrow(self.controller.mainPathSwitch.on = NO);
@@ -73,7 +73,7 @@
 
     XCTAssertNoThrow([self.mockUserDefaults verify]);
     
-    [[self.mockUserDefaults expect] setBool:NO forKey:@"routeVertePaths"];
+    [[self.mockUserDefaults expect] setBool:YES forKey:@"routeVertePathsHidden"];
     [[self.mockUserDefaults expect] synchronize];
 
     XCTAssertNoThrow(self.controller.routeVerteSwitch.on = NO);
