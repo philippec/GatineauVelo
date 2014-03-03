@@ -8,7 +8,6 @@
 
 #import "GVAppDelegate.h"
 #import "GVMainViewController.h"
-#import "GVPathLoader.h"
 #import "GVContext.h"
 #import "GVAppDefaults.h"
 
@@ -18,10 +17,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
-    self.pathLoader.boundingRegion = appDefaults.maximumCityRegion;
-
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
-    [self.pathLoader loadBikePathsAtURL:url];
 
     GVMainViewController *controller = (GVMainViewController *)self.window.rootViewController;
     controller.managedObjectContext = self.context.managedObjectContext;
@@ -69,18 +64,6 @@
     }
 
     return _context;
-}
-
-#pragma mark - Path Loader
-
-- (GVPathLoader *)pathLoader
-{
-    if (!_pathLoader)
-    {
-        _pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.context.managedObjectContext];
-    }
-
-    return _pathLoader;
 }
 
 @end

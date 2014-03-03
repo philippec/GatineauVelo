@@ -38,10 +38,6 @@
     GVContext *context;
     XCTAssertNoThrow(context = appDelegate.context);
     XCTAssertNotNil(context);
-
-    GVPathLoader *pathLoader;
-    XCTAssertNoThrow(pathLoader = appDelegate.pathLoader);
-    XCTAssertNotNil(pathLoader);
 }
 
 @end

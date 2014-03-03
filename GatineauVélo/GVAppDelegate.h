@@ -15,6 +15,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) GVContext *context;
-@property (strong, nonatomic) GVPathLoader *pathLoader;
 
 @end

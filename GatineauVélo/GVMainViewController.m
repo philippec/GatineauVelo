@@ -13,9 +13,11 @@
 #import "GVUserLocation.h"
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
+#import "GVPathLoader.h"
 
 @interface GVMainViewController ()
 
+@property (strong) GVAppDefaults *appDefaults;
 @property (assign) MKCoordinateRegion selectedRegion;
 
 @end
@@ -27,18 +29,25 @@
     self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
     self.routeVerteColor = [UIColor greenColor];
     self.standardColor = [UIColor orangeColor];
+
+    self.appDefaults = [[GVAppDefaults alloc] init];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
+
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
+    [self.pathLoader loadBikePathsAtURL:url];
+
     self.mapView.region = self.selectedRegion;
 
     if (self.userLocation.locationServicesEnabled)
     {
         [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
-            GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
-            GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:appDefaults.maximumCityRegion];
+            GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.appDefaults.maximumCityRegion];
             if ([checker coordinateInRegion:userPosition])
             {
                 // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
@@ -189,5 +198,16 @@
     return renderer;
 }
 
+#pragma mark - Path Loader
+
+- (GVPathLoader *)pathLoader
+{
+    if (!_pathLoader)
+    {
+        _pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.managedObjectContext];
+    }
+
+    return _pathLoader;
+}
 
 @end

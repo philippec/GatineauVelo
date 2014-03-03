@@ -75,6 +75,8 @@
     XCTAssertNotNil(self.controller.userLocation);
     XCTAssertNoThrow(self.controller.userLocation = self.mockUserLocation);
     XCTAssertEqualObjects(self.controller.userLocation, self.mockUserLocation);
+
+    XCTAssertNotNil(self.controller.pathLoader);
 }
 
 - (void)testColors

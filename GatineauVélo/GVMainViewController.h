@@ -12,6 +12,7 @@
 #import <MapKit/MapKit.h>
 
 @class GVUserLocation;
+@class GVPathLoader;
 
 @interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate, MKMapViewDelegate>
 
@@ -20,6 +21,7 @@
 @property (strong) UIColor *routeVerteColor;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 @property (nonatomic, strong) GVUserLocation *userLocation;
+@property (strong, nonatomic) GVPathLoader *pathLoader;
 
 
 @property (strong) IBOutlet MKMapView *mapView;
