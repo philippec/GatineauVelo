@@ -39,14 +39,17 @@
 {
     [super viewDidLoad];
 
-    self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
+    if (self.context.needsContent)
+    {
+        self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
 
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
 
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-    }];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        }];
+    }
 
     self.mapView.region = self.selectedRegion;
 
