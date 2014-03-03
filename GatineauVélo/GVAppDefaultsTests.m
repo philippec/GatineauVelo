@@ -43,6 +43,10 @@
     UIColor *color;
     XCTAssertNoThrow(color = [self.appDefaults colorNamed:@"standardColor"]);
     XCTAssertNotNil(color);
+
+    NSString *fileName;
+    XCTAssertNoThrow(fileName = self.appDefaults.csvFileName);
+    XCTAssertEqualObjects(fileName, @"PISTE_CYCLABLE");
 }
 
 @end

@@ -12,6 +12,7 @@
 @interface GVAppDefaults : NSObject
 
 @property (readonly) MKCoordinateRegion maximumCityRegion;
+@property (readonly) NSString *csvFileName;
 
 - (UIColor *)colorNamed:(NSString *)name;
 

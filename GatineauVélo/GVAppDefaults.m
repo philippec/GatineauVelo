@@ -55,4 +55,9 @@
     return color;
 }
 
+- (NSString *)csvFileName
+{
+    return self.appDefaults[@"csvFileName"];
+}
+
 @end

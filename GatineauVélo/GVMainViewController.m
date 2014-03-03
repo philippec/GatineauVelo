@@ -43,7 +43,7 @@
     {
         self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
 
-        NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:self.appDefaults.csvFileName withExtension:@"csv"];
 
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
