@@ -22,6 +22,7 @@
 @property (strong) GVAppDefaults *appDefaults;
 @property (assign) MKCoordinateRegion selectedRegion;
 @property (assign) CFTimeInterval updateTimerInterval;
+@property (assign) BOOL userLocationCalled;
 
 @end
 
@@ -105,8 +106,16 @@ static const double kUpdateInterval = 300.0;
             GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.appDefaults.maximumCityRegion];
             if ([checker coordinateInRegion:userPosition])
             {
-                // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
-                MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
+                MKCoordinateSpan localSpan = self.selectedRegion.span;
+
+                // Only do this once at startup
+                if (!self.userLocationCalled)
+                {
+                    // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
+                    localSpan = MKCoordinateSpanMake(0.02, 0.02);
+                    self.userLocationCalled = YES;
+                }
+
                 MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
                 [self.mapView setRegion:region animated:YES];
             }
