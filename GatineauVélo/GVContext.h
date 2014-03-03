@@ -13,8 +13,8 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, nonatomic) BOOL needsContent;
 
 - (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
 
 @end

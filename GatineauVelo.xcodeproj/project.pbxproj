@@ -59,6 +59,7 @@
 		378DA92E18C3E95F00ED4501 /* GVOpenDataLicenseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92B18C3E95A00ED4501 /* GVOpenDataLicenseViewControllerTests.m */; };
 		378DA93118C3E9B600ED4501 /* open_data_license.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92F18C3E9B600ED4501 /* open_data_license.html */; };
 		378DA93518C4088C00ED4501 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA93418C4088C00ED4501 /* MBProgressHUD.m */; };
+		378DA93718C4243200ED4501 /* GVContextTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 378DA93618C4243200ED4501 /* GVContextTestsData */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
@@ -155,6 +156,7 @@
 		378DA93218C3E9BA00ED4501 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/open_data_license.html; sourceTree = "<group>"; };
 		378DA93318C4088C00ED4501 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "Third Party/MBProgressHUD.h"; sourceTree = "<group>"; };
 		378DA93418C4088C00ED4501 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "Third Party/MBProgressHUD.m"; sourceTree = "<group>"; };
+		378DA93618C4243200ED4501 /* GVContextTestsData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GVContextTestsData; sourceTree = "<group>"; };
 		37BAB16C18BA767A00B949D1 /* GVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPoint.h; sourceTree = "<group>"; };
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				370AC68918C299FA00A36D54 /* GVContext.h */,
 				370AC68A18C299FA00A36D54 /* GVContext.m */,
 				370AC68C18C29A0300A36D54 /* GVContextTests.m */,
+				378DA93618C4243200ED4501 /* GVContextTestsData */,
 				370AC6C718C3D66A00A36D54 /* GVCoordinateChecker.h */,
 				370AC6C818C3D66A00A36D54 /* GVCoordinateChecker.m */,
 				370AC6CA18C3D67E00A36D54 /* GVCoordinateCheckerTests.m */,
@@ -456,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373DC8D818BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+				378DA93718C4243200ED4501 /* GVContextTestsData in Resources */,
 				370AC69918C2B55A00A36D54 /* GVPathLoaderTestsData in Resources */,
 				370AC69718C2A3AF00A36D54 /* GVMainViewControllerTestsData in Resources */,
 			);
