@@ -27,7 +27,7 @@
     [super setUp];
 
     self.context = [[GVContext alloc] init];
-    self.pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.context.managedObjectContext];
+    self.pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
     self.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45, -75), MKCoordinateSpanMake(1.3, 2.8));
 }
 
@@ -40,11 +40,11 @@
 
 - (void)testCreation
 {
-    id mockContext = [OCMockObject mockForClass:[NSManagedObjectContext class]];
-    XCTAssertNoThrow(self.pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:mockContext]);
+    id mockContext = [OCMockObject mockForClass:[GVContext class]];
+    XCTAssertNoThrow(self.pathLoader = [[GVPathLoader alloc] initWithContext:mockContext]);
     XCTAssertNotNil(self.pathLoader);
 
-    XCTAssertEqualObjects(self.pathLoader.managedObjectContext, mockContext);
+    XCTAssertEqualObjects(self.pathLoader.context, mockContext);
 }
 
 - (void)testLoad10Paths

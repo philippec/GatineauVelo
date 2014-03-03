@@ -33,7 +33,7 @@
     self.controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GVMainViewController"];
 
     self.context = [[GVContext alloc] init];
-    self.pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.context.managedObjectContext];
+    self.pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
 
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
     [self.pathLoader loadBikePathsAtURL:fileURL withCompletion:nil];
@@ -60,8 +60,8 @@
     XCTAssertNoThrow(self.controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GVMainViewController"]);
     XCTAssertNotNil(self.controller);
 
-    XCTAssertNoThrow(self.controller.managedObjectContext = self.context.managedObjectContext);
-    XCTAssertEqualObjects(self.controller.managedObjectContext, self.context.managedObjectContext);
+    XCTAssertNoThrow(self.controller.context = self.context);
+    XCTAssertEqualObjects(self.controller.context, self.context);
 
     XCTAssertNoThrow([self.controller view]);
 

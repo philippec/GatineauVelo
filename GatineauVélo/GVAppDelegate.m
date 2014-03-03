@@ -19,7 +19,7 @@
     GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
 
     GVMainViewController *controller = (GVMainViewController *)self.window.rootViewController;
-    controller.managedObjectContext = self.context.managedObjectContext;
+    controller.context = self.context;
     controller.standardColor = [appDefaults colorNamed:@"standardColor"];
     controller.routeVerteColor = [appDefaults colorNamed:@"routeVerteColor"];
     

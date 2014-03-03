@@ -14,6 +14,7 @@
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
 #import "GVPathLoader.h"
+#import "GVContext.h"
 #import "MBProgressHUD.h"
 
 @interface GVMainViewController ()
@@ -150,7 +151,7 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];
     fetchRequest.sortDescriptors = @[sortDescriptor];
-    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
 
     BOOL hideRouteVerte = [[NSUserDefaults standardUserDefaults] boolForKey:@"routeVertePathsHidden"];
     if (!hideRouteVerte)
@@ -209,7 +210,7 @@
 {
     if (!_pathLoader)
     {
-        _pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.managedObjectContext];
+        _pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
     }
 
     return _pathLoader;

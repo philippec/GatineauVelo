@@ -11,12 +11,14 @@
 
 typedef void (^GVPathLoaderComplete)(void);
 
+@class GVContext;
+
 @interface GVPathLoader : NSObject
 
-@property (readonly) NSManagedObjectContext *managedObjectContext;
+@property (readonly) GVContext *context;
 @property (assign) MKCoordinateRegion boundingRegion;
 
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
+- (instancetype)initWithContext:(GVContext *)context;
 
 - (void)loadBikePathsAtURL:(NSURL *)url withCompletion:(GVPathLoaderComplete)completion;
 

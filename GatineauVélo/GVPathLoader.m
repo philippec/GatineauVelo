@@ -11,20 +11,21 @@
 #import "GVPisteCyclable.h"
 #import "GVPoint.h"
 #import "GVCoordinateChecker.h"
+#import "GVContext.h"
 
 @interface GVPathLoader()
 
-@property (strong) NSManagedObjectContext *managedObjectContext;
+@property (strong) GVContext *context;
 
 @end
 
 @implementation GVPathLoader
 
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context
+- (instancetype)initWithContext:(GVContext *)context
 {
     if (self = [super init])
     {
-        _managedObjectContext = context;
+        _context = context;
     }
 
     return self;
@@ -53,7 +54,7 @@
             continue;
         }
 
-        GVPoint *pt = [NSEntityDescription insertNewObjectForEntityForName:@"GVPoint" inManagedObjectContext:self.managedObjectContext];
+        GVPoint *pt = [NSEntityDescription insertNewObjectForEntityForName:@"GVPoint" inManagedObjectContext:self.context.managedObjectContext];
 
         pt.latitude = [NSNumber numberWithDouble:latitude];
         pt.longitude = [NSNumber numberWithDouble:longitude];
@@ -83,7 +84,7 @@
             NSArray *elements = [line componentsSeparatedByString:@"|"];
             if (elements.count == 12)
             {
-                GVPisteCyclable *pisteCyclable = [NSEntityDescription insertNewObjectForEntityForName:@"GVPisteCyclable" inManagedObjectContext:self.managedObjectContext];
+                GVPisteCyclable *pisteCyclable = [NSEntityDescription insertNewObjectForEntityForName:@"GVPisteCyclable" inManagedObjectContext:self.context.managedObjectContext];
                 pisteCyclable.entiteID = elements[0];
                 pisteCyclable.munID = elements[1];
                 pisteCyclable.codeID = elements[2];
@@ -103,7 +104,7 @@
     }
 
     NSError *error;
-    if (![self.managedObjectContext save:&error])
+    if (![self.context.managedObjectContext save:&error])
     {
         NSLog(@"Erreur: %@", error);
     }

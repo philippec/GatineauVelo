@@ -13,10 +13,11 @@
 
 @class GVUserLocation;
 @class GVPathLoader;
+@class GVContext;
 
 @interface GVMainViewController : UIViewController <GVFlipsideViewControllerDelegate, MKMapViewDelegate>
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) GVContext *context;
 @property (strong) UIColor *standardColor;
 @property (strong) UIColor *routeVerteColor;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
