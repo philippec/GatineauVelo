@@ -50,7 +50,13 @@
 - (void)testLoad10Paths
 {
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
-    XCTAssertNoThrow([self.pathLoader loadBikePathsAtURL:fileURL]);
+
+    __block BOOL wasCalled;
+    GVPathLoaderComplete completion = ^(void) {
+        wasCalled = YES;
+    };
+
+    XCTAssertNoThrow([self.pathLoader loadBikePathsAtURL:fileURL withCompletion:completion]);
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];
@@ -62,6 +68,7 @@
     XCTAssertNil(error);
 
     XCTAssertEqual(frc.fetchedObjects.count, (NSUInteger)10);
+    XCTAssertTrue(wasCalled);
 }
 
 - (void)testBoundingRegion
@@ -78,7 +85,7 @@
     XCTAssertNoThrow(self.pathLoader.boundingRegion = self.region);
 
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"piste_bad_data.csv"];
-    XCTAssertNoThrow([self.pathLoader loadBikePathsAtURL:fileURL]);
+    XCTAssertNoThrow([self.pathLoader loadBikePathsAtURL:fileURL withCompletion:nil]);
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codeID" ascending:YES];

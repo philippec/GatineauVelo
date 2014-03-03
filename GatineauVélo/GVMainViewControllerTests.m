@@ -36,7 +36,7 @@
     self.pathLoader = [[GVPathLoader alloc] initWithManagedObjectContext:self.context.managedObjectContext];
 
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
-    [self.pathLoader loadBikePathsAtURL:fileURL];
+    [self.pathLoader loadBikePathsAtURL:fileURL withCompletion:nil];
 
     self.mockUserDefaults = [OCMockObject mockForClass:[NSUserDefaults class]];
     self.mockUserLocation = [OCMockObject mockForClass:[GVUserLocation class]];

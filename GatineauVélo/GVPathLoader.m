@@ -66,7 +66,7 @@
     return [NSSet setWithSet:s];
 }
 
-- (void)loadBikePathsAtURL:(NSURL *)url
+- (void)loadBikePathsAtURL:(NSURL *)url withCompletion:(GVPathLoaderComplete)completion
 {
     DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:url.filePathURL.path];
     reader.lineDelimiter = @"\r";
@@ -106,6 +106,11 @@
     if (![self.managedObjectContext save:&error])
     {
         NSLog(@"Erreur: %@", error);
+    }
+
+    if (completion)
+    {
+        completion();
     }
 }
 

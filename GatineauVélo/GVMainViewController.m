@@ -14,6 +14,7 @@
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
 #import "GVPathLoader.h"
+#import "MBProgressHUD.h"
 
 @interface GVMainViewController ()
 
@@ -40,7 +41,11 @@
     self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
 
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"PISTE_CYCLABLE" withExtension:@"csv"];
-    [self.pathLoader loadBikePathsAtURL:url];
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
 
     self.mapView.region = self.selectedRegion;
 

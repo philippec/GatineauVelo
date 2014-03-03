@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+typedef void (^GVPathLoaderComplete)(void);
+
 @interface GVPathLoader : NSObject
 
 @property (readonly) NSManagedObjectContext *managedObjectContext;
@@ -16,6 +18,6 @@
 
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 
-- (void)loadBikePathsAtURL:(NSURL *)url;
+- (void)loadBikePathsAtURL:(NSURL *)url withCompletion:(GVPathLoaderComplete)completion;
 
 @end
