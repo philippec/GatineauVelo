@@ -8,11 +8,27 @@
 
 #import "GVContext.h"
 
+@interface GVContext()
+
+@property (copy) NSString *memoryStoreType;
+
+@end
+
 @implementation GVContext
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+- (instancetype)initWithMemoryStoreType:(NSString *)memoryStoreType
+{
+    if (self = [super init])
+    {
+        _memoryStoreType = memoryStoreType;
+    }
+
+    return self;
+}
 
 - (void)saveContext
 {
@@ -82,7 +98,7 @@
 
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:self.memoryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
         abort();

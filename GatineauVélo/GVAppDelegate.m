@@ -60,7 +60,7 @@
 {
     if (!_context)
     {
-        _context = [[GVContext alloc] init];
+        _context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType];
     }
 
     return _context;

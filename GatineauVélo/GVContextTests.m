@@ -21,7 +21,7 @@
 - (void)setUp
 {
     [super setUp];
-    self.context = [[GVContext alloc] init];
+    self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType];
 }
 
 - (void)tearDown
@@ -32,7 +32,7 @@
 
 - (void)testCreation
 {
-    XCTAssertNoThrow(self.context = [[GVContext alloc] init]);
+    XCTAssertNoThrow(self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType]);
     XCTAssertNotNil(self.context);
 }
 
