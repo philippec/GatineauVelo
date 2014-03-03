@@ -11,17 +11,23 @@
 #import "GVContext.h"
 #import "GVAppDefaults.h"
 
+@interface GVAppDelegate()
+
+@property (strong) GVAppDefaults *appDefaults;
+
+@end
+
 
 @implementation GVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    GVAppDefaults *appDefaults = [[GVAppDefaults alloc] init];
+    self.appDefaults = [[GVAppDefaults alloc] init];
 
     GVMainViewController *controller = (GVMainViewController *)self.window.rootViewController;
     controller.context = self.context;
-    controller.standardColor = [appDefaults colorNamed:@"standardColor"];
-    controller.routeVerteColor = [appDefaults colorNamed:@"routeVerteColor"];
+    controller.standardColor = [self.appDefaults colorNamed:@"standardColor"];
+    controller.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
     
     return YES;
 }
@@ -60,7 +66,11 @@
 {
     if (!_context)
     {
-        _context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:self.appDefaults.csvFileName ofType:@"csv"];
+        NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
+        NSDate *date = [attributes fileModificationDate];
+
+        _context = [[GVContext alloc] initWithMemoryStoreType:NSSQLiteStoreType andCreationDate:date];
     }
 
     return _context;

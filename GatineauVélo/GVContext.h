@@ -15,7 +15,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, nonatomic) BOOL needsContent;
 
-- (instancetype)initWithMemoryStoreType:(NSString *)memoryStoreType;
+- (instancetype)initWithMemoryStoreType:(NSString *)memoryStoreType andCreationDate:(NSDate *)date;
 - (void)saveContext;
 
 @end

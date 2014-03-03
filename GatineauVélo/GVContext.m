@@ -11,6 +11,7 @@
 @interface GVContext()
 
 @property (copy) NSString *memoryStoreType;
+@property (strong) NSDate *creationDate;
 
 @end
 
@@ -20,11 +21,12 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-- (instancetype)initWithMemoryStoreType:(NSString *)memoryStoreType
+- (instancetype)initWithMemoryStoreType:(NSString *)memoryStoreType andCreationDate:(NSDate *)date
 {
     if (self = [super init])
     {
         _memoryStoreType = memoryStoreType;
+        _creationDate = date;
     }
 
     return self;
@@ -96,7 +98,18 @@
 
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GatineauVe_lo.sqlite"];
 
-    NSError *error = nil;
+    // Check if the store is older than the requested creation date
+    NSError *error;
+    NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:storeURL.filePathURL.path error:&error];
+    NSDate *storeCreationDate = [attributes fileModificationDate];
+    if (storeCreationDate != nil && error == nil)
+    {
+        if (NSOrderedAscending == [storeCreationDate compare:self.creationDate])
+        {
+            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        }
+    }
+
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:self.memoryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);

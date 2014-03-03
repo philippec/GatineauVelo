@@ -32,7 +32,7 @@
     self.storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     self.controller = [self.storyboard instantiateViewControllerWithIdentifier:@"GVMainViewController"];
 
-    self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType];
+    self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType andCreationDate:nil];
     self.pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
 
     NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];

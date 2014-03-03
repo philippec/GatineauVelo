@@ -26,7 +26,7 @@
 {
     [super setUp];
 
-    self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType];
+    self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType andCreationDate:nil];
     self.pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
     self.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45, -75), MKCoordinateSpanMake(1.3, 2.8));
 }
