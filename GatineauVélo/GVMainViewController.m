@@ -21,8 +21,11 @@
 
 @property (strong) GVAppDefaults *appDefaults;
 @property (assign) MKCoordinateRegion selectedRegion;
+@property (assign) CFTimeInterval updateTimerInterval;
 
 @end
+
+static const double kUpdateInterval = 300.0;
 
 @implementation GVMainViewController
 
@@ -33,6 +36,8 @@
     self.standardColor = [UIColor orangeColor];
 
     self.appDefaults = [[GVAppDefaults alloc] init];
+    self.updateTimerInterval = kUpdateInterval;
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateTimerInterval target:self selector:@selector(updateUserLocation) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidLoad
@@ -53,7 +58,7 @@
 
     self.mapView.region = self.selectedRegion;
 
-    [self updateUserLocation];
+    [self.updateTimer fire];
 
     [self updateAllOverlays];
 }
@@ -63,6 +68,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)appDidBecomeActive
+{
+	[self.updateTimer fire];
+}
+
 
 - (NSUserDefaults *)userDefaults
 {

@@ -21,6 +21,7 @@
 @property (strong) GVContext *context;
 @property (strong) id mockUserDefaults;
 @property (strong) id mockUserLocation;
+@property (strong) id mockTimer;
 
 @end
 
@@ -40,8 +41,10 @@
 
     self.mockUserDefaults = [OCMockObject mockForClass:[NSUserDefaults class]];
     self.mockUserLocation = [OCMockObject mockForClass:[GVUserLocation class]];
+    self.mockTimer = [OCMockObject mockForClass:[NSTimer class]];
 
     self.controller.userLocation = self.mockUserLocation;
+    self.controller.updateTimer = self.mockTimer;
 }
 
 - (void)tearDown
@@ -52,6 +55,7 @@
     self.pathLoader = nil;
     self.mockUserDefaults = nil;
     self.mockUserLocation = nil;
+    self.mockTimer = nil;
     [super tearDown];
 }
 
@@ -62,6 +66,8 @@
 
     XCTAssertNoThrow(self.controller.context = self.context);
     XCTAssertEqualObjects(self.controller.context, self.context);
+    XCTAssertNotNil(self.controller.updateTimer);
+    XCTAssertEqualWithAccuracy(self.controller.updateTimerInterval, 300.0, 0.00001);
 
     XCTAssertNoThrow([self.controller view]);
 
@@ -86,6 +92,19 @@
 
     XCTAssertNoThrow(self.controller.routeVerteColor = [UIColor blueColor]);
     XCTAssertEqualObjects(self.controller.routeVerteColor, [UIColor blueColor]);
+}
+
+- (void)testUpdateTimer
+{
+    XCTAssertNoThrow(self.controller.context = self.context);
+
+    [[self.mockTimer expect] fire];
+    XCTAssertNoThrow([self.controller view]);
+    XCTAssertNoThrow([self.mockTimer verify]);
+
+    [[self.mockTimer expect] fire];
+    XCTAssertNoThrow([self.controller appDidBecomeActive]);
+    XCTAssertNoThrow([self.mockTimer verify]);
 }
 
 @end

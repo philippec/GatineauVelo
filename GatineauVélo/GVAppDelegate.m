@@ -14,6 +14,7 @@
 @interface GVAppDelegate()
 
 @property (strong) GVAppDefaults *appDefaults;
+@property (strong) GVMainViewController *mainViewController;
 
 @end
 
@@ -24,10 +25,10 @@
 {
     self.appDefaults = [[GVAppDefaults alloc] init];
 
-    GVMainViewController *controller = (GVMainViewController *)self.window.rootViewController;
-    controller.context = self.context;
-    controller.standardColor = [self.appDefaults colorNamed:@"standardColor"];
-    controller.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
+    self.mainViewController = (GVMainViewController *)self.window.rootViewController;
+    self.mainViewController.context = self.context;
+    self.mainViewController.standardColor = [self.appDefaults colorNamed:@"standardColor"];
+    self.mainViewController.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
     
     return YES;
 }
@@ -51,7 +52,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.mainViewController appDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

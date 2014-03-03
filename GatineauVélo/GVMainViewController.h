@@ -23,8 +23,11 @@
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 @property (nonatomic, strong) GVUserLocation *userLocation;
 @property (strong, nonatomic) GVPathLoader *pathLoader;
-
+@property (strong) NSTimer *updateTimer;
+@property (readonly) CFTimeInterval updateTimerInterval;
 
 @property (strong) IBOutlet MKMapView *mapView;
+
+- (void)appDidBecomeActive;
 
 @end
