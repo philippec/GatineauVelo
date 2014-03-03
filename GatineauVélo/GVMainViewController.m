@@ -53,19 +53,7 @@
 
     self.mapView.region = self.selectedRegion;
 
-    if (self.userLocation.locationServicesEnabled)
-    {
-        [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
-            GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.appDefaults.maximumCityRegion];
-            if ([checker coordinateInRegion:userPosition])
-            {
-                // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
-                MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
-                MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
-                [self.mapView setRegion:region animated:YES];
-            }
-        }];
-    }
+    [self updateUserLocation];
 
     [self updateAllOverlays];
 }
@@ -86,6 +74,8 @@
     return _userDefaults;
 }
 
+#pragma mark - User location
+
 - (GVUserLocation *)userLocation
 {
     if (!_userLocation)
@@ -94,6 +84,23 @@
     }
 
     return _userLocation;
+}
+
+- (void)updateUserLocation
+{
+    if (self.userLocation.locationServicesEnabled)
+    {
+        [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
+            GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.appDefaults.maximumCityRegion];
+            if ([checker coordinateInRegion:userPosition])
+            {
+                // This span represents a "neighbourhood" area, so only use it if the userPosition is within the city boundaries
+                MKCoordinateSpan localSpan = MKCoordinateSpanMake(0.02, 0.02);
+                MKCoordinateRegion region = MKCoordinateRegionMake(userPosition, localSpan);
+                [self.mapView setRegion:region animated:YES];
+            }
+        }];
+    }
 }
 
 #pragma mark - Flipside View
