@@ -1,5 +1,5 @@
 
-/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
+/* Class = "IBUILabel"; text = "Pistes principales"; ObjectID = "5QO-yh-4Fr"; */
 "5QO-yh-4Fr.text" = "Pistes principales";
 
 /* Class = "IBUILabel"; text = "Couleurs"; ObjectID = "BfK-in-HwL"; */
@@ -34,3 +34,9 @@
 
 /* Class = "IBUITableViewSection"; headerTitle = "À propos"; ObjectID = "sc8-s3-vUw"; */
 "sc8-s3-vUw.headerTitle" = "À propos";
+
+/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "vUG-dd-dVQ"; */
+"vUG-dd-dVQ.text" = "Pistes principales";
+
+/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "yD1-c6-yP5"; */
+"yD1-c6-yP5.text" = "Route Verte";

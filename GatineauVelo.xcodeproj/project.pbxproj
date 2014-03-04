@@ -100,8 +100,6 @@
 		370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexColors.m"; path = "Third Party/UIColor+HexColors.m"; sourceTree = "<group>"; };
 		370AC6A318C377E300A36D54 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		370AC6A418C377E300A36D54 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		370AC6B518C3941400A36D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		370AC6B618C3941700A36D54 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		370AC6B718C3987700A36D54 /* GVPathColorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathColorsViewController.h; sourceTree = "<group>"; };
 		370AC6B818C3987700A36D54 /* GVPathColorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathColorsViewController.m; sourceTree = "<group>"; };
 		370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathColorsViewControllerTests.m; sourceTree = "<group>"; };
@@ -163,6 +161,8 @@
 		37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPisteCyclable.m; sourceTree = "<group>"; };
 		37BAB17318BAED9300B949D1 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = "Third Party/DDFileReader.h"; sourceTree = "<group>"; };
 		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
+		37D96A9518C58035006298B4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		37D96A9618C5803A006298B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -551,8 +551,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				373DC8BA18BA6CC2003FBFC3 /* Base */,
-				370AC6B518C3941400A36D54 /* en */,
-				370AC6B618C3941700A36D54 /* fr */,
+				37D96A9518C58035006298B4 /* fr */,
+				37D96A9618C5803A006298B4 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -34,3 +34,9 @@
 
 /* Class = "IBUITableViewSection"; headerTitle = "About"; ObjectID = "sc8-s3-vUw"; */
 "sc8-s3-vUw.headerTitle" = "About";
+
+/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "vUG-dd-dVQ"; */
+"vUG-dd-dVQ.text" = "Main Bike Paths";
+
+/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "yD1-c6-yP5"; */
+"yD1-c6-yP5.text" = "Route Verte";
