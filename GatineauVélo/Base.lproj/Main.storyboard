@@ -105,7 +105,7 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QP1-pW-VWa">
+                                    <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QP1-pW-VWa">
                                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -117,8 +117,12 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="hED-2o-FLw" secondAttribute="trailing" id="ALh-ns-Koz"/>
+                                    <constraint firstItem="QP1-pW-VWa" firstAttribute="leading" secondItem="PKU-Ry-XjV" secondAttribute="leading" id="AOn-LD-vkv"/>
                                     <constraint firstItem="hED-2o-FLw" firstAttribute="top" secondItem="PKU-Ry-XjV" secondAttribute="top" constant="20" id="Rif-xI-z9A"/>
+                                    <constraint firstAttribute="trailing" secondItem="QP1-pW-VWa" secondAttribute="trailing" id="bFA-eU-Laj"/>
+                                    <constraint firstAttribute="bottom" secondItem="QP1-pW-VWa" secondAttribute="bottom" id="j76-Q1-UgQ"/>
                                     <constraint firstItem="hED-2o-FLw" firstAttribute="leading" secondItem="PKU-Ry-XjV" secondAttribute="leading" id="kqr-nF-DSF"/>
+                                    <constraint firstItem="QP1-pW-VWa" firstAttribute="top" secondItem="PKU-Ry-XjV" secondAttribute="top" constant="64" id="tTd-zF-uWf"/>
                                 </constraints>
                             </view>
                         </subviews>
