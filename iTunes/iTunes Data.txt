@@ -1,0 +1,25 @@
+GatineauVélo
+============
+
+Bike Paths for the City of Gatineau
+
+Display the various bike paths in the Ville de Gatineau directly on your device.
+
+Made possible by the OpenData initiative of the Ville de Gatineau.
+
+
+Pistes Cyclables de la Ville de Gatineau
+
+Visualisez les différentes pistes cyclables sur le territoire de la Ville de Gatineau directement sur votre appareil.
+
+Rendu possible par l'initiative des Données Ouvertes de la Ville de Gatineau.
+
+----
+
+Keywords: Gatineau, bike path, bike paths, route verte, open data
+Mots-clés: Gatineau, piste cyclable, pistes cyclables, route verte, données ouvertes
+
+Support URL: http://apps.casgrain.com/support/
+
+Marketing URL: http://apps.casgrain.com/GatineauVelo/
+
