@@ -62,12 +62,12 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    NSLog(@"%@", error);
+//    NSLog(@"%@", error);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-    NSLog(@"%zd", status);
+//    NSLog(@"%zd", status);
 }
 
 
