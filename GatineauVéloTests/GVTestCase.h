@@ -11,6 +11,5 @@
 @interface GVTestCase : XCTestCase
 
 - (NSURL *)dataFolder;
-- (void)loopFor:(NSTimeInterval)interval withCondition:(BOOL(^)(void))condition;
 
 @end
