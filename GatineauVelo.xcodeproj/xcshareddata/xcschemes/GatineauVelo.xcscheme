@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
-               BuildableName = "GatineauVe&#769;lo.app"
-               BlueprintName = "GatineauVe&#769;lo"
+               BuildableName = "GatineauVe&#x301;lo.app"
+               BlueprintName = "GatineauVe&#x301;lo"
                ReferencedContainer = "container:GatineauVelo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "373DC8CA18BA6CC2003FBFC3"
-               BuildableName = "GatineauVe&#769;loTests.xctest"
-               BlueprintName = "GatineauVe&#769;loTests"
+               BuildableName = "GatineauVe&#x301;loTests.xctest"
+               BlueprintName = "GatineauVe&#x301;loTests"
                ReferencedContainer = "container:GatineauVelo.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
-            BuildableName = "GatineauVe&#769;lo.app"
-            BlueprintName = "GatineauVe&#769;lo"
+            BuildableName = "GatineauVe&#x301;lo.app"
+            BlueprintName = "GatineauVe&#x301;lo"
             ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
-            BuildableName = "GatineauVe&#769;lo.app"
-            BlueprintName = "GatineauVe&#769;lo"
+            BuildableName = "GatineauVe&#x301;lo.app"
+            BlueprintName = "GatineauVe&#x301;lo"
             ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "373DC8A118BA6CC2003FBFC3"
-            BuildableName = "GatineauVe&#769;lo.app"
-            BlueprintName = "GatineauVe&#769;lo"
+            BuildableName = "GatineauVe&#x301;lo.app"
+            BlueprintName = "GatineauVe&#x301;lo"
             ReferencedContainer = "container:GatineauVelo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
