@@ -150,10 +150,10 @@ static const double kUpdateInterval = 300.0;
 //    NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
 
-- (NSArray *)pistesCyclablesForFetchRequestController:(NSFetchedResultsController *)frc withColor:(UIColor *)color
+- (NSArray *)polyLinesForBikePaths:(NSArray *)bikePaths withColor:(UIColor *)color
 {
-    NSMutableArray *pistesCyclablesVisibles = [NSMutableArray array];
-    for (GVPisteCyclable *pisteCyclable in frc.fetchedObjects)
+    NSMutableArray *visibleBikePaths = [NSMutableArray array];
+    for (GVPisteCyclable *pisteCyclable in bikePaths)
     {
 //        NSLog(@"%@", pisteCyclable);
         // All the coordinates of the pisteCyclable, in order
@@ -170,11 +170,11 @@ static const double kUpdateInterval = 300.0;
         }
         GVColorPolyline *polyLine = [GVColorPolyline polylineWithCoordinates:coords count:count];
         polyLine.color = color;
-        [pistesCyclablesVisibles addObject:polyLine];
+        [visibleBikePaths addObject:polyLine];
         free(coords);
     }
 
-    return [NSArray arrayWithArray:pistesCyclablesVisibles];
+    return [NSArray arrayWithArray:visibleBikePaths];
 }
 
 - (void)updateAllOverlays
@@ -202,7 +202,7 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.routeVerteColor];
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.routeVerteColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 
@@ -221,7 +221,7 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self pistesCyclablesForFetchRequestController:frc withColor:self.standardColor];
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.standardColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 }
