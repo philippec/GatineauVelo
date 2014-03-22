@@ -34,6 +34,7 @@
 		370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6D818C3E16200A36D54 /* GVAboutViewControllerTests.m */; };
 		370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6DB18C3E71700A36D54 /* GVLicensesViewController.m */; };
 		370AC6DF18C3E71E00A36D54 /* GVLicensesViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370AC6DC18C3E71700A36D54 /* GVLicensesViewControllerTests.m */; };
+		3710DBEA18DD340400CF65C9 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710DBE818DD340400CF65C9 /* Main_iPad.storyboard */; };
 		373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A518BA6CC2003FBFC3 /* Foundation.framework */; };
 		373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */; };
 		373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373DC8A918BA6CC2003FBFC3 /* UIKit.framework */; };
@@ -120,6 +121,9 @@
 		370AC6DA18C3E71700A36D54 /* GVLicensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVLicensesViewController.h; sourceTree = "<group>"; };
 		370AC6DB18C3E71700A36D54 /* GVLicensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLicensesViewController.m; sourceTree = "<group>"; };
 		370AC6DC18C3E71700A36D54 /* GVLicensesViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLicensesViewControllerTests.m; sourceTree = "<group>"; };
+		3710DBE918DD340400CF65C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3710DBEC18DD37C800CF65C9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main_iPad.strings; sourceTree = "<group>"; };
+		3710DBEE18DD37C900CF65C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		373DC8A218BA6CC2003FBFC3 /* GatineauVélo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GatineauVélo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8A518BA6CC2003FBFC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -282,6 +286,7 @@
 				370AC6C818C3D66A00A36D54 /* GVCoordinateChecker.m */,
 				370AC6CA18C3D67E00A36D54 /* GVCoordinateCheckerTests.m */,
 				373DC8B918BA6CC2003FBFC3 /* Main.storyboard */,
+				3710DBE818DD340400CF65C9 /* Main_iPad.storyboard */,
 				373DC8BF18BA6CC2003FBFC3 /* GVMainViewController.h */,
 				373DC8C018BA6CC2003FBFC3 /* GVMainViewController.m */,
 				373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */,
@@ -446,6 +451,7 @@
 				370AC6D218C3DE7700A36D54 /* about.html in Resources */,
 				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
 				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
+				3710DBEA18DD340400CF65C9 /* Main_iPad.storyboard in Resources */,
 				370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */,
 				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
 				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
@@ -536,6 +542,16 @@
 				370AC6D718C3DEB700A36D54 /* en */,
 			);
 			name = about.html;
+			sourceTree = "<group>";
+		};
+		3710DBE818DD340400CF65C9 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3710DBE918DD340400CF65C9 /* Base */,
+				3710DBEC18DD37C800CF65C9 /* fr */,
+				3710DBEE18DD37C900CF65C9 /* en */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */ = {
@@ -665,7 +681,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
 				INFOPLIST_FILE = "GatineauVélo/GatineauVélo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -678,7 +696,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
 				INFOPLIST_FILE = "GatineauVélo/GatineauVélo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -797,7 +817,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVélo/GatineauVélo-Prefix.pch";
 				INFOPLIST_FILE = "GatineauVélo/GatineauVélo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "App Store";

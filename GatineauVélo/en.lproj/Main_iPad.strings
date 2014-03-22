@@ -1,0 +1,42 @@
+
+/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
+"5QO-yh-4Fr.text" = "Main Bike Paths";
+
+/* Class = "IBUILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
+"BfK-in-HwL.text" = "Colours";
+
+/* Class = "IBUILabel"; text = "Bike Paths"; ObjectID = "DKq-Bj-8WW"; */
+"DKq-Bj-8WW.text" = "Bike Paths";
+
+/* Class = "IBUILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
+"Nd3-n3-X0h.text" = "Third-Party Licenses";
+
+/* Class = "IBUITableViewController"; title = "Settings"; ObjectID = "Ozv-HC-FVd"; */
+"Ozv-HC-FVd.title" = "Settings";
+
+/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "RQ5-C6-lNr"; */
+"RQ5-C6-lNr.text" = "Route Verte";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Wdy-xG-hi4"; */
+"Wdy-xG-hi4.title" = "Back";
+
+/* Class = "IBUILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
+"WlB-al-rZQ.text" = "About this Application";
+
+/* Class = "IBUINavigationItem"; title = "Gatineau Bike Paths"; ObjectID = "caU-JJ-JLf"; */
+"caU-JJ-JLf.title" = "Gatineau Bike Paths";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
+"mKf-Sg-tvg.headerTitle" = "Settings";
+
+/* Class = "IBUILabel"; text = "Open Data License"; ObjectID = "q90-xu-Q0C"; */
+"q90-xu-Q0C.text" = "Open Data License";
+
+/* Class = "IBUITableViewSection"; headerTitle = "About"; ObjectID = "sc8-s3-vUw"; */
+"sc8-s3-vUw.headerTitle" = "About";
+
+/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "vUG-dd-dVQ"; */
+"vUG-dd-dVQ.text" = "Main Bike Paths";
+
+/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "yD1-c6-yP5"; */
+"yD1-c6-yP5.text" = "Route Verte";
