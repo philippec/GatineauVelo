@@ -14,6 +14,20 @@ Visualisez les différentes pistes cyclables sur le territoire de la Ville de Ga
 
 Rendu possible par l'initiative des Données Ouvertes de la Ville de Gatineau.
 
+Version 1.1
+-----------
+
+Version universelle pour iPhone et iPad.
+
+Saviez-vous que l'application est en code-source libre? Visitez https://github.com/philippec/GatineauVelo pour plus de détails.
+
+Si vous aimez cette application, pourquoi ne pas nous laisser un petit commentaire sur l'App Store? Cela nous encourage à continuer de développer de jolies applications pratiques pour vous.
+
+Universal for iPhone and iPad.
+
+Did you know that this application was Open Source? Visit https://github.com/philippec/GatineauVelo for more information.
+
+If you like this application, why not leave a small review in the App Store? This really helps us when we want to make new and useful applications for you.
 ----
 
 Keywords: Gatineau, bike path, bike paths, route verte, open data
