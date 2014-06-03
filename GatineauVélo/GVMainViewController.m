@@ -138,7 +138,8 @@ static const double kUpdateInterval = 300.0;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
+        GVFlipsideViewController *vc = (GVFlipsideViewController *)segue.destinationViewController;
+        vc.delegate = self;
     }
 }
 
