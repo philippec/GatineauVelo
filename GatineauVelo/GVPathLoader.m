@@ -30,23 +30,17 @@
     return self;
 }
 
-- (NSSet *)extractCoordsFromString:(NSString *)coords
+- (NSSet *)extractCoordsFromArray:(NSArray *)coords
 {
     NSMutableSet *s = [NSMutableSet setWithCapacity:0];
 
     GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.boundingRegion];
 
-    NSString *coordsWithoutLinestring = [coords substringFromIndex:@"LINESTRING (".length];
-    NSString *coordsWithoutBraces = [coordsWithoutLinestring substringToIndex:coordsWithoutLinestring.length - 2];
-    NSArray *allCoords = [coordsWithoutBraces componentsSeparatedByString:@","];
     NSUInteger count = 0;
-    for (NSString *oneCoord in allCoords)
+    for (NSDictionary *oneCoord in coords)
     {
-        NSScanner *scanner = [NSScanner scannerWithString:oneCoord];
-
-        double latitude, longitude;
-        [scanner scanDouble:&longitude];
-        [scanner scanDouble:&latitude];
+        double latitude = [oneCoord[@"latitude"] doubleValue];
+        double longitude = [oneCoord[@"longitude"] doubleValue];
 
         if (![checker coordinateInRegion:CLLocationCoordinate2DMake(latitude, longitude)])
         {
@@ -94,7 +88,7 @@
             pisteCyclable.largeur = dict[@"largeur"];
             pisteCyclable.longueur = dict[@"longueur"];
 
-//            pisteCyclable.geom = [self extractCoordsFromString:elements[11]];
+            pisteCyclable.geom = [self extractCoordsFromArray:dict[@"geom"]];
         }
     }
 
