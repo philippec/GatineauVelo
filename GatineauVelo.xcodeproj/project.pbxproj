@@ -129,10 +129,10 @@
 		373DC8A718BA6CC2003FBFC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		373DC8A918BA6CC2003FBFC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		373DC8AB18BA6CC2003FBFC3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		373DC8AF18BA6CC2003FBFC3 /* GatineauVélo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVélo-Info.plist"; sourceTree = "<group>"; };
+		373DC8AF18BA6CC2003FBFC3 /* GatineauVelo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVelo-Info.plist"; sourceTree = "<group>"; };
 		373DC8B118BA6CC2003FBFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		373DC8B318BA6CC2003FBFC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		373DC8B518BA6CC2003FBFC3 /* GatineauVélo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatineauVélo-Prefix.pch"; sourceTree = "<group>"; };
+		373DC8B518BA6CC2003FBFC3 /* GatineauVelo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatineauVelo-Prefix.pch"; sourceTree = "<group>"; };
 		373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVAppDelegate.h; sourceTree = "<group>"; };
 		373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegate.m; sourceTree = "<group>"; };
 		373DC8BA18BA6CC2003FBFC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		373DC8C518BA6CC2003FBFC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		373DC8CB18BA6CC2003FBFC3 /* GatineauVéloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GatineauVéloTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DC8CC18BA6CC2003FBFC3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		373DC8D518BA6CC2003FBFC3 /* GatineauVéloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVéloTests-Info.plist"; sourceTree = "<group>"; };
+		373DC8D518BA6CC2003FBFC3 /* GatineauVeloTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GatineauVeloTests-Info.plist"; sourceTree = "<group>"; };
 		373DC8D718BA6CC2003FBFC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
@@ -317,10 +317,10 @@
 			isa = PBXGroup;
 			children = (
 				370AC68718C291B900A36D54 /* libOCMock.a */,
-				373DC8AF18BA6CC2003FBFC3 /* GatineauVélo-Info.plist */,
+				373DC8AF18BA6CC2003FBFC3 /* GatineauVelo-Info.plist */,
 				373DC8B018BA6CC2003FBFC3 /* InfoPlist.strings */,
 				373DC8B318BA6CC2003FBFC3 /* main.m */,
-				373DC8B518BA6CC2003FBFC3 /* GatineauVélo-Prefix.pch */,
+				373DC8B518BA6CC2003FBFC3 /* GatineauVelo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			children = (
 				370AC69318C2A33200A36D54 /* GVTestCase.h */,
 				370AC69418C2A33200A36D54 /* GVTestCase.m */,
-				373DC8D518BA6CC2003FBFC3 /* GatineauVéloTests-Info.plist */,
+				373DC8D518BA6CC2003FBFC3 /* GatineauVeloTests-Info.plist */,
 				373DC8D618BA6CC2003FBFC3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -684,8 +684,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
-				INFOPLIST_FILE = "GatineauVelo/GatineauVélo-Info.plist";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -702,8 +702,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
-				INFOPLIST_FILE = "GatineauVelo/GatineauVélo-Info.plist";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -722,7 +722,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -732,7 +732,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
 				);
-				INFOPLIST_FILE = "GatineauVeloTests/GatineauVéloTests-Info.plist";
+				INFOPLIST_FILE = "GatineauVeloTests/GatineauVeloTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
@@ -754,20 +754,20 @@
 		373DC8E218BA6CC2003FBFC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GatineauVélo.app/GatineauVélo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GatineauVelo.app/GatineauVélo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
 				);
-				INFOPLIST_FILE = "GatineauVeloTests/GatineauVéloTests-Info.plist";
+				INFOPLIST_FILE = "GatineauVeloTests/GatineauVeloTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
@@ -826,8 +826,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
-				INFOPLIST_FILE = "GatineauVelo/GatineauVélo-Info.plist";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -846,13 +846,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVélo-Prefix.pch";
+				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
 				);
-				INFOPLIST_FILE = "GatineauVeloTests/GatineauVéloTests-Info.plist";
+				INFOPLIST_FILE = "GatineauVeloTests/GatineauVeloTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/GatineauVeloTests/OCMock/iOS\"",
