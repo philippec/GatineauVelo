@@ -63,7 +63,6 @@
 		378DA93718C4243200ED4501 /* GVContextTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 378DA93618C4243200ED4501 /* GVContextTestsData */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
-		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
 		37C9754E197E1B74000BD96D /* PISTE_CYCLABLE.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C9754D197E1B74000BD96D /* PISTE_CYCLABLE.json */; };
 		37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFADAD18BA701D00728113 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -163,8 +162,6 @@
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
 		37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPisteCyclable.m; sourceTree = "<group>"; };
-		37BAB17318BAED9300B949D1 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = "Third Party/DDFileReader.h"; sourceTree = "<group>"; };
-		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
 		37C9754D197E1B74000BD96D /* PISTE_CYCLABLE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PISTE_CYCLABLE.json; sourceTree = "<group>"; };
 		37D96A9518C58035006298B4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		37D96A9618C5803A006298B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -347,8 +344,6 @@
 		37BAB17218BAED6700B949D1 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				37BAB17318BAED9300B949D1 /* DDFileReader.h */,
-				37BAB17418BAED9300B949D1 /* DDFileReader.m */,
 				378DA93318C4088C00ED4501 /* MBProgressHUD.h */,
 				378DA93418C4088C00ED4501 /* MBProgressHUD.m */,
 				370AC69F18C2ED5400A36D54 /* UIColor+HexColors.h */,
@@ -490,7 +485,6 @@
 				370AC67D18C2886200A36D54 /* GVAppDefaults.m in Sources */,
 				370AC68418C28E6800A36D54 /* GVPathLoader.m in Sources */,
 				373DC8C418BA6CC2003FBFC3 /* GVFlipsideViewController.m in Sources */,
-				37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */,
 				373DC8B818BA6CC2003FBFC3 /* GVAppDelegate.m in Sources */,
 				370AC6BF18C3A10B00A36D54 /* GVPathEnabledViewController.m in Sources */,
 				370AC68B18C299FA00A36D54 /* GVContext.m in Sources */,

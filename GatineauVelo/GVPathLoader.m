@@ -7,7 +7,6 @@
 //
 
 #import "GVPathLoader.h"
-#import "DDFileReader.h"
 #import "GVPisteCyclable.h"
 #import "GVPoint.h"
 #import "GVCoordinateChecker.h"
@@ -69,41 +68,36 @@
 
 - (void)loadBikePathsAtURL:(NSURL *)url withCompletion:(GVPathLoaderComplete)completion
 {
-    DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:url.filePathURL.path];
-    reader.lineDelimiter = @"\r";
-    NSUInteger lineCounter = 0;
-    NSString *line;
-    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-
-    while ((line = [reader readLine]))
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSError *error;
+    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (![json isKindOfClass:[NSArray class]])
     {
-        // Skip the first line as it contains just the headers
-        if (lineCounter > 0)
-        {
-            NSArray *elements = [line componentsSeparatedByString:@"|"];
-            if (elements.count == 12)
-            {
-                GVPisteCyclable *pisteCyclable = [NSEntityDescription insertNewObjectForEntityForName:@"GVPisteCyclable" inManagedObjectContext:self.context.managedObjectContext];
-                pisteCyclable.entiteID = elements[0];
-                pisteCyclable.munID = elements[1];
-                pisteCyclable.codeID = elements[2];
-                pisteCyclable.type = elements[3];
-                pisteCyclable.route_verte = [elements[4] isEqualToString:@"Oui"] ? @YES : @NO;
-                pisteCyclable.direc_uniq = [elements[5] isEqualToString:@"Oui"] ? @YES : @NO;
-                pisteCyclable.status = elements[6];
-                pisteCyclable.revetement = elements[7];
-                pisteCyclable.proprio = elements[8];
-                pisteCyclable.largeur = [f numberFromString:elements[9]];
-                pisteCyclable.longueur = [f numberFromString:elements[10]];
-
-                pisteCyclable.geom = [self extractCoordsFromString:elements[11]];
-            }
-        }
-        lineCounter++;
+        NSLog(@"Erreur: %@", error);
+        return;
     }
 
-    NSError *error;
+    for (NSDictionary *dict in json)
+    {
+        if (dict.count == 12)
+        {
+            GVPisteCyclable *pisteCyclable = [NSEntityDescription insertNewObjectForEntityForName:@"GVPisteCyclable" inManagedObjectContext:self.context.managedObjectContext];
+            pisteCyclable.entiteID = dict[@"entiteID"];
+            pisteCyclable.munID = dict[@"munID"];
+            pisteCyclable.codeID = dict[@"codeID"];
+            pisteCyclable.type = dict[@"type"];
+            pisteCyclable.route_verte = [dict[@"route_verte"] isEqualToString:@"Oui"] ? @YES : @NO;
+            pisteCyclable.direc_uniq = [dict[@"direc_uniq"] isEqualToString:@"Oui"] ? @YES : @NO;
+            pisteCyclable.status = dict[@"status"];
+            pisteCyclable.revetement = dict[@"revetement"];
+            pisteCyclable.proprio = dict[@"proprio"];
+            pisteCyclable.largeur = dict[@"largeur"];
+            pisteCyclable.longueur = dict[@"longueur"];
+
+//            pisteCyclable.geom = [self extractCoordsFromString:elements[11]];
+        }
+    }
+
     if (![self.context.managedObjectContext save:&error])
     {
         NSLog(@"Erreur: %@", error);
