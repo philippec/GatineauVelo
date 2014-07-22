@@ -64,8 +64,8 @@
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
+		37C9754E197E1B74000BD96D /* PISTE_CYCLABLE.json in Resources */ = {isa = PBXBuildFile; fileRef = 37C9754D197E1B74000BD96D /* PISTE_CYCLABLE.json */; };
 		37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFADAD18BA701D00728113 /* MapKit.framework */; };
-		37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +86,7 @@
 		370AC68218C28E6800A36D54 /* GVPathLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathLoader.h; sourceTree = "<group>"; };
 		370AC68318C28E6800A36D54 /* GVPathLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoader.m; sourceTree = "<group>"; };
 		370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoaderTests.m; sourceTree = "<group>"; };
-		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "GatineauVeloTests/OCMock/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
+		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = GatineauVeloTests/OCMock/iOS/libOCMock.a; sourceTree = SOURCE_ROOT; };
 		370AC68918C299FA00A36D54 /* GVContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVContext.h; sourceTree = "<group>"; };
 		370AC68A18C299FA00A36D54 /* GVContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContext.m; sourceTree = "<group>"; };
 		370AC68C18C29A0300A36D54 /* GVContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContextTests.m; sourceTree = "<group>"; };
@@ -165,12 +165,12 @@
 		37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPisteCyclable.m; sourceTree = "<group>"; };
 		37BAB17318BAED9300B949D1 /* DDFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDFileReader.h; path = "Third Party/DDFileReader.h"; sourceTree = "<group>"; };
 		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
+		37C9754D197E1B74000BD96D /* PISTE_CYCLABLE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PISTE_CYCLABLE.json; sourceTree = "<group>"; };
 		37D96A9518C58035006298B4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		37D96A9618C5803A006298B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PISTE_CYCLABLE.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +232,8 @@
 		373DC89918BA6CC2003FBFC3 = {
 			isa = PBXGroup;
 			children = (
-				373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */,
-				373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */,
+				373DC8AD18BA6CC2003FBFC3 /* GatineauVelo */,
+				373DC8D318BA6CC2003FBFC3 /* GatineauVeloTests */,
 				373DC8A418BA6CC2003FBFC3 /* Frameworks */,
 				373DC8A318BA6CC2003FBFC3 /* Products */,
 				370AC6A218C377C300A36D54 /* Distribution Support */,
@@ -262,7 +262,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */ = {
+		373DC8AD18BA6CC2003FBFC3 /* GatineauVelo */ = {
 			isa = PBXGroup;
 			children = (
 				37BAB17218BAED6700B949D1 /* Third Party */,
@@ -310,7 +310,7 @@
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
-			path = "GatineauVelo";
+			path = GatineauVelo;
 			sourceTree = "<group>";
 		};
 		373DC8AE18BA6CC2003FBFC3 /* Supporting Files */ = {
@@ -325,12 +325,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */ = {
+		373DC8D318BA6CC2003FBFC3 /* GatineauVeloTests */ = {
 			isa = PBXGroup;
 			children = (
 				373DC8D418BA6CC2003FBFC3 /* Supporting Files */,
 			);
-			path = "GatineauVeloTests";
+			path = GatineauVeloTests;
 			sourceTree = "<group>";
 		};
 		373DC8D418BA6CC2003FBFC3 /* Supporting Files */ = {
@@ -360,7 +360,7 @@
 		37EFADB418BA721300728113 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */,
+				37C9754D197E1B74000BD96D /* PISTE_CYCLABLE.json */,
 				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
 				37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */,
 				37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */,
@@ -457,8 +457,8 @@
 				3710DBEA18DD340400CF65C9 /* Main_iPad.storyboard in Resources */,
 				370AC68118C2892B00A36D54 /* ApplicationDefaults.plist in Resources */,
 				373DC8BB18BA6CC2003FBFC3 /* Main.storyboard in Resources */,
-				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
 				378DA93118C3E9B600ED4501 /* open_data_license.html in Resources */,
+				37C9754E197E1B74000BD96D /* PISTE_CYCLABLE.json in Resources */,
 				378DA92718C3E75B00ED4501 /* licenses.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

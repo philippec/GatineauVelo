@@ -46,7 +46,7 @@
 
     // Load some data
     GVPathLoader *pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
-    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
+    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.json"];
     [pathLoader loadBikePathsAtURL:fileURL withCompletion:nil];
 
     XCTAssertNoThrow(result = self.context.needsContent);
@@ -59,7 +59,7 @@
 
     // Load some data
     GVPathLoader *pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
-    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
+    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.json"];
     [pathLoader loadBikePathsAtURL:fileURL withCompletion:nil];
 
     XCTAssertFalse(self.context.needsContent);

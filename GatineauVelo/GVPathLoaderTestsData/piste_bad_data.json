@@ -1,0 +1,29 @@
+[
+  {
+    "direc_uniq" : "Non",
+    "proprio" : "CCN",
+    "largeur" : 3,
+    "longueur" : 1024.2,
+    "type" : "Sentier polyvalent",
+    "entiteID" : "{721B6B45-9157-4520-A6EB-A9B76239CACF}",
+    "route_verte" : "Oui",
+    "munID" : "81017",
+    "revetement" : "Flexible",
+    "geom" : [
+      {
+        "longitude" : -75.70984,
+        "latitude" : 45.432339
+      },
+      {
+        "longitude" : 2,
+        "latitude" : 50
+      },
+      {
+        "longitude" : -75.70989400000001,
+        "latitude" : 45.432368
+      }
+    ],
+    "status" : "T.Q.C",
+    "codeID" : "166"
+  }
+]

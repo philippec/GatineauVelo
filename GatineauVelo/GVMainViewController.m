@@ -49,7 +49,7 @@ static const double kUpdateInterval = 300.0;
     {
         self.pathLoader.boundingRegion = self.appDefaults.maximumCityRegion;
 
-        NSURL *url = [[NSBundle mainBundle] URLForResource:self.appDefaults.csvFileName withExtension:@"csv"];
+        NSURL *url = [[NSBundle mainBundle] URLForResource:self.appDefaults.csvFileName withExtension:@"json"];
 
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {

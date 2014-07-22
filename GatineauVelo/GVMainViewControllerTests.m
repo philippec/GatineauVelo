@@ -36,7 +36,7 @@
     self.context = [[GVContext alloc] initWithMemoryStoreType:NSInMemoryStoreType andCreationDate:nil];
     self.pathLoader = [[GVPathLoader alloc] initWithContext:self.context];
 
-    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
+    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.json"];
     [self.pathLoader loadBikePathsAtURL:fileURL withCompletion:nil];
 
     self.mockUserDefaults = [OCMockObject mockForClass:[NSUserDefaults class]];

@@ -49,7 +49,7 @@
 
 - (void)testLoad10Paths
 {
-    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.csv"];
+    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"pistes_cyclables_10.json"];
 
     __block BOOL wasCalled;
     GVPathLoaderComplete completion = ^(void) {
@@ -84,7 +84,7 @@
 {
     XCTAssertNoThrow(self.pathLoader.boundingRegion = self.region);
 
-    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"piste_bad_data.csv"];
+    NSURL *fileURL = [[self dataFolder] URLByAppendingPathComponent:@"piste_bad_data.json"];
     XCTAssertNoThrow([self.pathLoader loadBikePathsAtURL:fileURL withCompletion:nil]);
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"GVPisteCyclable"];

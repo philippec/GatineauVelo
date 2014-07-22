@@ -67,7 +67,7 @@
 {
     if (!_context)
     {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:self.appDefaults.csvFileName ofType:@"csv"];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:self.appDefaults.csvFileName ofType:@"json"];
         NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
         NSDate *date = [attributes fileModificationDate];
 
