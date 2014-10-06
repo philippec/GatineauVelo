@@ -92,7 +92,9 @@ static const double kUpdateInterval = 300.0;
 {
     if (!_userLocation)
     {
-        _userLocation = [[GVUserLocation alloc] init];
+        _userLocation = [[GVUserLocation alloc] initWithBlock:^(BOOL enabled) {
+            [self updateUserLocation:enabled];
+        }];
     }
 
     return _userLocation;
@@ -100,7 +102,12 @@ static const double kUpdateInterval = 300.0;
 
 - (void)updateUserLocation
 {
-    if (self.userLocation.locationServicesEnabled)
+    [self updateUserLocation:self.userLocation.locationServicesEnabled];
+}
+
+- (void)updateUserLocation:(BOOL)locationEnabled
+{
+    if (locationEnabled)
     {
         [self.userLocation locateUserPositionWithBlock:^(CLLocationCoordinate2D userPosition) {
             GVCoordinateChecker *checker = [GVCoordinateChecker coordinateCheckerWithRegion:self.appDefaults.maximumCityRegion];

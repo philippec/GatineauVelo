@@ -11,8 +11,11 @@
 
 
 typedef void (^GVUserLocationCallback)(CLLocationCoordinate2D userPosition);
+typedef void (^GVUserLocationEnabledCallback)(BOOL enabled);
 
 @interface GVUserLocation : NSObject <CLLocationManagerDelegate>
+
+- (instancetype)initWithBlock:(GVUserLocationEnabledCallback)callback;
 
 - (BOOL)locationServicesEnabled;
 

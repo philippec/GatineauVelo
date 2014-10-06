@@ -1,2 +1,3 @@
 /* Localized versions of Info.plist keys */
 
+"NSLocationWhenInUseUsageDescription" = "Vous pourrez voir votre position sur la carte, si vous êtes à l'intérieur de la ville.";

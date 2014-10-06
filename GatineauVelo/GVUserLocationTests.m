@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "GVUserLocation.h"
 
 @interface GVUserLocationTests : XCTestCase
@@ -30,8 +31,21 @@
 
 - (void)testCreation
 {
-    XCTAssertNoThrow(self.userLocation = [[GVUserLocation alloc] init]);
+    __block BOOL wasCalled;
+    GVUserLocationEnabledCallback cb = ^(BOOL enabled) {
+        XCTAssertTrue(enabled);
+        wasCalled = YES;
+    };
+
+    XCTAssertNoThrow(self.userLocation = [[GVUserLocation alloc] initWithBlock:cb]);
     XCTAssertNotNil(self.userLocation);
+
+    id mockLocationManager = [OCMockObject mockForClass:[CLLocationManager class]];
+
+    // Call delegate method
+    XCTAssertNoThrow([self.userLocation locationManager:mockLocationManager didChangeAuthorizationStatus:kCLAuthorizationStatusAuthorized]);
+
+    XCTAssertTrue(wasCalled);
 }
 
 @end

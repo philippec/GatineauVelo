@@ -1,2 +1,3 @@
 /* Localized versions of Info.plist keys */
 
+"NSLocationWhenInUseUsageDescription" = "This will show your current location on the map, if you are within the city limits.";

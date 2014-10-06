@@ -13,17 +13,29 @@
 
 @property (strong) CLLocationManager *locationManager;
 @property (copy) GVUserLocationCallback locationCallback;
+@property (copy) GVUserLocationEnabledCallback enabledCallback;
+@property (assign) BOOL userHasAgreedToShareLocation;
 
 @end
 
 @implementation GVUserLocation
 
-- (instancetype)init
+- (instancetype)initWithBlock:(GVUserLocationEnabledCallback)callback;
 {
     if (self = [super init])
     {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
+        if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+        {
+            [_locationManager requestWhenInUseAuthorization];
+        }
+        else
+        {
+            // Default on previous OS
+            _userHasAgreedToShareLocation = YES;
+        }
+        _enabledCallback = [callback copy];
     }
 
     return self;
@@ -31,13 +43,20 @@
 
 - (BOOL)locationServicesEnabled
 {
-    return [CLLocationManager locationServicesEnabled];
+    if (self.userHasAgreedToShareLocation)
+    {
+        return [CLLocationManager locationServicesEnabled];
+    }
+    return NO;
 }
 
 - (void)locateUserPositionWithBlock:(GVUserLocationCallback)callback
 {
     self.locationCallback = callback;
-    [self.locationManager startUpdatingLocation];
+    if (self.userHasAgreedToShareLocation)
+    {
+        [self.locationManager startUpdatingLocation];
+    }
 }
 
 
@@ -67,7 +86,19 @@
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-//    NSLog(@"%zd", status);
+    if (kCLAuthorizationStatusAuthorizedAlways == status || kCLAuthorizationStatusAuthorizedWhenInUse == status)
+    {
+        self.userHasAgreedToShareLocation = YES;
+    }
+    else
+    {
+        self.userHasAgreedToShareLocation = NO;
+    }
+
+    if (self.enabledCallback)
+    {
+        self.enabledCallback(self.userHasAgreedToShareLocation);
+    }
 }
 
 
