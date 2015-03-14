@@ -55,6 +55,7 @@
 		373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */; };
 		373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */; };
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
+		3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3754E3381AB488D100A40786 /* Launch Screen.xib */; };
 		378DA92718C3E75B00ED4501 /* licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92518C3E75B00ED4501 /* licenses.html */; };
 		378DA92C18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92A18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m */; };
 		378DA92E18C3E95F00ED4501 /* GVOpenDataLicenseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92B18C3E95A00ED4501 /* GVOpenDataLicenseViewControllerTests.m */; };
@@ -86,7 +87,7 @@
 		370AC68218C28E6800A36D54 /* GVPathLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPathLoader.h; sourceTree = "<group>"; };
 		370AC68318C28E6800A36D54 /* GVPathLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoader.m; sourceTree = "<group>"; };
 		370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPathLoaderTests.m; sourceTree = "<group>"; };
-		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = "GatineauVeloTests/OCMock/iOS/libOCMock.a"; sourceTree = SOURCE_ROOT; };
+		370AC68718C291B900A36D54 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = GatineauVeloTests/OCMock/iOS/libOCMock.a; sourceTree = SOURCE_ROOT; };
 		370AC68918C299FA00A36D54 /* GVContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVContext.h; sourceTree = "<group>"; };
 		370AC68A18C299FA00A36D54 /* GVContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContext.m; sourceTree = "<group>"; };
 		370AC68C18C29A0300A36D54 /* GVContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVContextTests.m; sourceTree = "<group>"; };
@@ -149,6 +150,9 @@
 		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
+		3754E3391AB488D100A40786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
+		3754E33C1AB4890B00A40786 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
+		3754E33E1AB4890D00A40786 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "fr.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		378DA92618C3E75B00ED4501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/licenses.html; sourceTree = "<group>"; };
 		378DA92818C3E76100ED4501 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = fr; path = fr.lproj/licenses.html; sourceTree = "<group>"; };
 		378DA92918C3E95A00ED4501 /* GVOpenDataLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVOpenDataLicenseViewController.h; sourceTree = "<group>"; };
@@ -232,8 +236,8 @@
 		373DC89918BA6CC2003FBFC3 = {
 			isa = PBXGroup;
 			children = (
-				373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */,
-				373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */,
+				373DC8AD18BA6CC2003FBFC3 /* GatineauVelo */,
+				373DC8D318BA6CC2003FBFC3 /* GatineauVeloTests */,
 				373DC8A418BA6CC2003FBFC3 /* Frameworks */,
 				373DC8A318BA6CC2003FBFC3 /* Products */,
 				370AC6A218C377C300A36D54 /* Distribution Support */,
@@ -262,7 +266,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		373DC8AD18BA6CC2003FBFC3 /* GatineauVélo */ = {
+		373DC8AD18BA6CC2003FBFC3 /* GatineauVelo */ = {
 			isa = PBXGroup;
 			children = (
 				37BAB17218BAED6700B949D1 /* Third Party */,
@@ -308,9 +312,10 @@
 				370AC6C318C3B18E00A36D54 /* GVUserLocation.m */,
 				370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */,
 				373DC8C518BA6CC2003FBFC3 /* Images.xcassets */,
+				3754E3381AB488D100A40786 /* Launch Screen.xib */,
 				373DC8AE18BA6CC2003FBFC3 /* Supporting Files */,
 			);
-			path = "GatineauVelo";
+			path = GatineauVelo;
 			sourceTree = "<group>";
 		};
 		373DC8AE18BA6CC2003FBFC3 /* Supporting Files */ = {
@@ -325,12 +330,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		373DC8D318BA6CC2003FBFC3 /* GatineauVéloTests */ = {
+		373DC8D318BA6CC2003FBFC3 /* GatineauVeloTests */ = {
 			isa = PBXGroup;
 			children = (
 				373DC8D418BA6CC2003FBFC3 /* Supporting Files */,
 			);
-			path = "GatineauVeloTests";
+			path = GatineauVeloTests;
 			sourceTree = "<group>";
 		};
 		373DC8D418BA6CC2003FBFC3 /* Supporting Files */ = {
@@ -460,6 +465,7 @@
 				37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */,
 				378DA93118C3E9B600ED4501 /* open_data_license.html in Resources */,
 				378DA92718C3E75B00ED4501 /* licenses.html in Resources */,
+				3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +589,16 @@
 				37EFADB318BA716000728113 /* fr */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3754E3381AB488D100A40786 /* Launch Screen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3754E3391AB488D100A40786 /* Base */,
+				3754E33C1AB4890B00A40786 /* en */,
+				3754E33E1AB4890D00A40786 /* fr */,
+			);
+			name = "Launch Screen.xib";
 			sourceTree = "<group>";
 		};
 		378DA92518C3E75B00ED4501 /* licenses.html */ = {
