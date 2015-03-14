@@ -28,6 +28,13 @@ Universal for iPhone and iPad.
 Did you know that this application was Open Source? Visit https://github.com/philippec/GatineauVelo for more information.
 
 If you like this application, why not leave a small review in the App Store? This really helps us when we want to make new and useful applications for you.
+
+Version 1.2
+-----------
+
+Support pour iPhone 6, 6 Plus et iOS 8.
+
+Supports iPhone 6, 6 Plus and iOS 8.
 ----
 
 Keywords: Gatineau, bike path, bike paths, route verte, open data
