@@ -35,6 +35,14 @@ Version 1.2
 Support pour iPhone 6, 6 Plus et iOS 8.
 
 Supports iPhone 6, 6 Plus and iOS 8.
+
+Version 1.2.1
+-------------
+
+Support pour iPhone 6, 6 Plus et iOS 8.
+
+Supports iPhone 6, 6 Plus and iOS 8.
+
 ----
 
 Keywords: Gatineau, bike path, bike paths, route verte, open data
