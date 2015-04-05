@@ -10,6 +10,9 @@
 #import "GVMainViewController.h"
 #import "GVContext.h"
 #import "GVAppDefaults.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "FabricKeys.h"
 
 @interface GVAppDelegate()
 
@@ -29,7 +32,11 @@
     self.mainViewController.context = self.context;
     self.mainViewController.standardColor = [self.appDefaults colorNamed:@"standardColor"];
     self.mainViewController.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
-    
+
+#ifndef DISABLE_FABRIC
+    [Fabric with:@[CrashlyticsKit]];
+#endif
+
     return YES;
 }
 							
