@@ -102,15 +102,51 @@
     NSError *error;
     NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:storeURL.filePathURL.path error:&error];
     NSDate *storeCreationDate = [attributes fileModificationDate];
+    BOOL shouldDestroyStore = NO;
     if (storeCreationDate != nil && error == nil)
     {
         if (NSOrderedAscending == [storeCreationDate compare:self.creationDate])
         {
-            [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+            shouldDestroyStore = YES;
         }
     }
 
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+
+    if (shouldDestroyStore)
+    {
+        if ([_persistentStoreCoordinator respondsToSelector:@selector(destroyPersistentStoreAtURL:withType:options:error:)])
+        {
+            // Do it the new way
+            [_persistentStoreCoordinator destroyPersistentStoreAtURL:storeURL withType:self.memoryStoreType options:nil error:&error];
+        }
+        else
+        {
+            // Do it the old-fashioned way
+            // Note that we can't just delete the store itself, we have to delete related files as well
+            // For that we'll use a regex so we can match "GatineauVelo.sqlite", "GatineauVelo.sqlite-wal", etc.
+            NSString *storeName = storeURL.lastPathComponent;
+            NSString *storePath = storeURL.path.stringByDeletingLastPathComponent;
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[storeName stringByAppendingString:@".*$"]
+                                                                                   options:NSRegularExpressionCaseInsensitive
+                                                                                     error:nil];
+            NSDirectoryEnumerator *filesEnumerator = [[NSFileManager defaultManager] enumeratorAtPath:storePath];
+
+            NSString *oneFileName;
+            NSError *deleteError;
+            while (oneFileName = [filesEnumerator nextObject])
+            {
+                NSUInteger match = [regex numberOfMatchesInString:oneFileName
+                                                          options:0
+                                                            range:NSMakeRange(0, oneFileName.length)];
+                if (match > 0)
+                {
+                    [[NSFileManager defaultManager] removeItemAtPath:[storePath stringByAppendingPathComponent:oneFileName] error:&deleteError];
+                }
+            }
+        }
+    }
+
     if (![_persistentStoreCoordinator addPersistentStoreWithType:self.memoryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
