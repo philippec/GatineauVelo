@@ -67,6 +67,28 @@
     return [NSSet setWithSet:s];
 }
 
+// String elements are quoted, we will remove the start-end quotes from them
+- (NSArray *)removeQuotes:(NSArray *)elements
+{
+    NSMutableArray *result = [NSMutableArray arrayWithArray:elements];
+
+    for (NSUInteger i = 0; i < result.count; i++)
+    {
+        NSString *oneElement = result[i];
+        if ([oneElement hasPrefix:@"\""])
+        {
+            oneElement = [oneElement substringFromIndex:1];
+        }
+        if ([oneElement hasSuffix:@"\""])
+        {
+            oneElement = [oneElement substringToIndex:oneElement.length - 1];
+        }
+        result[i] = oneElement;
+    }
+
+    return [NSArray arrayWithArray:result];
+}
+
 - (void)loadBikePathsAtURL:(NSURL *)url withCompletion:(GVPathLoaderComplete)completion
 {
     DDFileReader *reader = [[DDFileReader alloc] initWithFilePath:url.filePathURL.path];
@@ -81,23 +103,26 @@
         // Skip the first line as it contains just the headers
         if (lineCounter > 0)
         {
-            NSArray *elements = [line componentsSeparatedByString:@"|"];
-            if (elements.count == 12)
+            NSArray *elements = [[line stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsSeparatedByString:@","];
+            elements = [self removeQuotes:elements];
+            if (elements.count >= 12)
             {
                 GVPisteCyclable *pisteCyclable = [NSEntityDescription insertNewObjectForEntityForName:@"GVPisteCyclable" inManagedObjectContext:self.context.managedObjectContext];
-                pisteCyclable.entiteID = elements[0];
-                pisteCyclable.munID = elements[1];
-                pisteCyclable.codeID = elements[2];
-                pisteCyclable.type = elements[3];
-                pisteCyclable.route_verte = [elements[4] isEqualToString:@"Oui"] ? @YES : @NO;
-                pisteCyclable.direc_uniq = [elements[5] isEqualToString:@"Oui"] ? @YES : @NO;
-                pisteCyclable.status = elements[6];
-                pisteCyclable.revetement = elements[7];
-                pisteCyclable.proprio = elements[8];
-                pisteCyclable.largeur = [f numberFromString:elements[9]];
-                pisteCyclable.longueur = [f numberFromString:elements[10]];
+                pisteCyclable.munID = elements[0];
+                pisteCyclable.codeID = elements[1];
+                pisteCyclable.type = elements[2];
+                pisteCyclable.route_verte = [elements[3] isEqualToString:@"Oui"] ? @YES : @NO;
+                pisteCyclable.direc_uniq = [elements[4] isEqualToString:@"Oui"] ? @YES : @NO;
+                pisteCyclable.status = elements[5];
+                pisteCyclable.revetement = elements[6];
+                pisteCyclable.proprio = elements[7];
+                pisteCyclable.largeur = [f numberFromString:elements[8]];
+                pisteCyclable.longueur = [f numberFromString:elements[9]];
+                pisteCyclable.entiteID = elements[10];
 
-                pisteCyclable.geom = [self extractCoordsFromString:elements[11]];
+                // Create a new string re-joining elements 11 to n
+                NSArray *geom = [elements subarrayWithRange:NSMakeRange(11, elements.count - 11)];
+                pisteCyclable.geom = [self extractCoordsFromString:[geom componentsJoinedByString:@","]];
             }
         }
         lineCounter++;
