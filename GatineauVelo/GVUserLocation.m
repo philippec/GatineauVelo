@@ -68,7 +68,7 @@
     CLLocation *location = [locations lastObject];
     NSDate *eventDate = location.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
-    if (abs(howRecent) < 15.0)
+    if (fabs(howRecent) < 15.0)
     {
         [self.locationManager stopUpdatingLocation];
         if (self.locationCallback)
