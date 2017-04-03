@@ -66,6 +66,8 @@
 		378DA93718C4243200ED4501 /* GVContextTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 378DA93618C4243200ED4501 /* GVContextTestsData */; };
 		379F47BE1E920C64006C6BCD /* GVWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47BD1E920C64006C6BCD /* GVWebViewDelegate.m */; };
 		379F47C01E920C77006C6BCD /* GVWebViewDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47BF1E920C76006C6BCD /* GVWebViewDelegateTests.m */; };
+		379F47C31E930B0C006C6BCD /* GVReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47C21E930B0C006C6BCD /* GVReviewController.m */; };
+		379F47C51E930B27006C6BCD /* GVReviewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47C41E930B27006C6BCD /* GVReviewControllerTests.m */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
@@ -175,6 +177,9 @@
 		379F47BC1E920C64006C6BCD /* GVWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWebViewDelegate.h; sourceTree = "<group>"; };
 		379F47BD1E920C64006C6BCD /* GVWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWebViewDelegate.m; sourceTree = "<group>"; };
 		379F47BF1E920C76006C6BCD /* GVWebViewDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWebViewDelegateTests.m; sourceTree = "<group>"; };
+		379F47C11E930B0C006C6BCD /* GVReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVReviewController.h; sourceTree = "<group>"; };
+		379F47C21E930B0C006C6BCD /* GVReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVReviewController.m; sourceTree = "<group>"; };
+		379F47C41E930B27006C6BCD /* GVReviewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVReviewControllerTests.m; sourceTree = "<group>"; };
 		37BAB16C18BA767A00B949D1 /* GVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPoint.h; sourceTree = "<group>"; };
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
@@ -326,6 +331,9 @@
 				370AC68318C28E6800A36D54 /* GVPathLoader.m */,
 				370AC68518C28E7800A36D54 /* GVPathLoaderTests.m */,
 				370AC69818C2B55A00A36D54 /* GVPathLoaderTestsData */,
+				379F47C11E930B0C006C6BCD /* GVReviewController.h */,
+				379F47C21E930B0C006C6BCD /* GVReviewController.m */,
+				379F47C41E930B27006C6BCD /* GVReviewControllerTests.m */,
 				370AC6C218C3B18E00A36D54 /* GVUserLocation.h */,
 				370AC6C318C3B18E00A36D54 /* GVUserLocation.m */,
 				370AC6C518C3B20800A36D54 /* GVUserLocationTests.m */,
@@ -559,6 +567,7 @@
 				370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */,
 				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
 				379F47BE1E920C64006C6BCD /* GVWebViewDelegate.m in Sources */,
+				379F47C31E930B0C006C6BCD /* GVReviewController.m in Sources */,
 				370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */,
 				370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
@@ -586,6 +595,7 @@
 				370AC6C118C3A10F00A36D54 /* GVPathEnabledViewControllerTests.m in Sources */,
 				370AC6DF18C3E71E00A36D54 /* GVLicensesViewControllerTests.m in Sources */,
 				370AC6CB18C3D67E00A36D54 /* GVCoordinateCheckerTests.m in Sources */,
+				379F47C51E930B27006C6BCD /* GVReviewControllerTests.m in Sources */,
 				373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
