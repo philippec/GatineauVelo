@@ -7,12 +7,15 @@
 //
 
 #import "GVAboutViewController.h"
-
-@interface GVAboutViewController ()
-
-@end
+#import "GVWebViewDelegate.h"
 
 @implementation GVAboutViewController
+
+- (void)dealloc
+{
+    self.webDelegate = nil;
+    self.webView = nil;
+}
 
 - (void)viewDidLoad
 {
@@ -27,6 +30,9 @@
     [str replaceOccurrencesOfString:@"{VersionNum}" withString:versionStr options:NSCaseInsensitiveSearch range:NSMakeRange(0, [str length])];
 
     [self.webView loadHTMLString:str baseURL:url];
+
+    self.webDelegate = [[GVWebViewDelegate alloc] init];
+    self.webView.delegate = self.webDelegate;
 }
 
 - (void)didReceiveMemoryWarning

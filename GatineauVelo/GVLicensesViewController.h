@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class GVWebViewDelegate;
+
 @interface GVLicensesViewController : UIViewController
 
+@property (strong) GVWebViewDelegate *webDelegate;
 @property (strong) IBOutlet UIWebView *webView;
 
 @end

@@ -7,13 +7,16 @@
 //
 
 #import "GVLicensesViewController.h"
-
-@interface GVLicensesViewController ()
-
-@end
+#import "GVWebViewDelegate.h"
 
 @implementation GVLicensesViewController
 
+- (void)dealloc
+    {
+        self.webDelegate = nil;
+        self.webView = nil;
+    }
+    
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -24,6 +27,9 @@
     NSString* str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 
     [self.webView loadHTMLString:str baseURL:url];
+
+    self.webDelegate = [[GVWebViewDelegate alloc] init];
+    self.webView.delegate = self.webDelegate;
 }
 
 - (void)didReceiveMemoryWarning

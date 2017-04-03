@@ -64,6 +64,8 @@
 		378DA93118C3E9B600ED4501 /* open_data_license.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92F18C3E9B600ED4501 /* open_data_license.html */; };
 		378DA93518C4088C00ED4501 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA93418C4088C00ED4501 /* MBProgressHUD.m */; };
 		378DA93718C4243200ED4501 /* GVContextTestsData in Resources */ = {isa = PBXBuildFile; fileRef = 378DA93618C4243200ED4501 /* GVContextTestsData */; };
+		379F47BE1E920C64006C6BCD /* GVWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47BD1E920C64006C6BCD /* GVWebViewDelegate.m */; };
+		379F47C01E920C77006C6BCD /* GVWebViewDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 379F47BF1E920C76006C6BCD /* GVWebViewDelegateTests.m */; };
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
@@ -170,6 +172,9 @@
 		378DA93318C4088C00ED4501 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "Third Party/MBProgressHUD.h"; sourceTree = "<group>"; };
 		378DA93418C4088C00ED4501 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = "Third Party/MBProgressHUD.m"; sourceTree = "<group>"; };
 		378DA93618C4243200ED4501 /* GVContextTestsData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GVContextTestsData; sourceTree = "<group>"; };
+		379F47BC1E920C64006C6BCD /* GVWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWebViewDelegate.h; sourceTree = "<group>"; };
+		379F47BD1E920C64006C6BCD /* GVWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWebViewDelegate.m; sourceTree = "<group>"; };
+		379F47BF1E920C76006C6BCD /* GVWebViewDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWebViewDelegateTests.m; sourceTree = "<group>"; };
 		37BAB16C18BA767A00B949D1 /* GVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPoint.h; sourceTree = "<group>"; };
 		37BAB16D18BA767A00B949D1 /* GVPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVPoint.m; sourceTree = "<group>"; };
 		37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVPisteCyclable.h; sourceTree = "<group>"; };
@@ -239,6 +244,9 @@
 				378DA92A18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m */,
 				378DA92B18C3E95A00ED4501 /* GVOpenDataLicenseViewControllerTests.m */,
 				378DA92F18C3E9B600ED4501 /* open_data_license.html */,
+				379F47BC1E920C64006C6BCD /* GVWebViewDelegate.h */,
+				379F47BD1E920C64006C6BCD /* GVWebViewDelegate.m */,
+				379F47BF1E920C76006C6BCD /* GVWebViewDelegateTests.m */,
 			);
 			name = "Web Views";
 			sourceTree = "<group>";
@@ -550,6 +558,7 @@
 				378DA93518C4088C00ED4501 /* MBProgressHUD.m in Sources */,
 				370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */,
 				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
+				379F47BE1E920C64006C6BCD /* GVWebViewDelegate.m in Sources */,
 				370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */,
 				370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */,
 				373DC8C118BA6CC2003FBFC3 /* GVMainViewController.m in Sources */,
@@ -564,6 +573,7 @@
 			files = (
 				378DA92E18C3E95F00ED4501 /* GVOpenDataLicenseViewControllerTests.m in Sources */,
 				370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */,
+				379F47C01E920C77006C6BCD /* GVWebViewDelegateTests.m in Sources */,
 				370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */,
 				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
