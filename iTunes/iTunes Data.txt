@@ -58,6 +58,19 @@ Supports iPad Pro and iOS 9.
 
 ----
 
+Version 1.3.1
+-------------
+
+Nouvelles données fournies par la Ville de Gatineau. Les pistes cyclables sont plus complètes. Gatineau, ville vélo!
+
+Support pour iOS 10.
+
+Updated bike path data from the City of Gatineau. The bike paths are now better represented. Gatineau, ville vélo!
+
+Supports iOS 10.
+
+----
+
 Keywords: Gatineau, bike path, bike paths, route verte, open data
 Mots-clés: Gatineau, piste cyclable, pistes cyclables, route verte, données ouvertes
 
