@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @class GVContext;
-@class GVPathLoader;
 
 @interface GVAppDelegate : UIResponder <UIApplicationDelegate>
 
