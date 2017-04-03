@@ -14,6 +14,7 @@
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
 #import "GVPathLoader.h"
+#import "GVReviewController.h"
 #import "GVContext.h"
 #import "MBProgressHUD.h"
 
@@ -23,6 +24,7 @@
 @property (assign) MKCoordinateRegion selectedRegion;
 @property (assign) CFTimeInterval updateTimerInterval;
 @property (strong) NSDate *userLocationCalledDate;
+@property (strong) GVReviewController *reviewController;
 
 @end
 
@@ -64,12 +66,19 @@ static const double kUpdateInterval = 300.0;
     [self.updateTimer fire];
 
     [self updateAllOverlays];
+
+    if (!self.reviewController)
+    {
+        self.reviewController = [[GVReviewController alloc] initWithDefaults:self.userDefaults];
+    }
+    [self.reviewController requestReview];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    self.reviewController = nil;
 }
 
 - (void)appDidBecomeActive
