@@ -43,7 +43,7 @@
     id mockLocationManager = [OCMockObject mockForClass:[CLLocationManager class]];
 
     // Call delegate method
-    XCTAssertNoThrow([self.userLocation locationManager:mockLocationManager didChangeAuthorizationStatus:kCLAuthorizationStatusAuthorized]);
+    XCTAssertNoThrow([self.userLocation locationManager:mockLocationManager didChangeAuthorizationStatus:kCLAuthorizationStatusAuthorizedAlways]);
 
     XCTAssertTrue(wasCalled);
 }

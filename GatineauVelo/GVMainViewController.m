@@ -32,6 +32,8 @@ static const double kUpdateInterval = 300.0;
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    
     self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
     self.routeVerteColor = [UIColor greenColor];
     self.standardColor = [UIColor orangeColor];

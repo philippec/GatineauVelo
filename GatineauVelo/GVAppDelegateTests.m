@@ -31,7 +31,7 @@
 - (void)testCreation
 {
     GVAppDelegate *appDelegate;
-    XCTAssertNoThrow(appDelegate = [[UIApplication sharedApplication] delegate]);
+    XCTAssertNoThrow(appDelegate = (GVAppDelegate *)[[UIApplication sharedApplication] delegate]);
     XCTAssertNotNil(appDelegate);
     XCTAssertTrue([appDelegate isKindOfClass:[GVAppDelegate class]]);
 
