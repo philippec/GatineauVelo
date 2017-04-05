@@ -21,7 +21,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>102</string>
+	<string>103</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
