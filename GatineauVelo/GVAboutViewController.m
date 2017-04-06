@@ -26,8 +26,10 @@
     NSURL* url = [NSURL URLWithString: baseString];
     NSMutableString* str = [NSMutableString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 
-    NSString* versionStr = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
-    [str replaceOccurrencesOfString:@"{VersionNum}" withString:versionStr options:NSCaseInsensitiveSearch range:NSMakeRange(0, [str length])];
+    NSString* buildStr = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
+    NSString* versionStr = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleShortVersionString"];
+    NSString* fullVersionStr = [NSString stringWithFormat:@"%@ (%@)", versionStr, buildStr];
+    [str replaceOccurrencesOfString:@"{VersionNum}" withString:fullVersionStr options:NSCaseInsensitiveSearch range:NSMakeRange(0, [str length])];
 
     [self.webView loadHTMLString:str baseURL:url];
 
