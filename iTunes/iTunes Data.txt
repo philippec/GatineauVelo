@@ -71,6 +71,15 @@ Supports iOS 10.
 
 ----
 
+Version 1.3.2
+-------------
+
+Ajout des modes Satellite et Hybride pour la carte.
+
+Added Satellite and Hybrid mode for the map.
+
+----
+
 Keywords: Gatineau, bike path, bike paths, route verte, open data
 Mots-clés: Gatineau, piste cyclable, pistes cyclables, route verte, données ouvertes
 
