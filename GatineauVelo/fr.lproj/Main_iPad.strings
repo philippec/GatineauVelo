@@ -1,42 +1,54 @@
 
-/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
-"5QO-yh-4Fr.text" = "Pistes principales";
+/* Class = "UILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
+"5QO-yh-4Fr.text" = "Pistes cyclables principales";
 
-/* Class = "IBUILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
+/* Class = "UILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
 "BfK-in-HwL.text" = "Couleurs";
 
-/* Class = "IBUILabel"; text = "Bike Paths"; ObjectID = "DKq-Bj-8WW"; */
+/* Class = "UILabel"; text = "Bike Paths"; ObjectID = "DKq-Bj-8WW"; */
 "DKq-Bj-8WW.text" = "Pistes cyclables";
 
-/* Class = "IBUILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
-"Nd3-n3-X0h.text" = "Licences de tiers-partis";
+/* Class = "UILabel"; text = "Standard"; ObjectID = "DPT-3B-dLO"; */
+"DPT-3B-dLO.text" = "Standard";
 
-/* Class = "IBUITableViewController"; title = "Settings"; ObjectID = "Ozv-HC-FVd"; */
+/* Class = "UILabel"; text = "Map Type"; ObjectID = "FQu-vS-P9Z"; */
+"FQu-vS-P9Z.text" = "Style de carte";
+
+/* Class = "UILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
+"Nd3-n3-X0h.text" = "Licenses de tiers-partis";
+
+/* Class = "UILabel"; text = "Satellite"; ObjectID = "OrZ-Jy-lVf"; */
+"OrZ-Jy-lVf.text" = "Satellite";
+
+/* Class = "UITableViewController"; title = "Settings"; ObjectID = "Ozv-HC-FVd"; */
 "Ozv-HC-FVd.title" = "Réglages";
 
-/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "RQ5-C6-lNr"; */
+/* Class = "UILabel"; text = "Route Verte"; ObjectID = "RQ5-C6-lNr"; */
 "RQ5-C6-lNr.text" = "Route Verte";
 
-/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Wdy-xG-hi4"; */
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "Wdy-xG-hi4"; */
 "Wdy-xG-hi4.title" = "Retour";
 
-/* Class = "IBUILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
+/* Class = "UILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "À propos de cette application";
 
-/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
-"caU-JJ-JLf.title" = "Pistes Cyclables Gatineau";
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
+"caU-JJ-JLf.title" = "Titre";
 
-/* Class = "IBUITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
+/* Class = "UITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
 "mKf-Sg-tvg.headerTitle" = "Réglages";
 
-/* Class = "IBUILabel"; text = "Open Data License"; ObjectID = "q90-xu-Q0C"; */
+/* Class = "UILabel"; text = "Open Data License"; ObjectID = "q90-xu-Q0C"; */
 "q90-xu-Q0C.text" = "License Données Ouvertes";
 
-/* Class = "IBUITableViewSection"; headerTitle = "About"; ObjectID = "sc8-s3-vUw"; */
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "sc8-s3-vUw"; */
 "sc8-s3-vUw.headerTitle" = "À propos";
 
-/* Class = "IBUILabel"; text = "Main Bike Paths"; ObjectID = "vUG-dd-dVQ"; */
-"vUG-dd-dVQ.text" = "Pistes principales";
+/* Class = "UILabel"; text = "Hybrid"; ObjectID = "uTM-D0-rhi"; */
+"uTM-D0-rhi.text" = "Hybride";
 
-/* Class = "IBUILabel"; text = "Route Verte"; ObjectID = "yD1-c6-yP5"; */
+/* Class = "UILabel"; text = "Main Bike Paths"; ObjectID = "vUG-dd-dVQ"; */
+"vUG-dd-dVQ.text" = "Pistes cyclables principales";
+
+/* Class = "UILabel"; text = "Route Verte"; ObjectID = "yD1-c6-yP5"; */
 "yD1-c6-yP5.text" = "Route Verte";

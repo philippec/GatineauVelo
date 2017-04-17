@@ -196,8 +196,17 @@ static const double kUpdateInterval = 300.0;
     return [NSArray arrayWithArray:visibleBikePaths];
 }
 
+- (void)updateMapType
+{
+    // Defaults to 0 for MKMapTypeStandard
+    NSInteger mapType = [[NSUserDefaults standardUserDefaults] integerForKey:@"mapType"];
+
+    self.mapView.mapType = mapType;
+}
+
 - (void)updateAllOverlays
 {
+    [self updateMapType];
     [self.mapView removeOverlays:self.mapView.overlays];
 
     // Filter out the map points that can be shown on the map

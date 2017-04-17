@@ -55,6 +55,8 @@
 		373DC8E418BA6CF0003FBFC3 /* GVMainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */; };
 		373DC8E618BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */; };
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
+		37427A051EA3FBE5001CD52E /* GVMapTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */; };
+		37427A071EA3FBEB001CD52E /* GVMapTypeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */; };
 		3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3754E3381AB488D100A40786 /* Launch Screen.xib */; };
 		375E775B1ACF2D6900765280 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E77591ACF2D6900765280 /* Crashlytics.framework */; };
 		375E775C1ACF2D6900765280 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E775A1ACF2D6900765280 /* Fabric.framework */; };
@@ -157,6 +159,9 @@
 		373DC8E318BA6CF0003FBFC3 /* GVMainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMainViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVFlipsideViewControllerTests.m; sourceTree = "<group>"; };
 		373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAppDelegateTests.m; sourceTree = "<group>"; };
+		37427A021EA3FBE5001CD52E /* GVMapTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVMapTypeViewController.h; sourceTree = "<group>"; };
+		37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMapTypeViewController.m; sourceTree = "<group>"; };
+		37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMapTypeViewControllerTests.m; sourceTree = "<group>"; };
 		3754E3391AB488D100A40786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
 		3754E33C1AB4890B00A40786 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		3754E33E1AB4890D00A40786 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "fr.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -321,6 +326,9 @@
 				373DC8C218BA6CC2003FBFC3 /* GVFlipsideViewController.h */,
 				373DC8C318BA6CC2003FBFC3 /* GVFlipsideViewController.m */,
 				373DC8E518BA6D81003FBFC3 /* GVFlipsideViewControllerTests.m */,
+				37427A021EA3FBE5001CD52E /* GVMapTypeViewController.h */,
+				37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */,
+				37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */,
 				370AC6B718C3987700A36D54 /* GVPathColorsViewController.h */,
 				370AC6B818C3987700A36D54 /* GVPathColorsViewController.m */,
 				370AC6BA18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m */,
@@ -550,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37427A051EA3FBE5001CD52E /* GVMapTypeViewController.m in Sources */,
 				370AC6C418C3B18E00A36D54 /* GVUserLocation.m in Sources */,
 				378DA92C18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m in Sources */,
 				370AC69C18C2E3E800A36D54 /* GVColorPolyline.m in Sources */,
@@ -584,6 +593,7 @@
 				370AC6D918C3E16200A36D54 /* GVAboutViewControllerTests.m in Sources */,
 				379F47C01E920C77006C6BCD /* GVWebViewDelegateTests.m in Sources */,
 				370AC6BB18C39A3D00A36D54 /* GVPathColorsViewControllerTests.m in Sources */,
+				37427A071EA3FBEB001CD52E /* GVMapTypeViewControllerTests.m in Sources */,
 				370AC68618C28E7800A36D54 /* GVPathLoaderTests.m in Sources */,
 				370AC67F18C2887600A36D54 /* GVAppDefaultsTests.m in Sources */,
 				370AC68D18C29A0300A36D54 /* GVContextTests.m in Sources */,

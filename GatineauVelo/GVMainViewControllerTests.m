@@ -107,4 +107,9 @@
     XCTAssertNoThrow([self.mockTimer verify]);
 }
 
+- (void)testMapType
+{
+    XCTAssertEqual(MKMapTypeStandard, 0);
+}
+
 @end
