@@ -8,6 +8,7 @@
 
 #import "GVPathColorsViewController.h"
 #import "GVAppDefaults.h"
+#import "GVColorPickerTableViewController.h"
 
 @interface GVPathColorsViewController ()
 
@@ -18,9 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.mainPathColorView.backgroundColor = [self.appDefaults colorNamed:@"standardColor"];
-    self.routeVerteColorView.backgroundColor = [self.appDefaults colorNamed:@"routeVerteColor"];
+    [self prepareColors];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,10 +31,29 @@
 {
     if (!_appDefaults)
     {
-        _appDefaults = [[GVAppDefaults alloc] init];
+        _appDefaults = [[GVAppDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
     }
 
     return _appDefaults;
+}
+
+- (void)prepareColors
+{
+    self.mainPathColorView.backgroundColor = [self.appDefaults colorNamed:@"standardColor"];
+    self.routeVerteColorView.backgroundColor = [self.appDefaults colorNamed:@"routeVerteColor"];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *colorSelection = segue.identifier;
+    GVColorPickerTableViewController *controller = (GVColorPickerTableViewController *)segue.destinationViewController;
+    controller.colors = [self.appDefaults colorsForName:colorSelection];
+    controller.callback = ^(NSUInteger index) {
+        [self.appDefaults saveColorIndex:index forColorName:colorSelection];
+        [self prepareColors];
+    };
 }
 
 @end

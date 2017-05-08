@@ -37,12 +37,11 @@ static const double kUpdateInterval = 300.0;
     [super awakeFromNib];
     
     self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
-    self.routeVerteColor = [UIColor greenColor];
-    self.standardColor = [UIColor orangeColor];
 
-    self.appDefaults = [[GVAppDefaults alloc] init];
+    self.appDefaults = [[GVAppDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
     self.updateTimerInterval = kUpdateInterval;
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateTimerInterval target:self selector:@selector(updateUserLocation) userInfo:nil repeats:YES];
+    [self updateColours];
 }
 
 - (void)viewDidLoad
@@ -95,6 +94,12 @@ static const double kUpdateInterval = 300.0;
     }
 
     return _userDefaults;
+}
+
+- (void)updateColours
+{
+    self.standardColor = [self.appDefaults colorNamed:@"standardColor"];
+    self.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
 }
 
 #pragma mark - User location
@@ -207,6 +212,7 @@ static const double kUpdateInterval = 300.0;
 - (void)updateAllOverlays
 {
     [self updateMapType];
+    [self updateColours];
     [self.mapView removeOverlays:self.mapView.overlays];
 
     // Filter out the map points that can be shown on the map

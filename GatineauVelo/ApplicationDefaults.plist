@@ -14,9 +14,23 @@
 		<real>0.710821</real>
 	</dict>
 	<key>standardColor</key>
-	<string>ffa500</string>
+	<array>
+		<string>ffa500</string>
+		<string>d9ff00</string>
+		<string>5aff00</string>
+		<string>00ff25</string>
+		<string>00ffa5</string>
+		<string>00d9ff</string>
+	</array>
 	<key>routeVerteColor</key>
-	<string>266a2e</string>
+	<array>
+		<string>266a2e</string>
+		<string>266a50</string>
+		<string>26626a</string>
+		<string>26406a</string>
+		<string>2e266a</string>
+		<string>50266a</string>
+	</array>
 	<key>csvFileName</key>
 	<string>PISTE_CYCLABLE</string>
 </dict>

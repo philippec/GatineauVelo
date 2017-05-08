@@ -26,12 +26,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.appDefaults = [[GVAppDefaults alloc] init];
+    self.appDefaults = [[GVAppDefaults alloc] initWithUserDefaults:[NSUserDefaults standardUserDefaults]];
 
     self.mainViewController = (GVMainViewController *)self.window.rootViewController;
     self.mainViewController.context = self.context;
-    self.mainViewController.standardColor = [self.appDefaults colorNamed:@"standardColor"];
-    self.mainViewController.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
 
 #ifndef DISABLE_FABRIC
     [Fabric with:@[CrashlyticsKit]];

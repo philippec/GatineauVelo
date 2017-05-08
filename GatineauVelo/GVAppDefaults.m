@@ -13,17 +13,19 @@
 
 @property (strong) NSDictionary *appDefaults;
 @property (assign) MKCoordinateRegion maxCityRegionInternal;
+@property (strong) NSUserDefaults *defaults;
 
 @end
 
 @implementation GVAppDefaults
 
-- (instancetype)init
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)defaults
 {
     if (self = [super init])
     {
         NSURL *url = [[NSBundle bundleForClass:[self class]] URLForResource:@"ApplicationDefaults" withExtension:@"plist"];
         _appDefaults = [NSDictionary dictionaryWithContentsOfURL:url];
+        _defaults = defaults;
     }
 
     return self;
@@ -46,13 +48,28 @@
 {
     UIColor *color = [UIColor clearColor];
 
-    NSString *colorString = self.appDefaults[name];
-    if (colorString)
+    NSArray *colors = self.appDefaults[name];
+    if (colors)
     {
-        color = [UIColor colorWithHexString:colorString];
+        NSUInteger idx = [self.defaults integerForKey:name];
+        if (idx < colors.count)
+        {
+            NSString *colorString = colors[idx];
+            color = [UIColor colorWithHexString:colorString];
+        }
     }
 
     return color;
+}
+
+- (NSArray *)colorsForName:(NSString *)name
+{
+    return self.appDefaults[name];
+}
+
+- (void)saveColorIndex:(NSUInteger)index forColorName:(NSString *)name
+{
+    [self.defaults setInteger:index forKey:name];
 }
 
 - (NSString *)csvFileName

@@ -57,6 +57,7 @@
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
 		37427A051EA3FBE5001CD52E /* GVMapTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */; };
 		37427A071EA3FBEB001CD52E /* GVMapTypeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */; };
+		374662071EB0130E00E19C41 /* GVColorPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374662061EB0130E00E19C41 /* GVColorPickerTableViewController.m */; };
 		3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3754E3381AB488D100A40786 /* Launch Screen.xib */; };
 		375E775B1ACF2D6900765280 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E77591ACF2D6900765280 /* Crashlytics.framework */; };
 		375E775C1ACF2D6900765280 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E775A1ACF2D6900765280 /* Fabric.framework */; };
@@ -162,6 +163,8 @@
 		37427A021EA3FBE5001CD52E /* GVMapTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVMapTypeViewController.h; sourceTree = "<group>"; };
 		37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMapTypeViewController.m; sourceTree = "<group>"; };
 		37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVMapTypeViewControllerTests.m; sourceTree = "<group>"; };
+		374662051EB0130E00E19C41 /* GVColorPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVColorPickerTableViewController.h; sourceTree = "<group>"; };
+		374662061EB0130E00E19C41 /* GVColorPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVColorPickerTableViewController.m; sourceTree = "<group>"; };
 		3754E3391AB488D100A40786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
 		3754E33C1AB4890B00A40786 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		3754E33E1AB4890D00A40786 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "fr.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
@@ -307,6 +310,8 @@
 				373DC8B618BA6CC2003FBFC3 /* GVAppDelegate.h */,
 				373DC8B718BA6CC2003FBFC3 /* GVAppDelegate.m */,
 				373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */,
+				374662051EB0130E00E19C41 /* GVColorPickerTableViewController.h */,
+				374662061EB0130E00E19C41 /* GVColorPickerTableViewController.m */,
 				370AC69A18C2E3E800A36D54 /* GVColorPolyline.h */,
 				370AC69B18C2E3E800A36D54 /* GVColorPolyline.m */,
 				370AC69D18C2E43C00A36D54 /* GVColorPolylineTests.m */,
@@ -576,6 +581,7 @@
 				370AC6DD18C3E71700A36D54 /* GVLicensesViewController.m in Sources */,
 				370AC6B918C3987700A36D54 /* GVPathColorsViewController.m in Sources */,
 				379F47BE1E920C64006C6BCD /* GVWebViewDelegate.m in Sources */,
+				374662071EB0130E00E19C41 /* GVColorPickerTableViewController.m in Sources */,
 				379F47C31E930B0C006C6BCD /* GVReviewController.m in Sources */,
 				370AC6CF18C3DCF100A36D54 /* GVAboutViewController.m in Sources */,
 				370AC6C918C3D66A00A36D54 /* GVCoordinateChecker.m in Sources */,

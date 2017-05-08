@@ -58,7 +58,7 @@
     XCTAssertNoThrow(self.controller.userDefaults = self.mockUserDefaults);
 
     MKMapType mapType = MKMapTypeSatellite;
-    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(mapType)] integerForKey:@"mapType"];
+    [[[self.mockUserDefaults stub] andReturnValue:OCMOCK_VALUE(mapType)] integerForKey:@"mapType"];
 
     XCTAssertNoThrow([self.controller view]);
     XCTAssertEqual(self.controller.standardViewCell.accessoryType, UITableViewCellAccessoryNone);
