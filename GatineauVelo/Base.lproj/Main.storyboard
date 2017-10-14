@@ -95,7 +95,7 @@
                                     <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="hED-2o-FLw">
                                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                         <items>
-                                            <navigationItem title="Title" id="caU-JJ-JLf">
+                                            <navigationItem title="Info" id="caU-JJ-JLf">
                                                 <barButtonItem key="leftBarButtonItem" title="Back" id="Wdy-xG-hi4">
                                                     <connections>
                                                         <action selector="back:" destination="kIf-nA-PKG" id="Jf2-YJ-ghW"/>

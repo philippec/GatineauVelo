@@ -29,7 +29,10 @@
 /* Class = "UILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "À propos de cette application";
 
-/* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "YZa-At-pGl"; */
+"YZa-At-pGl.text" = "Ajouts récents";
+
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "caU-JJ-JLf"; */
 "caU-JJ-JLf.title" = "Infos";
 
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "hou-kH-3JS"; */

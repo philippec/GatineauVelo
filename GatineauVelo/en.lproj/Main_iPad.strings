@@ -14,6 +14,9 @@
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "FQu-vS-P9Z"; */
 "FQu-vS-P9Z.text" = "Map Type";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "IlL-Vx-nf8"; */
+"IlL-Vx-nf8.text" = "Recent Updates";
+
 /* Class = "UILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
 "Nd3-n3-X0h.text" = "Third-Party Licenses";
 
@@ -32,7 +35,7 @@
 /* Class = "UILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "About this Application";
 
-/* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "caU-JJ-JLf"; */
 "caU-JJ-JLf.title" = "Info";
 
 /* Class = "UITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
