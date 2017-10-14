@@ -33,7 +33,7 @@
 "WlB-al-rZQ.text" = "About this Application";
 
 /* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
-"caU-JJ-JLf.title" = "Title";
+"caU-JJ-JLf.title" = "Info";
 
 /* Class = "UITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
 "mKf-Sg-tvg.headerTitle" = "Settings";

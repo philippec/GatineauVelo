@@ -30,7 +30,7 @@
 "WlB-al-rZQ.text" = "À propos de cette application";
 
 /* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
-"caU-JJ-JLf.title" = "Titre";
+"caU-JJ-JLf.title" = "Infos";
 
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "hou-kH-3JS"; */
 "hou-kH-3JS.text" = "Style de carte";
