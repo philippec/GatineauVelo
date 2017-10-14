@@ -14,6 +14,7 @@
 
 @property (strong) IBOutlet UIView *mainPathColorView;
 @property (strong) IBOutlet UIView *routeVerteColorView;
+@property (strong) IBOutlet UIView *updatedPathColorView;
 
 @property (nonatomic, strong) GVAppDefaults *appDefaults;
 

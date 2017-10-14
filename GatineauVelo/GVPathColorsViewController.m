@@ -21,6 +21,7 @@
 
     self.mainPathColorView.backgroundColor = [self.appDefaults colorNamed:@"standardColor"];
     self.routeVerteColorView.backgroundColor = [self.appDefaults colorNamed:@"routeVerteColor"];
+    self.updatedPathColorView.backgroundColor = [self.appDefaults colorNamed:@"updateColor"];
 }
 
 - (void)didReceiveMemoryWarning

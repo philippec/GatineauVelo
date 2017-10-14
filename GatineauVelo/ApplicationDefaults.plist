@@ -17,6 +17,8 @@
 	<string>ffa500</string>
 	<key>routeVerteColor</key>
 	<string>266a2e</string>
+	<key>updateColor</key>
+	<string>ff2f92</string>
 	<key>csvFileName</key>
 	<string>PISTE_CYCLABLE</string>
 </dict>
