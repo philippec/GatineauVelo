@@ -73,6 +73,7 @@
 		37BAB16E18BA767A00B949D1 /* GVPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB16D18BA767A00B949D1 /* GVPoint.m */; };
 		37BAB17118BA767A00B949D1 /* GVPisteCyclable.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */; };
 		37BAB17518BAED9300B949D1 /* DDFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BAB17418BAED9300B949D1 /* DDFileReader.m */; };
+		37DEC0741F93092D0037BCBB /* update.json in Resources */ = {isa = PBXBuildFile; fileRef = 37E5891B1F930346005AB715 /* update.json */; };
 		37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EFADAD18BA701D00728113 /* MapKit.framework */; };
 		37EFADB618BA722200728113 /* PISTE_CYCLABLE.csv in Resources */ = {isa = PBXBuildFile; fileRef = 37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */; };
 /* End PBXBuildFile section */
@@ -193,6 +194,7 @@
 		37BAB17418BAED9300B949D1 /* DDFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDFileReader.m; path = "Third Party/DDFileReader.m"; sourceTree = "<group>"; };
 		37D96A9518C58035006298B4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		37D96A9618C5803A006298B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		37E5891B1F930346005AB715 /* update.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = update.json; sourceTree = "<group>"; };
 		37EFADAD18BA701D00728113 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37EFADB218BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37EFADB318BA716000728113 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				37EFADB518BA722200728113 /* PISTE_CYCLABLE.csv */,
+				37E5891B1F930346005AB715 /* update.json */,
 				373DC8BC18BA6CC2003FBFC3 /* GatineauVe_lo.xcdatamodeld */,
 				37BAB16F18BA767A00B949D1 /* GVPisteCyclable.h */,
 				37BAB17018BA767A00B949D1 /* GVPisteCyclable.m */,
@@ -496,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37DEC0741F93092D0037BCBB /* update.json in Resources */,
 				370AC6D218C3DE7700A36D54 /* about.html in Resources */,
 				373DC8C618BA6CC2003FBFC3 /* Images.xcassets in Resources */,
 				373DC8B218BA6CC2003FBFC3 /* InfoPlist.strings in Resources */,
