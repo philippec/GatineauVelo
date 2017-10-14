@@ -21,5 +21,7 @@
 	<string>ff2f92</string>
 	<key>csvFileName</key>
 	<string>PISTE_CYCLABLE</string>
+	<key>updateFileName</key>
+	<string>update</string>
 </dict>
 </plist>

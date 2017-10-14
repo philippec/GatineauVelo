@@ -13,6 +13,7 @@
 
 @property (readonly) MKCoordinateRegion maximumCityRegion;
 @property (readonly) NSString *csvFileName;
+@property (readonly) NSString *updateFileName;
 
 - (UIColor *)colorNamed:(NSString *)name;
 
