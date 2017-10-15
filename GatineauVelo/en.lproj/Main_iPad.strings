@@ -11,6 +11,9 @@
 /* Class = "UILabel"; text = "Standard"; ObjectID = "DPT-3B-dLO"; */
 "DPT-3B-dLO.text" = "Standard";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "F6q-I8-W3d"; */
+"F6q-I8-W3d.text" = "Recent Updates";
+
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "FQu-vS-P9Z"; */
 "FQu-vS-P9Z.text" = "Map Type";
 

@@ -413,6 +413,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jtj-nm-Wpl">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jtj-nm-Wpl" id="glg-fn-M4r">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Updates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-Vj-ou4">
+                                                    <rect key="frame" x="20" y="11" width="123" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-OL-WFX">
+                                                    <rect key="frame" x="306" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggleBikePath:" destination="4Gg-6G-ZoA" eventType="valueChanged" id="Yf9-hA-tlU"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fwW-OL-WFX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B2t-Vj-ou4" secondAttribute="trailing" constant="8" id="Jnf-et-HBR"/>
+                                                <constraint firstItem="fwW-OL-WFX" firstAttribute="centerY" secondItem="glg-fn-M4r" secondAttribute="centerY" id="Xfn-nD-35W"/>
+                                                <constraint firstAttribute="trailing" secondItem="fwW-OL-WFX" secondAttribute="trailing" constant="20" symbolic="YES" id="ksk-LJ-v2X"/>
+                                                <constraint firstItem="fwW-OL-WFX" firstAttribute="centerY" secondItem="B2t-Vj-ou4" secondAttribute="centerY" id="oxo-74-qea"/>
+                                                <constraint firstItem="B2t-Vj-ou4" firstAttribute="leading" secondItem="glg-fn-M4r" secondAttribute="leading" constant="20" symbolic="YES" id="vha-bT-zb3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -425,6 +453,7 @@
                     <connections>
                         <outlet property="mainPathSwitch" destination="0fb-9J-Z3z" id="uTW-nb-lxF"/>
                         <outlet property="routeVerteSwitch" destination="w8g-RI-M71" id="6eS-zm-sBT"/>
+                        <outlet property="updateSwitch" destination="fwW-OL-WFX" id="N6R-ae-oQC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSA-Tx-fO3" userLabel="First Responder" sceneMemberID="firstResponder"/>

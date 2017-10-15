@@ -414,6 +414,35 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CiW-GC-OcS">
+                                        <rect key="frame" x="0.0" y="88" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CiW-GC-OcS" id="BXB-WV-5os">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Updates" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6q-I8-W3d">
+                                                    <rect key="frame" x="20" y="11" width="123" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tnD-j0-PUT">
+                                                    <rect key="frame" x="699" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggleBikePath:" destination="4Gg-6G-ZoA" eventType="valueChanged" id="GPv-29-Ivu"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F6q-I8-W3d" firstAttribute="centerY" secondItem="BXB-WV-5os" secondAttribute="centerY" id="0Tn-yO-krf"/>
+                                                <constraint firstAttribute="trailing" secondItem="tnD-j0-PUT" secondAttribute="trailing" constant="20" symbolic="YES" id="DjQ-wk-TMQ"/>
+                                                <constraint firstItem="tnD-j0-PUT" firstAttribute="centerY" secondItem="BXB-WV-5os" secondAttribute="centerY" id="TBc-ri-cq7"/>
+                                                <constraint firstItem="F6q-I8-W3d" firstAttribute="leading" secondItem="BXB-WV-5os" secondAttribute="leading" constant="20" symbolic="YES" id="Vke-qu-t0O"/>
+                                                <constraint firstItem="tnD-j0-PUT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F6q-I8-W3d" secondAttribute="trailing" constant="8" id="hku-oA-GGX"/>
+                                                <constraint firstItem="tnD-j0-PUT" firstAttribute="centerY" secondItem="F6q-I8-W3d" secondAttribute="centerY" id="rs9-rB-eKs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -426,6 +455,7 @@
                     <connections>
                         <outlet property="mainPathSwitch" destination="0fb-9J-Z3z" id="uTW-nb-lxF"/>
                         <outlet property="routeVerteSwitch" destination="w8g-RI-M71" id="6eS-zm-sBT"/>
+                        <outlet property="updateSwitch" destination="tnD-j0-PUT" id="e2B-xO-M5w"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSA-Tx-fO3" userLabel="First Responder" sceneMemberID="firstResponder"/>

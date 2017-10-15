@@ -12,6 +12,7 @@
 
 @property (strong) IBOutlet UISwitch *mainPathSwitch;
 @property (strong) IBOutlet UISwitch *routeVerteSwitch;
+@property (strong) IBOutlet UISwitch *updateSwitch;
 
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 

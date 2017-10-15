@@ -11,6 +11,9 @@
 /* Class = "UILabel"; text = "Bike Paths"; ObjectID = "DKq-Bj-8WW"; */
 "DKq-Bj-8WW.text" = "Pistes cyclables";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "B2t-Vj-ou4"; */
+"B2t-Vj-ou4.text" = "Modifications récentes";
+
 /* Class = "UILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
 "Nd3-n3-X0h.text" = "Licenses de tiers-partis";
 
@@ -30,7 +33,7 @@
 "WlB-al-rZQ.text" = "À propos de cette application";
 
 /* Class = "UILabel"; text = "Recent Updates"; ObjectID = "YZa-At-pGl"; */
-"YZa-At-pGl.text" = "Ajouts récents";
+"YZa-At-pGl.text" = "Modifications récentes";
 
 /* Class = "UINavigationItem"; title = "Info"; ObjectID = "caU-JJ-JLf"; */
 "caU-JJ-JLf.title" = "Infos";

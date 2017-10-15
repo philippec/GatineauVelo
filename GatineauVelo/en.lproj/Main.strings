@@ -5,6 +5,9 @@
 /* Class = "UILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
 "5QO-yh-4Fr.text" = "Main Bike Paths";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "B2t-Vj-ou4"; */
+"B2t-Vj-ou4.text" = "Recent Updates";
+
 /* Class = "UILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
 "BfK-in-HwL.text" = "Colours";
 
