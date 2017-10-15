@@ -179,7 +179,7 @@ static const double kUpdateInterval = 300.0;
 //    NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
 
-- (NSArray *)polyLinesForBikePaths:(NSArray *)bikePaths withColor:(UIColor *)color
+- (NSArray *)polyLinesForBikePaths:(NSArray *)bikePaths withColor:(UIColor *)color andUpdateColor:(UIColor *)updateColor
 {
     NSMutableArray *visibleBikePaths = [NSMutableArray array];
     for (GVPisteCyclable *pisteCyclable in bikePaths)
@@ -188,7 +188,7 @@ static const double kUpdateInterval = 300.0;
         // Update the colour if it's new
         if ([self.updateCodes containsObject:pisteCyclable.codeID])
         {
-            color = self.updateColor;
+            color = updateColor;
         }
         // All the coordinates of the pisteCyclable, in order
         NSSet *points = pisteCyclable.geom;
@@ -230,6 +230,8 @@ static const double kUpdateInterval = 300.0;
     fetchRequest.sortDescriptors = @[sortDescriptor];
     NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
 
+    BOOL dontModifyColor = [[NSUserDefaults standardUserDefaults] boolForKey:@"dontUseUpdateColor"];
+
     BOOL hideRouteVerte = [[NSUserDefaults standardUserDefaults] boolForKey:@"routeVertePathsHidden"];
     if (!hideRouteVerte)
     {
@@ -245,7 +247,12 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.routeVerteColor];
+        UIColor *updateColor = self.updateColor;
+        if (dontModifyColor)
+        {
+            updateColor = self.routeVerteColor;
+        }
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.routeVerteColor andUpdateColor:updateColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 
@@ -264,7 +271,12 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.standardColor];
+        UIColor *updateColor = self.updateColor;
+        if (dontModifyColor)
+        {
+            updateColor = self.standardColor;
+        }
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.standardColor andUpdateColor:updateColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 }
