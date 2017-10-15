@@ -11,8 +11,14 @@
 /* Class = "UILabel"; text = "Standard"; ObjectID = "DPT-3B-dLO"; */
 "DPT-3B-dLO.text" = "Standard";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "F6q-I8-W3d"; */
+"F6q-I8-W3d.text" = "Modifications récentes";
+
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "FQu-vS-P9Z"; */
 "FQu-vS-P9Z.text" = "Style de carte";
+
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "IlL-Vx-nf8"; */
+"IlL-Vx-nf8.text" = "Modifications récentes";
 
 /* Class = "UILabel"; text = "Third-Party Licenses"; ObjectID = "Nd3-n3-X0h"; */
 "Nd3-n3-X0h.text" = "Licenses de tiers-partis";
@@ -32,8 +38,8 @@
 /* Class = "UILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "À propos de cette application";
 
-/* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
-"caU-JJ-JLf.title" = "Titre";
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "caU-JJ-JLf"; */
+"caU-JJ-JLf.title" = "Infos";
 
 /* Class = "UITableViewSection"; headerTitle = "Settings"; ObjectID = "mKf-Sg-tvg"; */
 "mKf-Sg-tvg.headerTitle" = "Réglages";

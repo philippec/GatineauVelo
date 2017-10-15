@@ -47,6 +47,7 @@
     XCTAssertNotNil(self.controller.appDefaults);
     XCTAssertNotNil(self.controller.mainPathColorView);
     XCTAssertNotNil(self.controller.routeVerteColorView);
+    XCTAssertNotNil(self.controller.updatedPathColorView);
 
     XCTAssertNoThrow(self.controller.appDefaults = self.mockAppDefaults);
     XCTAssertEqualObjects(self.controller.appDefaults, self.mockAppDefaults);
@@ -58,11 +59,13 @@
 
     [[[self.mockAppDefaults expect] andReturn:[UIColor redColor]] colorNamed:@"standardColor"];
     [[[self.mockAppDefaults expect] andReturn:[UIColor brownColor]] colorNamed:@"routeVerteColor"];
+    [[[self.mockAppDefaults expect] andReturn:[UIColor yellowColor]] colorNamed:@"updateColor"];
 
 
     XCTAssertNoThrow([self.controller view]);
     XCTAssertEqualObjects(self.controller.mainPathColorView.backgroundColor, [UIColor redColor]);
     XCTAssertEqualObjects(self.controller.routeVerteColorView.backgroundColor, [UIColor brownColor]);
+    XCTAssertEqualObjects(self.controller.updatedPathColorView.backgroundColor, [UIColor yellowColor]);
 
     XCTAssertNoThrow([self.mockAppDefaults verify]);
 

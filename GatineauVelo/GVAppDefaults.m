@@ -60,4 +60,9 @@
     return self.appDefaults[@"csvFileName"];
 }
 
+- (NSString *)updateFileName
+{
+    return self.appDefaults[@"updateFileName"];
+}
+
 @end

@@ -20,6 +20,7 @@
     [super viewDidLoad];
     self.mainPathSwitch.on = ![self.userDefaults boolForKey:@"mainPathsHidden"];
     self.routeVerteSwitch.on = ![self.userDefaults boolForKey:@"routeVertePathsHidden"];
+    self.updateSwitch.on = ![self.userDefaults boolForKey:@"dontUseUpdateColor"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +44,10 @@
     if (sender == self.routeVerteSwitch)
     {
         key = @"routeVertePathsHidden";
+    }
+    if (sender == self.updateSwitch)
+    {
+        key = @"dontUseUpdateColor";
     }
 
     [self.userDefaults setBool:!(sender.isOn) forKey:key];

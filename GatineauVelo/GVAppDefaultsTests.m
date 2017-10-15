@@ -47,6 +47,9 @@
     NSString *fileName;
     XCTAssertNoThrow(fileName = self.appDefaults.csvFileName);
     XCTAssertEqualObjects(fileName, @"PISTE_CYCLABLE");
+
+    XCTAssertNoThrow(fileName = self.appDefaults.updateFileName);
+    XCTAssertEqualObjects(fileName, @"update");
 }
 
 @end

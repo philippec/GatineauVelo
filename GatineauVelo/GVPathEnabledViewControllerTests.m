@@ -46,6 +46,7 @@
     XCTAssertNotNil(self.controller.userDefaults);
     XCTAssertNotNil(self.controller.mainPathSwitch);
     XCTAssertNotNil(self.controller.routeVerteSwitch);
+    XCTAssertNotNil(self.controller.updateSwitch);
 
     XCTAssertNoThrow(self.controller.userDefaults = self.mockUserDefaults);
     XCTAssertEqualObjects(self.controller.userDefaults, self.mockUserDefaults);
@@ -58,10 +59,12 @@
     BOOL no = NO;
     [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(no)] boolForKey:@"mainPathsHidden"];
     [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(no)] boolForKey:@"routeVertePathsHidden"];
+    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(no)] boolForKey:@"dontUseUpdateColor"];
 
     XCTAssertNoThrow([self.controller view]);
     XCTAssertTrue(self.controller.mainPathSwitch.isOn);
     XCTAssertTrue(self.controller.routeVerteSwitch.isOn);
+    XCTAssertTrue(self.controller.updateSwitch.isOn);
 
     XCTAssertNoThrow([self.mockUserDefaults verify]);
 
@@ -78,6 +81,14 @@
 
     XCTAssertNoThrow(self.controller.routeVerteSwitch.on = NO);
     XCTAssertNoThrow([self.controller toggleBikePath:self.controller.routeVerteSwitch]);
+
+    XCTAssertNoThrow([self.mockUserDefaults verify]);
+
+    [[self.mockUserDefaults expect] setBool:YES forKey:@"dontUseUpdateColor"];
+    [[self.mockUserDefaults expect] synchronize];
+
+    XCTAssertNoThrow(self.controller.updateSwitch.on = NO);
+    XCTAssertNoThrow([self.controller toggleBikePath:self.controller.updateSwitch]);
 
     XCTAssertNoThrow([self.mockUserDefaults verify]);
 }

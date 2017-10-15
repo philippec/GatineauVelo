@@ -5,6 +5,9 @@
 /* Class = "UILabel"; text = "Main Bike Paths"; ObjectID = "5QO-yh-4Fr"; */
 "5QO-yh-4Fr.text" = "Main Bike Paths";
 
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "B2t-Vj-ou4"; */
+"B2t-Vj-ou4.text" = "Recent Updates";
+
 /* Class = "UILabel"; text = "Colours"; ObjectID = "BfK-in-HwL"; */
 "BfK-in-HwL.text" = "Colours";
 
@@ -29,8 +32,11 @@
 /* Class = "UILabel"; text = "About this Application"; ObjectID = "WlB-al-rZQ"; */
 "WlB-al-rZQ.text" = "About this Application";
 
-/* Class = "UINavigationItem"; title = "Title"; ObjectID = "caU-JJ-JLf"; */
-"caU-JJ-JLf.title" = "Title";
+/* Class = "UILabel"; text = "Recent Updates"; ObjectID = "YZa-At-pGl"; */
+"YZa-At-pGl.text" = "Recent Updates";
+
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "caU-JJ-JLf"; */
+"caU-JJ-JLf.title" = "Info";
 
 /* Class = "UILabel"; text = "Map Type"; ObjectID = "hou-kH-3JS"; */
 "hou-kH-3JS.text" = "Map Type";

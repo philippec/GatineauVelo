@@ -32,6 +32,7 @@
     self.mainViewController.context = self.context;
     self.mainViewController.standardColor = [self.appDefaults colorNamed:@"standardColor"];
     self.mainViewController.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
+    self.mainViewController.updateColor = [self.appDefaults colorNamed:@"updateColor"];
 
 #ifndef DISABLE_FABRIC
     [Fabric with:@[CrashlyticsKit]];

@@ -14,6 +14,7 @@
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
 #import "GVPathLoader.h"
+#import "GVUpdateLoader.h"
 #import "GVReviewController.h"
 #import "GVContext.h"
 #import "MBProgressHUD.h"
@@ -39,10 +40,13 @@ static const double kUpdateInterval = 300.0;
     self.selectedRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(45.4728, -75.7949), MKCoordinateSpanMake(0.25, 0.22));
     self.routeVerteColor = [UIColor greenColor];
     self.standardColor = [UIColor orangeColor];
+    self.updateColor = [UIColor yellowColor];
 
     self.appDefaults = [[GVAppDefaults alloc] init];
     self.updateTimerInterval = kUpdateInterval;
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateTimerInterval target:self selector:@selector(updateUserLocation) userInfo:nil repeats:YES];
+
+    self.updateLoader = [[GVUpdateLoader alloc] init];
 }
 
 - (void)viewDidLoad
@@ -59,6 +63,12 @@ static const double kUpdateInterval = 300.0;
         [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
+    }
+
+    {
+        NSURL *url = [[NSBundle mainBundle] URLForResource:self.appDefaults.updateFileName withExtension:@"json"];
+
+        self.updateCodes = [self.updateLoader loadUpdatesAtURL:url];
     }
 
     self.mapView.region = self.selectedRegion;
@@ -169,12 +179,17 @@ static const double kUpdateInterval = 300.0;
 //    NSLog(@"selectedRegion: CLLocationCoordinate2DMake(%g, %g), MKCoordinateSpanMake(%g, %g)", self.selectedRegion.center.latitude, self.selectedRegion.center.longitude, self.selectedRegion.span.latitudeDelta, self.selectedRegion.span.longitudeDelta);
 }
 
-- (NSArray *)polyLinesForBikePaths:(NSArray *)bikePaths withColor:(UIColor *)color
+- (NSArray *)polyLinesForBikePaths:(NSArray *)bikePaths withColor:(UIColor *)color andUpdateColor:(UIColor *)updateColor
 {
     NSMutableArray *visibleBikePaths = [NSMutableArray array];
     for (GVPisteCyclable *pisteCyclable in bikePaths)
     {
 //        NSLog(@"%@", pisteCyclable);
+        // Update the colour if it's new
+        if ([self.updateCodes containsObject:pisteCyclable.codeID])
+        {
+            color = updateColor;
+        }
         // All the coordinates of the pisteCyclable, in order
         NSSet *points = pisteCyclable.geom;
         NSArray *orderedPoints = [points sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]]];
@@ -215,6 +230,8 @@ static const double kUpdateInterval = 300.0;
     fetchRequest.sortDescriptors = @[sortDescriptor];
     NSFetchedResultsController *frc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
 
+    BOOL dontModifyColor = [[NSUserDefaults standardUserDefaults] boolForKey:@"dontUseUpdateColor"];
+
     BOOL hideRouteVerte = [[NSUserDefaults standardUserDefaults] boolForKey:@"routeVertePathsHidden"];
     if (!hideRouteVerte)
     {
@@ -230,7 +247,12 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.routeVerteColor];
+        UIColor *updateColor = self.updateColor;
+        if (dontModifyColor)
+        {
+            updateColor = self.routeVerteColor;
+        }
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.routeVerteColor andUpdateColor:updateColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 
@@ -249,7 +271,12 @@ static const double kUpdateInterval = 300.0;
             return;
         }
 
-        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.standardColor];
+        UIColor *updateColor = self.updateColor;
+        if (dontModifyColor)
+        {
+            updateColor = self.standardColor;
+        }
+        NSArray *pistesCyclables = [self polyLinesForBikePaths:frc.fetchedObjects withColor:self.standardColor andUpdateColor:updateColor];
         [self.mapView addOverlays:pistesCyclables];
     }
 }

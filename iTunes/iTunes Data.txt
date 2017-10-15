@@ -80,6 +80,25 @@ Added Satellite and Hybrid mode for the map.
 
 ----
 
+Version 1.4.0
+-------------
+
+Nouvelles données fournies par la Ville de Gatineau. Les pistes cyclables sont plus complètes. Gatineau, ville vélo!
+
+Les pistes cyclables modifiées récemment sont présentées d'une couleur différente pour vous aider à voir ce qui a changé.
+Vous pouvez désactiver cette couleur si vous le désirez.
+
+Support pour iOS 11.
+
+Updated bike path data from the City of Gatineau. The bike paths are now better represented. Gatineau, ville vélo!
+
+Bike paths that were modified since the last update are now shown in a different colour, to help you identify what's changed.
+You can de-activate this colour is you choose to do so.
+
+Supports iOS 11.
+
+----
+
 Keywords: Gatineau, bike path, bike paths, route verte, open data
 Mots-clés: Gatineau, piste cyclable, pistes cyclables, route verte, données ouvertes
 
