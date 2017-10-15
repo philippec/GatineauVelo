@@ -68,6 +68,8 @@
     XCTAssertNoThrow([self.mockUserDefaults verify]);
 
     [[self.mockUserDefaults expect] setInteger:MKMapTypeHybrid forKey:@"mapType"];
+    mapType = MKMapTypeHybrid;
+    [[[self.mockUserDefaults expect] andReturnValue:OCMOCK_VALUE(mapType)] integerForKey:@"mapType"];
     [[self.mockUserDefaults expect] synchronize];
 
     XCTAssertNoThrow([self.controller tableView:self.controller.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]);
