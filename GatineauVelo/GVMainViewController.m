@@ -14,6 +14,7 @@
 #import "GVAppDefaults.h"
 #import "GVCoordinateChecker.h"
 #import "GVPathLoader.h"
+#import "GVUpdateLoader.h"
 #import "GVReviewController.h"
 #import "GVContext.h"
 #import "MBProgressHUD.h"
@@ -44,6 +45,8 @@ static const double kUpdateInterval = 300.0;
     self.appDefaults = [[GVAppDefaults alloc] init];
     self.updateTimerInterval = kUpdateInterval;
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:self.updateTimerInterval target:self selector:@selector(updateUserLocation) userInfo:nil repeats:YES];
+
+    self.updateLoader = [[GVUpdateLoader alloc] init];
 }
 
 - (void)viewDidLoad
@@ -60,6 +63,12 @@ static const double kUpdateInterval = 300.0;
         [self.pathLoader loadBikePathsAtURL:url withCompletion:^(void) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }];
+    }
+
+    {
+        NSURL *url = [[NSBundle mainBundle] URLForResource:self.appDefaults.updateFileName withExtension:@"json"];
+
+        self.updateCodes = [self.updateLoader loadUpdatesAtURL:url];
     }
 
     self.mapView.region = self.selectedRegion;
@@ -176,6 +185,11 @@ static const double kUpdateInterval = 300.0;
     for (GVPisteCyclable *pisteCyclable in bikePaths)
     {
 //        NSLog(@"%@", pisteCyclable);
+        // Update the colour if it's new
+        if ([self.updateCodes containsObject:pisteCyclable.codeID])
+        {
+            color = self.updateColor;
+        }
         // All the coordinates of the pisteCyclable, in order
         NSSet *points = pisteCyclable.geom;
         NSArray *orderedPoints = [points sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"order" ascending:YES]]];
