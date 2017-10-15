@@ -92,6 +92,9 @@
 
     XCTAssertNoThrow(self.controller.routeVerteColor = [UIColor blueColor]);
     XCTAssertEqualObjects(self.controller.routeVerteColor, [UIColor blueColor]);
+
+    XCTAssertNoThrow(self.controller.updateColor = [UIColor greenColor]);
+    XCTAssertEqualObjects(self.controller.updateColor, [UIColor greenColor]);
 }
 
 - (void)testUpdateTimer
