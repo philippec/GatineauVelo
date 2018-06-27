@@ -42,8 +42,9 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{    
     [self.webView setNeedsUpdateConstraints];
 }
 
