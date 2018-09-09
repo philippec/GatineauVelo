@@ -22,12 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>109</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>FABRIC_API_KEY</string>
+		<string>499cc9ecfe9bf1dd1f88943ce0fc9de123aeb4a9</string>
 		<key>Kits</key>
 		<array>
 			<dict>
@@ -38,6 +36,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.travel</string>
 	<key>LSRequiresIPhoneOS</key>
