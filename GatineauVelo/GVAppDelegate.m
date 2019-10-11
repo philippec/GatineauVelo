@@ -10,7 +10,11 @@
 #import "GVMainViewController.h"
 #import "GVContext.h"
 #import "GVAppDefaults.h"
-#import "FabricKeys.h"
+#import "Third Party/AnalyticsKeys.h"
+
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 
 @interface GVAppDelegate()
 
@@ -32,7 +36,11 @@
     self.mainViewController.routeVerteColor = [self.appDefaults colorNamed:@"routeVerteColor"];
     self.mainViewController.updateColor = [self.appDefaults colorNamed:@"updateColor"];
 
-#ifndef DISABLE_FABRIC
+#ifndef DISABLE_APPCENTER
+    [MSAppCenter start:APPCENTER_SECRET_KEY withServices:@[
+      [MSAnalytics class],
+      [MSCrashes class]
+    ]];
 #endif
 
     return YES;
