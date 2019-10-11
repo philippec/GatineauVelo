@@ -58,8 +58,6 @@
 		37427A051EA3FBE5001CD52E /* GVMapTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */; };
 		37427A071EA3FBEB001CD52E /* GVMapTypeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */; };
 		3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3754E3381AB488D100A40786 /* Launch Screen.xib */; };
-		375E775B1ACF2D6900765280 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E77591ACF2D6900765280 /* Crashlytics.framework */; };
-		375E775C1ACF2D6900765280 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375E775A1ACF2D6900765280 /* Fabric.framework */; };
 		378DA92718C3E75B00ED4501 /* licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92518C3E75B00ED4501 /* licenses.html */; };
 		378DA92C18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92A18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m */; };
 		378DA92E18C3E95F00ED4501 /* GVOpenDataLicenseViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92B18C3E95A00ED4501 /* GVOpenDataLicenseViewControllerTests.m */; };
@@ -169,8 +167,6 @@
 		3754E3391AB488D100A40786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
 		3754E33C1AB4890B00A40786 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
 		3754E33E1AB4890D00A40786 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "fr.lproj/Launch Screen.strings"; sourceTree = "<group>"; };
-		375E77591ACF2D6900765280 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = "GatineauVelo/Third Party/Crashlytics.framework"; sourceTree = SOURCE_ROOT; };
-		375E775A1ACF2D6900765280 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = "GatineauVelo/Third Party/Fabric.framework"; sourceTree = SOURCE_ROOT; };
 		375E775D1ACF6C1600765280 /* FabricKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FabricKeys.h; path = "Third Party/FabricKeys.h"; sourceTree = "<group>"; };
 		375E775E1ACF6D8B00765280 /* GatineauVelo-Info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GatineauVelo-Info.h"; sourceTree = "<group>"; };
 		378DA92618C3E75B00ED4501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = en; path = en.lproj/licenses.html; sourceTree = "<group>"; };
@@ -213,12 +209,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375E775C1ACF2D6900765280 /* Fabric.framework in Frameworks */,
 				37EFADAE18BA701D00728113 /* MapKit.framework in Frameworks */,
 				373DC8A818BA6CC2003FBFC3 /* CoreGraphics.framework in Frameworks */,
 				373DC8AC18BA6CC2003FBFC3 /* CoreData.framework in Frameworks */,
 				373DC8AA18BA6CC2003FBFC3 /* UIKit.framework in Frameworks */,
-				375E775B1ACF2D6900765280 /* Crashlytics.framework in Frameworks */,
 				373DC8A618BA6CC2003FBFC3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,8 +401,6 @@
 				378DA93418C4088C00ED4501 /* MBProgressHUD.m */,
 				370AC69F18C2ED5400A36D54 /* UIColor+HexColors.h */,
 				370AC6A018C2ED5400A36D54 /* UIColor+HexColors.m */,
-				375E77591ACF2D6900765280 /* Crashlytics.framework */,
-				375E775A1ACF2D6900765280 /* Fabric.framework */,
 			);
 			name = "Third Party";
 			sourceTree = "<group>";
@@ -438,7 +430,6 @@
 				373DC89E18BA6CC2003FBFC3 /* Sources */,
 				373DC89F18BA6CC2003FBFC3 /* Frameworks */,
 				373DC8A018BA6CC2003FBFC3 /* Resources */,
-				375E77581ACF2D4400765280 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -539,20 +530,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		375E77581ACF2D4400765280 /* Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Fabric;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Check if Fabric support is activated\nif grep -q DISABLE_FABRIC \"${SRCROOT}/${PROJECT_NAME}/Third Party/FabricKeys.h\"\nthen\n    echo \"Fabric integration disabled, skipping Fabric framework\"\n    exit 0\nfi\n\necho \"Integrating with Fabric framework\"\n# Extract API keys from our header file (3rd column)\nFABRIC_API_KEY=`grep FABRIC_API_KEY \"${SRCROOT}/${PROJECT_NAME}/Third Party/FabricKeys.h\" | awk '{ print $3 }'`\nFABRIC_SECRET_KEY=`grep FABRIC_SECRET_KEY \"${SRCROOT}/${PROJECT_NAME}/Third Party/FabricKeys.h\" | awk '{ print $3 }'`\n\n\"./GatineauVelo/Third Party/Fabric.framework/run\" $FABRIC_API_KEY $FABRIC_SECRET_KEY";
-		};
 		375E775F1ACFA6D800765280 /* Create Fabric Header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,7 +803,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(PROJECT_DIR)/GatineauVelo/Third Party/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
@@ -851,7 +827,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(PROJECT_DIR)/GatineauVelo/Third Party/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
@@ -984,7 +959,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"\"$(PROJECT_DIR)/GatineauVelo/Third Party/\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";

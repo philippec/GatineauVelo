@@ -10,8 +10,6 @@
 #import "GVMainViewController.h"
 #import "GVContext.h"
 #import "GVAppDefaults.h"
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
 #import "FabricKeys.h"
 
 @interface GVAppDelegate()
@@ -35,7 +33,6 @@
     self.mainViewController.updateColor = [self.appDefaults colorNamed:@"updateColor"];
 
 #ifndef DISABLE_FABRIC
-    [Fabric with:@[CrashlyticsKit]];
 #endif
 
     return YES;
