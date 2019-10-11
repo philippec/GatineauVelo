@@ -22,7 +22,7 @@
     [super viewDidLoad];
 
     NSString* path = [[NSBundle mainBundle] pathForResource:@"licenses" ofType:@"html"];
-    NSString* baseString = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString* baseString = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     NSURL* url = [NSURL URLWithString: baseString];
     NSString* str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 

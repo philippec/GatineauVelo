@@ -283,7 +283,11 @@ static const double kUpdateInterval = 300.0;
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
 {
-    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+    if (!overlay)
+    {
+        return nil;
+    }
+    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithPolyline:(MKPolyline *)overlay];
     if ([overlay isKindOfClass:[GVColorPolyline class]])
     {
         GVColorPolyline *polyLine = (GVColorPolyline *)overlay;
