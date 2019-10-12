@@ -114,6 +114,17 @@ You can de-activate this colour is you choose to do so.
 
 Supports iOS 12.
 
+Version 1.5.0
+-------------
+
+Nouvelles données fournies par la Ville de Gatineau. Les pistes cyclables sont plus complètes. Gatineau, ville vélo!
+
+Support pour iOS 13, y compris le mode sombre.
+
+Updated bike path data from the City of Gatineau. The bike paths are now better represented. Gatineau, ville vélo!
+
+Supports iOS 13, including Dark Mode.
+
 ----
 
 Keywords: Gatineau, bike path, bike paths, route verte, open data
