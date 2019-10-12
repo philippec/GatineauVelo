@@ -482,6 +482,7 @@
 				TargetAttributes = {
 					373DC8A118BA6CC2003FBFC3 = {
 						DevelopmentTeam = V7QY36F2JR;
+						ProvisioningStyle = Automatic;
 					};
 					373DC8CA18BA6CC2003FBFC3 = {
 						TestTargetID = 373DC8A118BA6CC2003FBFC3;
@@ -810,8 +811,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -824,9 +827,10 @@
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.GatineauVe-lo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -837,8 +841,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -851,9 +857,10 @@
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.GatineauVe-lo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -972,8 +979,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -986,9 +995,10 @@
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.casgrain.GatineauVe-lo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
