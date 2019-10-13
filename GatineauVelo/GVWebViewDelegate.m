@@ -10,15 +10,15 @@
 
 @implementation GVWebViewDelegate
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    if (navigationType == UIWebViewNavigationTypeLinkClicked)
+    if (navigationAction.navigationType == WKNavigationTypeLinkActivated)
     {
-        [UIApplication.sharedApplication openURL:request.URL];
-        return false;
+        [UIApplication.sharedApplication openURL:navigationAction.request.URL];
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
     }
-    
-    return true;
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 @end

@@ -26,10 +26,14 @@
     NSURL* url = [NSURL URLWithString: baseString];
     NSString* str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
 
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.webView];
+
     [self.webView loadHTMLString:str baseURL:url];
 
     self.webDelegate = [[GVWebViewDelegate alloc] init];
-    self.webView.delegate = self.webDelegate;
+    self.webView.navigationDelegate = self.webDelegate;
 }
 
 - (void)didReceiveMemoryWarning

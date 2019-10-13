@@ -31,10 +31,14 @@
     NSString* fullVersionStr = [NSString stringWithFormat:@"%@ (%@)", versionStr, buildStr];
     [str replaceOccurrencesOfString:@"{VersionNum}" withString:fullVersionStr options:NSCaseInsensitiveSearch range:NSMakeRange(0, [str length])];
 
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.webView];
+
     [self.webView loadHTMLString:str baseURL:url];
 
     self.webDelegate = [[GVWebViewDelegate alloc] init];
-    self.webView.delegate = self.webDelegate;
+    self.webView.navigationDelegate = self.webDelegate;
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface GVWebViewDelegate : NSObject<UIWebViewDelegate>
+@interface GVWebViewDelegate : NSObject<WKNavigationDelegate>
 
 @end

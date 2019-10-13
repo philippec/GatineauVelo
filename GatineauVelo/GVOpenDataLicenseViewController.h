@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @class GVWebViewDelegate;
 
 @interface GVOpenDataLicenseViewController : UIViewController
 
 @property (strong) GVWebViewDelegate *webDelegate;
-@property (strong) IBOutlet UIWebView *webView;
+@property (strong) WKWebView *webView;
 
 @end

@@ -308,25 +308,10 @@
                     <view key="view" contentMode="scaleToFill" id="ncc-jO-ceS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="9Mf-gX-7GF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="yXw-XL-4g1" firstAttribute="trailing" secondItem="9Mf-gX-7GF" secondAttribute="trailing" id="7wS-T4-W31"/>
-                            <constraint firstItem="9Mf-gX-7GF" firstAttribute="leading" secondItem="yXw-XL-4g1" secondAttribute="leading" id="A6H-vP-Ibx"/>
-                            <constraint firstAttribute="bottom" secondItem="9Mf-gX-7GF" secondAttribute="bottom" id="Kkb-Gm-qYv"/>
-                            <constraint firstItem="9Mf-gX-7GF" firstAttribute="top" secondItem="ncc-jO-ceS" secondAttribute="top" id="QDH-XC-964"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yXw-XL-4g1"/>
                     </view>
                     <navigationItem key="navigationItem" id="mXh-Ui-eQy"/>
-                    <connections>
-                        <outlet property="webView" destination="9Mf-gX-7GF" id="aol-VX-j3Q"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rie-t4-SlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -584,25 +569,10 @@
                     <view key="view" contentMode="scaleToFill" id="S7c-Aw-bfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="XSq-Tj-Z23">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="CZP-Cv-v0a" firstAttribute="trailing" secondItem="XSq-Tj-Z23" secondAttribute="trailing" id="WOB-Me-5vO"/>
-                            <constraint firstItem="XSq-Tj-Z23" firstAttribute="leading" secondItem="CZP-Cv-v0a" secondAttribute="leading" id="hJa-j7-oEf"/>
-                            <constraint firstAttribute="bottom" secondItem="XSq-Tj-Z23" secondAttribute="bottom" id="mXz-oF-cTb"/>
-                            <constraint firstItem="XSq-Tj-Z23" firstAttribute="top" secondItem="S7c-Aw-bfU" secondAttribute="top" id="vzc-R7-mW2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CZP-Cv-v0a"/>
                     </view>
                     <navigationItem key="navigationItem" id="YXO-zN-HLD"/>
-                    <connections>
-                        <outlet property="webView" destination="XSq-Tj-Z23" id="wCp-Ux-9ps"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSF-uy-7AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,25 +585,10 @@
                     <view key="view" contentMode="scaleToFill" id="odA-Uf-M5N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" verticalCompressionResistancePriority="557" translatesAutoresizingMaskIntoConstraints="NO" id="igG-Lp-xU7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6NF-ez-vjB" firstAttribute="trailing" secondItem="igG-Lp-xU7" secondAttribute="trailing" id="4yV-Fq-Lnx"/>
-                            <constraint firstItem="igG-Lp-xU7" firstAttribute="top" secondItem="odA-Uf-M5N" secondAttribute="top" id="5QW-Lv-ZCV"/>
-                            <constraint firstAttribute="bottom" secondItem="igG-Lp-xU7" secondAttribute="bottom" id="CIK-YL-08d"/>
-                            <constraint firstItem="igG-Lp-xU7" firstAttribute="leading" secondItem="6NF-ez-vjB" secondAttribute="leading" id="gAN-hq-Y29"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6NF-ez-vjB"/>
                     </view>
                     <navigationItem key="navigationItem" id="8vK-ui-7Mb"/>
-                    <connections>
-                        <outlet property="webView" destination="igG-Lp-xU7" id="Uah-xf-n48"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvP-f4-hYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
