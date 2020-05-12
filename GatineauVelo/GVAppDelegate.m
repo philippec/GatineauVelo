@@ -12,9 +12,11 @@
 #import "GVAppDefaults.h"
 #import "Third Party/AnalyticsKeys.h"
 
+#ifndef DISABLE_APPCENTER
 @import AppCenter;
 @import AppCenterAnalytics;
 @import AppCenterCrashes;
+#endif
 
 @interface GVAppDelegate()
 

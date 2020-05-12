@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -57,9 +57,9 @@
 		373DC8E818BA6DE1003FBFC3 /* GVAppDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373DC8E718BA6DE1003FBFC3 /* GVAppDelegateTests.m */; };
 		37427A051EA3FBE5001CD52E /* GVMapTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A031EA3FBE5001CD52E /* GVMapTypeViewController.m */; };
 		37427A071EA3FBEB001CD52E /* GVMapTypeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37427A041EA3FBE5001CD52E /* GVMapTypeViewControllerTests.m */; };
-		3744A94523502F1C005E4766 /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94223502F1B005E4766 /* AppCenterAnalytics.framework */; };
-		3744A94623502F1C005E4766 /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94323502F1C005E4766 /* AppCenter.framework */; };
-		3744A94723502F1C005E4766 /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94423502F1C005E4766 /* AppCenterCrashes.framework */; };
+		3744A94523502F1C005E4766 /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94223502F1B005E4766 /* AppCenterAnalytics.framework */; platformFilter = ios; };
+		3744A94623502F1C005E4766 /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94323502F1C005E4766 /* AppCenter.framework */; platformFilter = ios; };
+		3744A94723502F1C005E4766 /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3744A94423502F1C005E4766 /* AppCenterCrashes.framework */; platformFilter = ios; };
 		3754E33A1AB488D100A40786 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3754E3381AB488D100A40786 /* Launch Screen.xib */; };
 		378DA92718C3E75B00ED4501 /* licenses.html in Resources */ = {isa = PBXBuildFile; fileRef = 378DA92518C3E75B00ED4501 /* licenses.html */; };
 		378DA92C18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378DA92A18C3E95A00ED4501 /* GVOpenDataLicenseViewController.m */; };
@@ -814,6 +814,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -824,6 +825,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = (
+					DISABLE_APPCENTER,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -831,6 +836,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -844,6 +850,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -854,6 +861,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = DISABLE_APPCENTER;
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -861,6 +869,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -982,6 +991,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = V7QY36F2JR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -992,6 +1002,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[sdk=macosx*]" = DISABLE_APPCENTER;
 				INFOPLIST_FILE = "GatineauVelo/GatineauVelo-Info.plist";
 				INFOPLIST_PREFIX_HEADER = "GatineauVelo/GatineauVelo-Info.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -999,6 +1010,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
